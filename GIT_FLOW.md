@@ -2,7 +2,7 @@
 
 ## The Git Worflow
 
-At the `1718-io` Cloud Team, We use `Git`, and the `Git Flow`, `AVH` Edition : https://github.com/petervanderdoes/gitflow-avh
+At the `pokus-io` Cloud Team, We use `Git`, and the `Git Flow`, `AVH` Edition : https://github.com/petervanderdoes/gitflow-avh
 
 > `WARNING`! : The Git Flow, `AVH Edition` :
 > * is an Edition of the well known original Git Flow,

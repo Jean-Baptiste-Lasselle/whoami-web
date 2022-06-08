@@ -27,7 +27,7 @@
  *   => all the CSS files are processed to be "debug-friendly" for dev : sass files are compiled wiht source map fiels, so that debuggers can use those source maps files for debugging
  *   => all the JavaScript files are processed to be "debug-friendly" for dev : they are beautified, and actually i want to apply prettierrc confifugration to make iot all clear
  *   => In all HTML files inside the 'dist' folder, the interpolation of <script> HTML tags:
- *         => to update the 'src' attributes of '<script>' HTML tags, with the dev name of the beautified JavaScript source files e.g. "radiojaune.com.js"
+ *         => to update the 'src' attributes of '<script>' HTML tags, with the dev name of the beautified JavaScript source files e.g. "whoami_web.com.js"
  *         => to update the 'href' or 'src' attributes of '<link>' HTML tags, with the name of the generated css files : Gulp discovers all the file path of all [*.scss] and [*.sass] files, in the './public/sass/' folder, and for each discovered file path :
  *              -> two file paths are generated : e.g. for the './public/sass/a/b/c/d/e/f/myfile.scss' file, Gulp will generate './public/sass/a/b/c/d/e/f/myfile.min.css' and  './public/sass/a/b/c/d/e/f/myfile.map.css'
  *              -> './public/sass/' is replaced by './dist/css/' : e.g. for the './public/sass/a/b/c/d/e/f/myfile.scss' file, Gulp will generate './public/sass/a/b/c/d/e/f/myfile.min.css' and  './public/sass/a/b/c/d/e/f/myfile.map.css'
@@ -36,7 +36,7 @@
  *   => all the HTML files are processed to be optimized for production : minified, purged
  *   => all the CSS files are processed to be optimized for production : minified, purgeCSS, cleancss, (and tree shaking by parcel ?)
  *   => all the JavaScript files are processed to be optimized for production : they are uglified and then minified, and probalbly all javascript files are meged into on and only one
- *   => In all HTML files inside the 'dist' folder, the interpolation of <script> HTML tags: to update the 'src' attributes of <script> tag, with the production name of the minified JavaScript file e.g. "radiojaune.com.min.js"
+ *   => In all HTML files inside the 'dist' folder, the interpolation of <script> HTML tags: to update the 'src' attributes of <script> tag, with the production name of the minified JavaScript file e.g. "whoami_web.com.min.js"
  *
  * First design concept :
  * -> For a build step to be idempotent as an abstract operation,
@@ -445,7 +445,7 @@ gulp.task('build:dist:prod', gulp.series('build:dist:css:prod', 'build:dist:js:p
 /// <!-- build:<name> -->
 /// Everything here will be replaced
 /// <!-- endbuild -->
-/// <!-- build:radiojaune_compiled_sass -->
+/// <!-- build:whoami_webcompiled_sass -->
 /// Everything here will be replaced
 /// <!-- endbuild -->
 import htmlreplace from 'gulp-html-replace';
@@ -455,7 +455,7 @@ import merge from 'gulp-merge';
 /// interpolate:html:dev
 gulp.task('interpolate:html:prod', function (done) {
 /// //  htmlreplace({
-/// //    radiojaune_compiled_sass3: {// Multiple tag replacement one for each sass scss compiled source file
+/// //    whoami_webcompiled_sass3: {// Multiple tag replacement one for each sass scss compiled source file
 /// //      // src: [['data-main.js', 'require-src.js']],
 /// //      // src: ['static/sass/**/*.s?ss', ['data-main.js', 'require-src.js']],
 /// //      // src: ['public/sass/**/*.s?ss', ['data-main.js', 'require-src.js']],
@@ -493,7 +493,7 @@ gulp.task('interpolate:html:prod', function (done) {
 
   var htmlReplaceWork = gulp.src('dist/**/*.html')
                             .pipe(htmlreplace({
-                                radiojaune_compiled_sass: {// Multiple tag replacement one for each sass scss compiled source file
+                                whoami_webcompiled_sass: {// Multiple tag replacement one for each sass scss compiled source file
                                   // src: [ ['dist/css/a.min.pokus', 'b.min.pokus.js', 'c.min.pokus.js'], ['dist/css/pour.tests.gulp/encore.autre.pour.test.min.pokus.css', 'data-main.js', 'require-src.js']],
                                   // tpl: multiPlaceHolderhtmlTemplateToInject
                                   src: compiledSassFiles,
@@ -544,7 +544,7 @@ gulp.task('interpolate:html:dev', function (done) {
 
   var htmlReplaceWork = gulp.src('public/**/*.html')
                             .pipe(htmlreplace({
-                                radiojaune_compiled_sass: {// Multiple tag replacement one for each sass scss compiled source file
+                                whoami_webcompiled_sass: {// Multiple tag replacement one for each sass scss compiled source file
                                   // src: [ ['dist/css/a.min.pokus', 'b.min.pokus.js', 'c.min.pokus.js'], ['dist/css/pour.tests.gulp/encore.autre.pour.test.min.pokus.css', 'data-main.js', 'require-src.js']],
                                   // tpl: multiPlaceHolderhtmlTemplateToInject
                                   src: compiledSassFiles,
@@ -735,27 +735,27 @@ import minifyCss from 'gulp-clean-css';
 import gulpSeo from 'gulp-seo';
 
 gulp.task('seo', function() {
-  const radioJauneConfiguration = {
+  const whoami_webConfiguration = {
         list: ['og', 'se', 'schema', 'twitter', 'facebook'],
         meta: {
-            title: 'RADIOJAUNE.COM',
+            title: 'whoami_web.COM',
             description: 'La radio libre 100%Jaune, Libre antenne tous les Dimanches 21h',
-            author: 'RADIOJAUNE.COM',
+            author: 'whoami_web.COM',
             keywords: ['radio', 'libre', 'libre antenne', 'live', 'gilets jaunes', 'convoi des libertés', 'freedom convoy', 'free speech', 'liberté d\'expression', 'émission', 'censure', 'censure facebook', 'citoyen', 'débats', 'scandale', 'polémiques', 'covid', 'vaccin', 'pass sanitaire', 'pass vaccinal', 'green pass', 'vaccin', 'démocratie', 'convergence'],
             robots: {
                 index: true, // true
                 follow: true // true
             },
             revisitAfter: '5 month', // 3 month
-            image: 'https://radiojaune.com/images/radiojaune/favicon.next/favicon.48x48.ico',
-            site_name: 'RADIOJAUNE.COM',
+            image: 'https://whoami_web.com/images/whoami_web/favicon.next/favicon.48x48.ico',
+            site_name: 'whoami_web.COM',
             type: 'website'
 
         }
     }
 
     return gulp.src('public/**/*.html')
-              .pipe(gulpSeo(radioJauneConfiguration))
+              .pipe(gulpSeo(whoami_webConfiguration))
               .pipe(gulp.dest('./public'))
               .pipe(browserSync.stream());
 });

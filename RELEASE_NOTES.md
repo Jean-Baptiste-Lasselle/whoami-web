@@ -1,7 +1,7 @@
 # Release notes
 
 In the next release, I want :
-* Standard operations implemented as npm scripts:
+* Standard operations implemented as `npm` scripts:
   * those npm scripts may execute any nodejs software
   * the implemented standard operations must be :
     * dev build :
