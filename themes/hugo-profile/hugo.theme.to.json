@@ -1,0 +1,19 @@
+
+> @JeanBaptisteLasselle/whoami-web@0.0.0 parse-hugo-them-toml
+> node .npm.scripts/toml-parser.js
+
+ value of TOML_FILE_PATH = /tmp/TEMP_SPAWN_HOME-Gpgx6iPGJ9/theme.toml
+[Object: null prototype] {
+  name: 'Hugo Profile',
+  license: 'MIT',
+  licenselink: 'https://github.com/gurusabarish/hugo-profile/blob/master/LICENSE',
+  description: 'A high performance and mobile first hugo template for personal portfolio and blog.',
+  homepage: 'https://github.com/gurusabarish/hugo-profile',
+  demosite: 'https://hugo-profile.netlify.app',
+  tags: [ 'Responsive', 'Blog', 'Portfolio', 'Personal' ],
+  min_version: '0.68.0',
+  author: [Object: null prototype] {
+    name: 'Gurusabarish',
+    homepage: 'https://www.linkedin.com/in/gurusabarish/'
+  }
+}

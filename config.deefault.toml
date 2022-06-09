@@ -1,0 +1,18 @@
+
+
+[reveal_hugo.custom_theme_options]
+targetPath = "assets/custom-theme.css"
+enableSourceMap = true
+
+# --- # --- 
+# Addon to us Bulma as integrated SCSS Processor
+
+[[module.imports]]
+  path = "github.com/jgthms/bulma"
+  disable = false
+  # [[module.imports.mounts]]
+    # source = "."
+    # target = "assets/sass"
+  [[module.imports.mounts]]
+    source = "."
+    target = "assets/bulma"

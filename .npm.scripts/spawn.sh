@@ -1,14 +1,17 @@
 #!/bin/bash
-export radiojaune_ENV=${radiojaune_ENV:-"staging"}
-source .${radiojaune_ENV}.env
+export whoami_webENV=${whoami_webENV:-"staging"}
+source .${whoami_webENV}.env
 # export HUGO_THEME_GIT_SSH=${HUGO_THEME_GIT_SSH:-"git@github.com:radio-jaune/hugo-theme-grayscale.git"}
 # export HUGO_THEME_GIT_SSH=${HUGO_THEME_GIT_SSH:-"git@github.com:runningstream/hugograyscale.git"}
+#
 export HUGO_THEME_GIT_SSH=${HUGO_THEME_GIT_SSH:-"git@github.com:halogenica/beautifulhugo.git"}
+# export HUGO_THEME_GIT_SSH=${HUGO_THEME_GIT_SSH:-"git@github.com:gurusabarish/hugo-profile.git"}
+#
 
-export HUGO_THEME_VERSION="1.1.0"
-export HUGO_THEME_VERSION="2.9.2"
-export HUGO_THEME_VERSION="2.5.0"
-export HUGO_THEME_VERSION="master"
+# export HUGO_THEME_VERSION=${HUGO_THEME_VERSION:-"1.1.0"}
+# export HUGO_THEME_VERSION=${HUGO_THEME_VERSION:-"2.9.2"}
+# export HUGO_THEME_VERSION=${HUGO_THEME_VERSION:-"2.5.0"}
+export HUGO_THEME_VERSION=${HUGO_THEME_VERSION:-"master"}
 
 if [ "x${HUGO_BASE_URL}" == "x" ]; then
   echo "the HUGO_BASE_URL env. var. is not defined, stopping the hugo project spawn"
