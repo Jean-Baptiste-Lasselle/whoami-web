@@ -12,4 +12,4 @@ chmod +x ./.interpolate.dev.env.sh
 source ./.dev.env
 
 # run the build from docker-copmpose yaml [.containers/dev/docker-compose.build.yml]
-docker-compose build -f ./docker-compose.yml pokus_dev
+docker-compose -f ./docker-compose.yml up -d pokus_dev
