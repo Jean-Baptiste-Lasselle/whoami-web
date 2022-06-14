@@ -71,16 +71,35 @@ ARG QUAY_OCI_IMAGE_TAG=${QUAY_OCI_IMAGE_TAG}
 # --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- #
 # ---                  HUGO BUILD                         --- #
 # --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- #
+# What informations do i want in the label metadata ?
+#    build-date
+#    name
+#    description
+#    url
+#    vcs-ref
+#    docker.cmd
+#
+# ---
+# https://medium.com/@chamilad/lets-make-your-docker-image-better-than-90-of-existing-ones-8b1e5de950d
+#
+# ---
+#
+
+LABEL io.pokus.oci.image.gun="pokusio/jb-lasselle-whoami-web:${QUAY_OCI_IMAGE_TAG}-dev"
 LABEL io.pokus.oci.base.image="golang:${GOLANG_VERSION}-alpine${ALPINE_OCI_IMAGE_TAG}"
 LABEL io.pokus.golang.version="${GOLANG_VERSION}"
 LABEL io.pokus.hugo.version="${HUGO_VERSION}"
 LABEL io.pokus.git.commit.id="${GIT_COMMIT_ID}"
 LABEL io.pokus.cicd.build.id="${CICD_BUILD_ID}"
 LABEL io.pokus.cicd.build.timestamp="${CICD_BUILD_TIMESTAMP}"
-LABEL io.pokus.website="https://pokus.herokuapp.com"
-LABEL io.pokus.github.org="https://github.com/pokus"
-LABEL io.pokus.author="Jean-Baptiste Lasselle <jean.baptiste.ricard.io@gmail.com>"
-LABEL io.pokus.maintainer="Jean-Baptiste Lasselle <jean.baptiste.ricard.io@gmail.com>"
+LABEL io.pokus.website="https://jean-baptiste-lasselle.github.io/whoami-web"
+# LABEL io.pokus.scm.type="gitlab.com"
+# LABEL io.pokus.scm.type="gitea.com"
+LABEL io.pokus.scm.type="github.com"
+LABEL io.pokus.scm.repo="https://github.com/Jean-Baptiste-Lasselle/whoami-web"
+LABEL io.pokus.github.org="https://github.com/Jean-Baptiste-Lasselle"
+LABEL io.pokus.author="Jean-Baptiste Lasselle <jean.baptiste.lasselle.pokus@gmail.com>"
+LABEL io.pokus.maintainer="Jean-Baptiste Lasselle <jean.baptiste.lasselle.pokus@gmail.com>"
 
 RUN mkdir -p /pokus.io/hugo/src/
 # COPY . /pokus.io/hugo/src/
