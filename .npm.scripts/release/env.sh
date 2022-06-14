@@ -15,7 +15,7 @@ echo "# --- # --- # --- # --- # --- # --- # --- # --- # --- # --- # --- #"
 # ----
 #
 export GH_PAGES_DEPLOYMENT_GIT_BRANCH=${GH_PAGES_DEPLOYMENT_GIT_BRANCH:-"monkey/tests-integration"}
-export GH_PAGES_DEPLOYMENT_CNAME=${GH_PAGES_DEPLOYMENT_CNAME:-"1718-io.github.io/ethical-hacking-example"}
+export GH_PAGES_DEPLOYMENT_CNAME=${GH_PAGES_DEPLOYMENT_CNAME:-"pokus-io.github.io/ethical-hacking-example"}
 export HEROKU_APP_ID=${HEROKU_APP_ID:-"xxxxxxxxxxxxxxxxxxx"}
 export RELEASE_VERSION_NUMBER=${RELEASE_VERSION_NUMBER:-"0.0.0"}
 

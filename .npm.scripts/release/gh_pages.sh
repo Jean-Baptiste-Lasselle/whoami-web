@@ -85,7 +85,7 @@ echo "# -- # -- # -- # -- # -- # -- # -- # -- # -- # -- # -- # -- # -- # -- #"
 
 
 
-export GFLOW_RELEASE_COMMIT_MESSAGE=${GFLOW_RELEASE_COMMIT_MESSAGE:-"[https://1718-io.github.io/ethical-hacking-example] github pages deployment for early  integration tests"}
+export GFLOW_RELEASE_COMMIT_MESSAGE=${GFLOW_RELEASE_COMMIT_MESSAGE:-"[https://pokus-io.github.io/ethical-hacking-example] github pages deployment for early  integration tests"}
 export GFLOW_RELEASE_TAG_MESSAGE=${GFLOW_RELEASE_TAG_MESSAGE:-"${GFLOW_RELEASE_COMMIT_MESSAGE}"}
 
 
@@ -119,4 +119,4 @@ echo "# -- 4./ git push to github pages deployment git branch"
 echo "# -- # -- # -- # -- # -- # -- # -- # -- # -- # -- # -- # -- # -- # -- #"
 
 
-git add -A && git commit -m "[https://1718-io.github.io/ethical-hacking-example] github pages deployment for early  integration tests" && git push -u origin HEAD
+git add -A && git commit -m "[https://pokus-io.github.io/ethical-hacking-example] github pages deployment for early  integration tests" && git push -u origin HEAD

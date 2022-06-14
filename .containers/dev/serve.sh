@@ -1,0 +1,16 @@
+
+#!/bin/bash
+
+export HUGO_SERVER_BIND_ADDR=${HUGO_SERVER_BIND_ADDR:-"0.0.0.0"}
+export HUGO_SERVER_PORT_NUMBER=${HUGO_SERVER_PORT_NUMBER:-"1313"}
+export PATH=$PATH:/usr/local/go/bin
+
+echo "# ---- STARTING HUGO DEV SERVER WITH : "
+echo "#    GLolang version = [$(go --version)]"
+echo "#    Hugo version = [$(hugo --version)]"
+echo "#    HUGO_BASE_URL=[${HUGO_BASE_URL}]"
+echo "#    HUGO_BASE_URL=[${HUGO_SERVER_BIND_ADDR}]"
+echo "#    HUGO_BASE_URL=[${HUGO_SERVER_PORT_NUMBER}]"
+
+
+hugo serve --watch --baseURL ${HUGO_BASE_URL} --bind "${HUGO_SERVER_BIND_ADDR}" --port "${HUGO_SERVER_PORT_NUMBER}"

@@ -78,4 +78,4 @@ echo "# -- # -- # -- # -- # -- # -- # -- # -- # -- # -- # -- # -- # -- # -- #"
 echo "# -- 4./ git push to github pages deployment git branch"
 echo "# -- # -- # -- # -- # -- # -- # -- # -- # -- # -- # -- # -- # -- # -- #"
 
-git add -A && git commit -m "[https://1718-io.github.io/ethical-hacking-example] github pages deployment" && git push -u origin HEAD
+git add -A && git commit -m "[https://pokus-io.github.io/ethical-hacking-example] github pages deployment" && git push -u origin HEAD

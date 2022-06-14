@@ -16,7 +16,7 @@ echo "# --- # --- # --- # --- # --- # --- # --- # --- # --- # --- # --- #"
 #
 export QUIJESUIS=$(whoami)
 export CURRENT_GIT_COMMIT=$(git rev-parse HEAD)
-export SURGE_DELOYMENT_DOMAIN=${SURGE_DELOYMENT_DOMAIN:-"live-${QUIJESUIS}-${CURRENT_GIT_COMMIT}-`1718-io`.surge.sh"}
+export SURGE_DELOYMENT_DOMAIN=${SURGE_DELOYMENT_DOMAIN:-"live-${QUIJESUIS}-${CURRENT_GIT_COMMIT}-`pokus-io`.surge.sh"}
 export HEROKU_APP_ID=${HEROKU_APP_ID:-"xxxxxxxxxxxxxxxxxxx"}
 
 echo "# --- # ---   SURGE_DELOYMENT_DOMAIN=[${SURGE_DELOYMENT_DOMAIN}]"
