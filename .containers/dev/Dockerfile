@@ -7,14 +7,17 @@
 # +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ #
 
 ARG ALPINE_OCI_IMAGE_TAG=${ALPINE_OCI_IMAGE_TAG}
-ARG GOLANG_VERSION=${GOLANG_VERSION:-1.15.6}
+ARG GOLANG_VERSION=${GOLANG_VERSION:-"1.18.3"}
 FROM golang:$GOLANG_VERSION-alpine$ALPINE_OCI_IMAGE_TAG AS hugo_build_base
 
 ARG ALPINE_OCI_IMAGE_TAG=${ALPINE_OCI_IMAGE_TAG:-'latest'}
 
-ARG GOLANG_VERSION=${GOLANG_VERSION}
-ARG HUGO_VERSION=${HUGO_VERSION}
-ARG HUGO_BASE_URL=https://pokus-io.github.io/conference/
+ARG GOLANG_VERSION
+ENV GOLANG_VERSION=${GOLANG_VERSION}
+
+ARG HUGO_VERSION=0.100.2
+ENV HUGO_VERSION=$HUGO_VERSION
+
 
 RUN echo "GOLANG_VERSION=[${GOLANG_VERSION}] and HUGO_VERSION=[${HUGO_VERSION}] and HUGO_BASE_URL=[${HUGO_BASE_URL}]"
 USER root
@@ -97,7 +100,7 @@ LABEL io.pokus.website="https://jean-baptiste-lasselle.github.io/whoami-web"
 # LABEL io.pokus.scm.type="gitea.com"
 LABEL io.pokus.scm.type="github.com"
 LABEL io.pokus.scm.repo="https://github.com/Jean-Baptiste-Lasselle/whoami-web"
-LABEL io.pokus.github.org="https://github.com/Jean-Baptiste-Lasselle"
+LABEL io.pokus.scm.github.org="https://github.com/Jean-Baptiste-Lasselle"
 LABEL io.pokus.author="Jean-Baptiste Lasselle <jean.baptiste.lasselle.pokus@gmail.com>"
 LABEL io.pokus.maintainer="Jean-Baptiste Lasselle <jean.baptiste.lasselle.pokus@gmail.com>"
 
@@ -109,11 +112,15 @@ RUN ls -allh /pokus.io/hugo/src/
 COPY . /pokus.io/hugo/src/
 RUN export PATH=$PATH:/usr/local/go/bin && cd /pokus.io/hugo/src/ && hugo -b "${HUGO_BASE_URL}"
 
-
 FROM hugo_build AS hugo_release
 
-ARG HUGO_BASE_URL=https://pokus-io.github.io/conference/
-ENV HUGO_BASE_URL=${HUGO_BASE_URL}
+ARG HUGO_BASE_URL=https://jean-baptiste-lasselle.github.io/whoami/
+ENV HUGO_BASE_URL=$HUGO_BASE_URL
+ARG HUGO_SERVER_BIND_ADDR=0.0.0.0
+ENV HUGO_SERVER_BIND_ADDR=$HUGO_SERVER_BIND_ADDR
+ARG HUGO_SERVER_PORT_NUMBER=1313
+ENV HUGO_SERVER_PORT_NUMBER=$HUGO_SERVER_PORT_NUMBER
+
 # --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- #
 # ---                  HUGO SERVER RUNTIME                --- #
 # --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- #
