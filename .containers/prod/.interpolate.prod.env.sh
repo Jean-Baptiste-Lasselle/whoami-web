@@ -5,6 +5,10 @@
 
 source ./.env.sh
 
+if [ -f  ./.prod.env ]; then
+  rm  ./.prod.env
+fi;
+
 # second interpolete all env vars in ./.prod.env
 cp ./.env.template ./.prod.env
 
@@ -32,3 +36,9 @@ sed -i "s#CICD_BUILD_ID_PLACEHOLDER#${CICD_BUILD_ID}#g" ./.prod.env
 sed -i "s#CICD_BUILD_TIMESTAMP_PLACEHOLDER#${CICD_BUILD_TIMESTAMP}#g" ./.prod.env
 # QUAY_OCI_IMAGE_TAG=QUAY_OCI_IMAGE_TAG_PLACEHOLDER
 sed -i "s#QUAY_OCI_IMAGE_TAG_PLACEHOLDER#${QUAY_OCI_IMAGE_TAG}#g" ./.prod.env
+# HUGO_BASE_URL=HUGO_BASE_URL_PLACEHOLDER
+sed -i "s#HUGO_BASE_URL_PLACEHOLDER#${HUGO_BASE_URL}#g" ./.dev.env
+# HUGO_SERVER_BIND_ADDR=HUGO_SERVER_BIND_ADDR_PLACEHOLDER
+sed -i "s#HUGO_SERVER_BIND_ADDR_PLACEHOLDER#${HUGO_SERVER_BIND_ADDR}#g" ./.dev.env
+# HUGO_SERVER_PORT_NUMBER=HUGO_SERVER_PORT_NUMBER_PLACEHOLDER
+sed -i "s#HUGO_SERVER_PORT_NUMBER_PLACEHOLDER#${HUGO_SERVER_PORT_NUMBER}#g" ./.dev.env

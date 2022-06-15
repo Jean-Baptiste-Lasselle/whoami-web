@@ -7,7 +7,7 @@ services:
     # container_name: pokus_dev
     build:
        context: .
-       dockerfile: dev.Dockerfile
+       dockerfile: Dockerfile
        args:
          - POKUS_USER_NAME=$POKUS_USER_NAME
          - POKUS_USER_GRPNAME=$POKUS_USER_GRPNAME

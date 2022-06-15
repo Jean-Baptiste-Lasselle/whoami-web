@@ -22,6 +22,15 @@ ENV HUGO_VERSION=$HUGO_VERSION
 RUN echo "GOLANG_VERSION=[${GOLANG_VERSION}] and HUGO_VERSION=[${HUGO_VERSION}] and HUGO_BASE_URL=[${HUGO_BASE_URL}]"
 USER root
 # [build-base] because the hugo installation requires gcc and [build-base] package contains the proper gcc
+RUN echo "# --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- #"
+RUN echo "# --- --- --- --- Contenu [/etc/apk/repositories]"
+RUN echo "# --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- #"
+RUN export APK_CONFIG_FILE=$(cat /etc/apk/repositories) && echo "${APK_CONFIG_FILE}"
+RUN echo "# --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- #"
+RUN exit 67
+# -- fix proposed at https://github.com/gliderlabs/docker-alpine/issues/386#issuecomment-376784936
+# RUN echo -e "http://nl.alpinelinux.org/alpine/v$ALPINE_OCI_IMAGE_TAG/main\nhttp://nl.alpinelinux.org/alpine/v$ALPINE_OCI_IMAGE_TAG/community" > /etc/apk/repositories
+RUN apk update && echo "debug point" && exit 1
 RUN apk update && apk add curl git tree tar bash build-base
 # --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- #
 # ---              CHECKING GOLANG VERSION                --- #
@@ -33,8 +42,10 @@ RUN export PATH=$PATH:/usr/local/go/bin && go version
 # ---                   INSTALLING HUGO                   --- #
 # --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- #
 
-COPY alpine.hugo-extended.setup.sh .
-RUN chmod +x ./alpine.hugo-extended.setup.sh && ./alpine.hugo-extended.setup.sh
+# COPY alpine.hugo-extended.setup.sh .
+COPY install-hugo-extended.sh .
+# RUN chmod +x ./alpine.hugo-extended.setup.sh && ./alpine.hugo-extended.setup.sh
+RUN chmod +x ./install-hugo-extended.sh && ./install-hugo-extended.sh
 RUN echo "Is Hugo properly installed ?"
 RUN export PATH=$PATH:/usr/local/go/bin && hugo version && hugo env
 
