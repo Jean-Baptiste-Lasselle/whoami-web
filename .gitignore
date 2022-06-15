@@ -7,3 +7,10 @@ dist/
 .dev.env
 .staging.env
 .prod.env
+
+# --- log files
+*.log
+./.*/**/*.log
+# ./.containers/**/*.log
+# ./.containers/dev/*.*.*.log
+# ./.containers/dev/logs.docker.daemon.log

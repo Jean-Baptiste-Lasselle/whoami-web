@@ -27,10 +27,10 @@ RUN echo "# --- --- --- --- Contenu [/etc/apk/repositories]"
 RUN echo "# --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- #"
 RUN export APK_CONFIG_FILE=$(cat /etc/apk/repositories) && echo "${APK_CONFIG_FILE}"
 RUN echo "# --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- #"
-RUN exit 67
+# RUN exit 67
 # -- fix proposed at https://github.com/gliderlabs/docker-alpine/issues/386#issuecomment-376784936
 # RUN echo -e "http://nl.alpinelinux.org/alpine/v$ALPINE_OCI_IMAGE_TAG/main\nhttp://nl.alpinelinux.org/alpine/v$ALPINE_OCI_IMAGE_TAG/community" > /etc/apk/repositories
-RUN apk update && echo "debug point" && exit 1
+# RUN apk update && echo "debug point" && exit 1
 RUN apk update && apk add curl git tree tar bash build-base
 # --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- #
 # ---              CHECKING GOLANG VERSION                --- #
