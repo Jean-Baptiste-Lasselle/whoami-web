@@ -43,7 +43,9 @@ Menus:
 params:
   title: "Devops Quant - Gitops everywhere"
   description: Text about my cool site
-  staticPath: "https://jean-baptiste-lasselle.github.io/whoami-web/"  # The path to serve the static files from
+  # staticPath: "https://jean-baptiste-lasselle.github.io/whoami-web/"  # The path to serve the static files from
+  # staticPath: "/whoami-web/"  # The path to serve the static files from
+  staticPath: ""  # The path to serve the static files from
   # favicon: "/images/favico_logo_devops_jbl.png"
   favicon: "/images/devops_cycle_eight.png"
 
