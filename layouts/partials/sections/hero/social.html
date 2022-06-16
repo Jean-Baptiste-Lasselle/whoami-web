@@ -2,7 +2,7 @@
     {{ range .Site.Params.hero.socialLinks.fontAwesomeIcons }}
     <span class="px-1">
         <a href="{{ .url }}" target="_blank" class="btn social-icon">
-            <i class="{{.Site.Params.staticPath}}/{{ .icon }}"></i>
+            <i class="{{ .icon }}"></i>
         </a>
     </span>
     {{ end }}
@@ -10,7 +10,7 @@
     {{ range .Site.Params.hero.socialLinks.customIcons }}
     <span class="px-1">
         <a href="{{ .url }}" target="_blank" class="btn social-icon">
-            <img src="{{.Site.Params.staticPath}}/{{ .icon }}">
+            <img src="{{ $.Site.BaseURL }}/{{ .icon }}">
         </a>
     </span>
     {{ end }}

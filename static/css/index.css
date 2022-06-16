@@ -535,6 +535,11 @@ header .navbar {
  * Custom CSS JB asselle
  **/
 
+/**/
 img {
-  width: 100%
+ width: 100%
+}
+img.devops.quant.logo {
+ width: 30px!important;
+ height: 30px!important;
 }
