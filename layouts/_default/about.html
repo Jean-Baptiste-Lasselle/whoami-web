@@ -1,9 +1,9 @@
 {{ define "head" }}
 <meta name="description" content="{{ .Params.description }}">
-<link rel="stylesheet" href="{{.Site.Params.staticPath}}/css/about.css">
+<link rel="stylesheet" href="{{default $.Site.BaseURL $.Site.Params.staticPath }}/css/about.css">
 
 <!-- fontawesome -->
-<script defer src="{{.Site.Params.staticPath}}/fontawesome-5/all-5.15.4.js"></script>
+<script defer src="{{default $.Site.BaseURL $.Site.Params.staticPath }}/fontawesome-5/all-5.15.4.js"></script>
 {{ end }}
 
 {{ define "title" }}
@@ -22,7 +22,7 @@
                 <div class="sticky-sidebar">
                     <aside class="aboutImg">
                         <div class="text-center">
-                            <img src="{{.Site.Params.staticPath}}/{{ .Params.image }}" class="mx-auto rounded" alt="">
+                            <img src="{{default $.Site.BaseURL $.Site.Params.staticPath }}/{{ .Params.image }}" class="mx-auto rounded" alt="">
                         </div>
                         <h2 class="text-center pt-3">
                             {{ .Params.name }}
@@ -40,7 +40,7 @@
                                 {{ range .Params.socialLinks.customIcons }}
                                 <li class="list-inline-item text-center">
                                     <a href="{{ .url }}" target="_blank" class="img-icon">
-                                        <img src="{{.Site.Params.staticPath}}/connerie/{{ .icon }}">
+                                        <img src="{{default $.Site.BaseURL $.Site.Params.staticPath }}/connerie/{{ .icon }}">
                                     </a>
                                 </li>
                                 {{ end }}
