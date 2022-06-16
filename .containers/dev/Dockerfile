@@ -133,7 +133,7 @@ LABEL io.pokus.author="Jean-Baptiste Lasselle <jean.baptiste.lasselle.pokus@gmai
 LABEL io.pokus.maintainer="Jean-Baptiste Lasselle <jean.baptiste.lasselle.pokus@gmail.com>"
 
 
-ARG HUGO_BASE_URL=https://jean-baptiste-lasselle.github.io/whoami/
+ARG HUGO_BASE_URL=https://jean-baptiste-lasselle.github.io/whoami-web/
 ENV HUGO_BASE_URL=$HUGO_BASE_URL
 ARG HUGO_SERVER_BIND_ADDR=0.0.0.0
 ENV HUGO_SERVER_BIND_ADDR=$HUGO_SERVER_BIND_ADDR

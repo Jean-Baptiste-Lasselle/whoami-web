@@ -14,7 +14,7 @@ export CICD_BUILD_ID=${CICD_BUILD_ID:-"${GIT_COMMIT_ID}"}
 export CICD_BUILD_TIMESTAMP=$(date -u +'%Y-%m-%dT%H:%M:%S%Z')
 # will be pokusio/jb-lasselle-whoami-web
 export QUAY_OCI_IMAGE_TAG=${QUAY_OCI_IMAGE_TAG:-"0.0.1"}
-# export HUGO_BASE_URL="https://jean-baptiste-lasselle.github.io/whoami/"
+# export HUGO_BASE_URL="https://jean-baptiste-lasselle.github.io/whoami-web/"
 # export HUGO_BASE_URL="http://127.0.0.1:3112"
 # --
 # HUGO_SERVER_BIND_ADDR is the bind address of the hugo dev server inside container

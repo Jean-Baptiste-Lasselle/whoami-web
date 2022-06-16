@@ -24,7 +24,7 @@ git flow init --defaults
 
 # you  must be on develp : your feature branch must be suashed and merged
 
-export RELEASE_VERSION=${RELEASE_VERSION:-"0.0.1"}
+export RELEASE_VERSION=${RELEASE_VERSION:-"0.0.2"}
 export DEPLOYMENT_DOMAIN=jean-baptiste-lasselle.github.io
 export DEPLOYMENT_BASE_URL=https://${DEPLOYMENT_DOMAIN}/whoami-web
 export CUSTOM_DOMAIN_CNAME="false"
@@ -42,9 +42,9 @@ hugoBuild () {
 
   # -- Build for prod env (github pages)
   npm run oci:run:hugo:prod
+  cat public/blogs/index.html | grep 'github.io'
   cat public/blogs/index.html | grep 'localhost'
   cat public/blogs/index.html | grep '127'
-  cat public/blogs/index.html | grep 'github.io'
 }
 
 cleanCNAME () {

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>TypeScript on Devops Quant</title>
-    <link>https://jean-baptiste-lasselle.github.io/whoami/tags/typescript/</link>
+    <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/typescript/</link>
     <description>Recent content in TypeScript on Devops Quant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jun 2022 08:53:58 +0530</lastBuildDate><atom:link href="https://jean-baptiste-lasselle.github.io/whoami/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Jun 2022 08:53:58 +0530</lastBuildDate><atom:link href="https://jean-baptiste-lasselle.github.io/whoami-web/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>(WIP) Making sense of your tsconfig.json - episode 1</title>
-      <link>https://jean-baptiste-lasselle.github.io/whoami/blogs/making-sens-tsconfig/</link>
+      <link>https://jean-baptiste-lasselle.github.io/whoami-web/blogs/making-sens-tsconfig/</link>
       <pubDate>Thu, 09 Jun 2022 08:53:58 +0530</pubDate>
       
-      <guid>https://jean-baptiste-lasselle.github.io/whoami/blogs/making-sens-tsconfig/</guid>
+      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/blogs/making-sens-tsconfig/</guid>
       <description>I recently needed to develop an npx executable, and wanted to code in TypeScript.
 I therefore had to run again tsc --init, and that&amp;rsquo;s where I decided to write this series of articles, with the goal to deeply understand how to choose my tsconfig.json configuration options.
 In this series, I will not review every single option to explain what their purpose is :
