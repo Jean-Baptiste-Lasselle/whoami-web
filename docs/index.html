@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="generator" content="Hugo 0.100.2" /><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="icon" href=https://jean-baptiste-lasselle.github.io/whoami-web///images/devops_cycle_eight.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://jean-baptiste-lasselle.github.io/whoami-web//css/font.css" media="all">
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-DWJJVE27WD', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<meta property="og:title" content="Devops Quant" />
+<meta property="og:description" content="Text about my cool site" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jean-baptiste-lasselle.github.io/whoami-web/" /><meta property="og:site_name" content="Devops Quant - Gitops everywhere" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Devops Quant"/>
+<meta name="twitter:description" content="Text about my cool site"/>
+
+
+
+<link rel="stylesheet" href="https://jean-baptiste-lasselle.github.io/whoami-web//bootstrap-5/css/bootstrap.min.css" media="all">
+<link rel="stylesheet" href="https://jean-baptiste-lasselle.github.io/whoami-web//css/header.css" media="all">
+<link rel="stylesheet" href="https://jean-baptiste-lasselle.github.io/whoami-web//css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="https://jean-baptiste-lasselle.github.io/whoami-web//css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+</style>
+
+<meta name="description" content=Text&#32;about&#32;my&#32;cool&#32;site>
+<link rel="stylesheet" href="https://jean-baptiste-lasselle.github.io/whoami-web//css/index.css" media="all">
+<link rel="stylesheet" href="https://jean-baptiste-lasselle.github.io/whoami-web//css/projects.css" media="all">
+
+
+<script defer src="https://jean-baptiste-lasselle.github.io/whoami-web//fontawesome-5/all-5.15.4.js"></script>
+
+  <title>
+Devops Quant
+
+  </title>
+</head>
+
+<body class="light" onload="loading()">
+  
+  
+  <script src="https://jean-baptiste-lasselle.github.io/whoami-web//bootstrap-5/js/bootstrap.bundle.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/whoami-web">
+                
+                <img src="https://jean-baptiste-lasselle.github.io/whoami-web///images/devops_cycle_eight.png"
+                    class="devops quant logo d-inline-block align-top">
+                Devops Quant - Gitops everywhere
+                
+            </a>
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/whoami-web#about" aria-label="about">About</a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/whoami-web#experience"
+                            aria-label="experience">Experience</a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/whoami-web#education"
+                            aria-label="education">Education</a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/whoami-web#projects"
+                            aria-label="projects">Projects</a>
+                    </li>
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/whoami-web#contact"
+                            aria-label="contact">Contact</a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/whoami-web/blogs" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                
+                
+                <div class="text-center">
+                    <button id="theme-toggle">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </button>
+                </div>
+
+                
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="hero" class="py-5 align-middle">
+    <div class="container px-3 px-sm-5 px-md-5 px-lg-5 pt-lg-3">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-8 content" id="primary-font">
+                <span class="subtitle">
+                    Hi, my name is
+                </span>
+                <h2>
+                    Jean-Baptiste Lasselle.
+                </h2>
+                <h3>
+                    I&#39;m a Devops Quant
+                </h3>
+                <p class="hero-content">
+                    I love automating everything. I daily work with Kubernetes, terraform, pulumi, CI/CD, robots. I love coding, shell, <code>TypeScript</code>, <code>Golang</code>, <code>C</code>, and <code>rust</code> are my favorites languages.
+                </p>
+                <div class="row">
+                    <div class="col-auto h-100">
+                        
+                        
+                        <a href="/resume/en/pdf/CV-Jean-Baptiste-Lasselle.pdf" download="proposed_file_name" class="btn">
+                            Resume
+                        </a>
+                        
+                    </div>
+                    <div class="col-auto px-0 h-100"><span id="loading-icons" style="display: none;">
+    
+    <span class="px-1">
+        <a href="https://github.com/Jean-Baptiste-Lasselle" target="_blank" class="btn social-icon">
+            <i class="fab fa-github"></i>
+        </a>
+    </span>
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/jean-baptiste-lasselle-b704591b4/" target="_blank" class="btn social-icon">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </span>
+    
+    <span class="px-1">
+        <a href="https://www.twitch.tv/pokusio" target="_blank" class="btn social-icon">
+            <i class="fab fa-twitch"></i>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://keybase.io/jblasselle" target="_blank" class="btn social-icon">
+            <img src="https://jean-baptiste-lasselle.github.io/whoami-web///images/icon-keybase-logo-48.png">
+        </a>
+    </span>
+    
+</span>
+</div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-9 pt-5 image px-5 px-md-5 px-lg-0 text-center">
+                        <img src="https://jean-baptiste-lasselle.github.io/whoami-web///images/jblasselle_profile_pic.png"
+                            class="img-thumbnail mx-auto"
+                            alt=""
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-bottom-svg d-md-block d-lg-block d-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="201" height="201" viewBox="0 0 201 201">
+            <g id="Group_1168" data-name="Group 1168" transform="translate(-384 -1392)">
+                <rect id="Rectangle_2206" data-name="Rectangle 2206" width="12" height="2" rx="1"
+                    transform="translate(391 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2271" data-name="Rectangle 2271" width="12" height="2" rx="1"
+                    transform="translate(391 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2238" data-name="Rectangle 2238" width="12" height="2" rx="1"
+                    transform="translate(391 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2278" data-name="Rectangle 2278" width="12" height="2" rx="1"
+                    transform="translate(391 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2222" data-name="Rectangle 2222" width="12" height="2" rx="1"
+                    transform="translate(391 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2272" data-name="Rectangle 2272" width="12" height="2" rx="1"
+                    transform="translate(391 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2241" data-name="Rectangle 2241" width="12" height="2" rx="1"
+                    transform="translate(391 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2288" data-name="Rectangle 2288" width="12" height="2" rx="1"
+                    transform="translate(391 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2214" data-name="Rectangle 2214" width="12" height="2" rx="1"
+                    transform="translate(499 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2289" data-name="Rectangle 2289" width="12" height="2" rx="1"
+                    transform="translate(499 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2256" data-name="Rectangle 2256" width="12" height="2" rx="1"
+                    transform="translate(499 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2290" data-name="Rectangle 2290" width="12" height="2" rx="1"
+                    transform="translate(499 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2231" data-name="Rectangle 2231" width="12" height="2" rx="1"
+                    transform="translate(499 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2291" data-name="Rectangle 2291" width="12" height="2" rx="1"
+                    transform="translate(499 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2257" data-name="Rectangle 2257" width="12" height="2" rx="1"
+                    transform="translate(499 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2292" data-name="Rectangle 2292" width="12" height="2" rx="1"
+                    transform="translate(499 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2210" data-name="Rectangle 2210" width="12" height="2" rx="1"
+                    transform="translate(445 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2279" data-name="Rectangle 2279" width="12" height="2" rx="1"
+                    transform="translate(445 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2248" data-name="Rectangle 2248" width="12" height="2" rx="1"
+                    transform="translate(445 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2280" data-name="Rectangle 2280" width="12" height="2" rx="1"
+                    transform="translate(445 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2226" data-name="Rectangle 2226" width="12" height="2" rx="1"
+                    transform="translate(445 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2281" data-name="Rectangle 2281" width="12" height="2" rx="1"
+                    transform="translate(445 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2249" data-name="Rectangle 2249" width="12" height="2" rx="1"
+                    transform="translate(445 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2293" data-name="Rectangle 2293" width="12" height="2" rx="1"
+                    transform="translate(445 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2219" data-name="Rectangle 2219" width="12" height="2" rx="1"
+                    transform="translate(553 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2310" data-name="Rectangle 2310" width="12" height="2" rx="1"
+                    transform="translate(553 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2262" data-name="Rectangle 2262" width="12" height="2" rx="1"
+                    transform="translate(553 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2311" data-name="Rectangle 2311" width="12" height="2" rx="1"
+                    transform="translate(553 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2232" data-name="Rectangle 2232" width="12" height="2" rx="1"
+                    transform="translate(553 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2312" data-name="Rectangle 2312" width="12" height="2" rx="1"
+                    transform="translate(553 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2263" data-name="Rectangle 2263" width="12" height="2" rx="1"
+                    transform="translate(553 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2313" data-name="Rectangle 2313" width="12" height="2" rx="1"
+                    transform="translate(553 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2209" data-name="Rectangle 2209" width="12" height="2" rx="1"
+                    transform="translate(418 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2273" data-name="Rectangle 2273" width="12" height="2" rx="1"
+                    transform="translate(418 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2242" data-name="Rectangle 2242" width="12" height="2" rx="1"
+                    transform="translate(418 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2282" data-name="Rectangle 2282" width="12" height="2" rx="1"
+                    transform="translate(418 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2223" data-name="Rectangle 2223" width="12" height="2" rx="1"
+                    transform="translate(418 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2274" data-name="Rectangle 2274" width="12" height="2" rx="1"
+                    transform="translate(418 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2243" data-name="Rectangle 2243" width="12" height="2" rx="1"
+                    transform="translate(418 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2294" data-name="Rectangle 2294" width="12" height="2" rx="1"
+                    transform="translate(418 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2217" data-name="Rectangle 2217" width="12" height="2" rx="1"
+                    transform="translate(526 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2314" data-name="Rectangle 2314" width="12" height="2" rx="1"
+                    transform="translate(526 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2258" data-name="Rectangle 2258" width="12" height="2" rx="1"
+                    transform="translate(526 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2315" data-name="Rectangle 2315" width="12" height="2" rx="1"
+                    transform="translate(526 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2233" data-name="Rectangle 2233" width="12" height="2" rx="1"
+                    transform="translate(526 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2316" data-name="Rectangle 2316" width="12" height="2" rx="1"
+                    transform="translate(526 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2259" data-name="Rectangle 2259" width="12" height="2" rx="1"
+                    transform="translate(526 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2317" data-name="Rectangle 2317" width="12" height="2" rx="1"
+                    transform="translate(526 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2211" data-name="Rectangle 2211" width="12" height="2" rx="1"
+                    transform="translate(472 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2295" data-name="Rectangle 2295" width="12" height="2" rx="1"
+                    transform="translate(472 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2250" data-name="Rectangle 2250" width="12" height="2" rx="1"
+                    transform="translate(472 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2296" data-name="Rectangle 2296" width="12" height="2" rx="1"
+                    transform="translate(472 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2227" data-name="Rectangle 2227" width="12" height="2" rx="1"
+                    transform="translate(472 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2297" data-name="Rectangle 2297" width="12" height="2" rx="1"
+                    transform="translate(472 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2251" data-name="Rectangle 2251" width="12" height="2" rx="1"
+                    transform="translate(472 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2298" data-name="Rectangle 2298" width="12" height="2" rx="1"
+                    transform="translate(472 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2221" data-name="Rectangle 2221" width="12" height="2" rx="1"
+                    transform="translate(580 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2318" data-name="Rectangle 2318" width="12" height="2" rx="1"
+                    transform="translate(580 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2264" data-name="Rectangle 2264" width="12" height="2" rx="1"
+                    transform="translate(580 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2319" data-name="Rectangle 2319" width="12" height="2" rx="1"
+                    transform="translate(580 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2236" data-name="Rectangle 2236" width="12" height="2" rx="1"
+                    transform="translate(580 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2320" data-name="Rectangle 2320" width="12" height="2" rx="1"
+                    transform="translate(580 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2265" data-name="Rectangle 2265" width="12" height="2" rx="1"
+                    transform="translate(580 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2321" data-name="Rectangle 2321" width="12" height="2" rx="1"
+                    transform="translate(580 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2207" data-name="Rectangle 2207" width="12" height="2" rx="1"
+                    transform="translate(396 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2270" data-name="Rectangle 2270" width="12" height="2" rx="1"
+                    transform="translate(396 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2239" data-name="Rectangle 2239" width="12" height="2" rx="1"
+                    transform="translate(396 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2283" data-name="Rectangle 2283" width="12" height="2" rx="1"
+                    transform="translate(396 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2224" data-name="Rectangle 2224" width="12" height="2" rx="1"
+                    transform="translate(396 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2275" data-name="Rectangle 2275" width="12" height="2" rx="1"
+                    transform="translate(396 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2244" data-name="Rectangle 2244" width="12" height="2" rx="1"
+                    transform="translate(396 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2299" data-name="Rectangle 2299" width="12" height="2" rx="1"
+                    transform="translate(396 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2215" data-name="Rectangle 2215" width="12" height="2" rx="1"
+                    transform="translate(504 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2300" data-name="Rectangle 2300" width="12" height="2" rx="1"
+                    transform="translate(504 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2252" data-name="Rectangle 2252" width="12" height="2" rx="1"
+                    transform="translate(504 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2301" data-name="Rectangle 2301" width="12" height="2" rx="1"
+                    transform="translate(504 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2228" data-name="Rectangle 2228" width="12" height="2" rx="1"
+                    transform="translate(504 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2302" data-name="Rectangle 2302" width="12" height="2" rx="1"
+                    transform="translate(504 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2253" data-name="Rectangle 2253" width="12" height="2" rx="1"
+                    transform="translate(504 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2303" data-name="Rectangle 2303" width="12" height="2" rx="1"
+                    transform="translate(504 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2212" data-name="Rectangle 2212" width="12" height="2" rx="1"
+                    transform="translate(450 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2284" data-name="Rectangle 2284" width="12" height="2" rx="1"
+                    transform="translate(450 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2245" data-name="Rectangle 2245" width="12" height="2" rx="1"
+                    transform="translate(450 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2285" data-name="Rectangle 2285" width="12" height="2" rx="1"
+                    transform="translate(450 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2229" data-name="Rectangle 2229" width="12" height="2" rx="1"
+                    transform="translate(450 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2286" data-name="Rectangle 2286" width="12" height="2" rx="1"
+                    transform="translate(450 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2246" data-name="Rectangle 2246" width="12" height="2" rx="1"
+                    transform="translate(450 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2304" data-name="Rectangle 2304" width="12" height="2" rx="1"
+                    transform="translate(450 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2218" data-name="Rectangle 2218" width="12" height="2" rx="1"
+                    transform="translate(558 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2322" data-name="Rectangle 2322" width="12" height="2" rx="1"
+                    transform="translate(558 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2266" data-name="Rectangle 2266" width="12" height="2" rx="1"
+                    transform="translate(558 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2323" data-name="Rectangle 2323" width="12" height="2" rx="1"
+                    transform="translate(558 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2234" data-name="Rectangle 2234" width="12" height="2" rx="1"
+                    transform="translate(558 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2324" data-name="Rectangle 2324" width="12" height="2" rx="1"
+                    transform="translate(558 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2267" data-name="Rectangle 2267" width="12" height="2" rx="1"
+                    transform="translate(558 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2325" data-name="Rectangle 2325" width="12" height="2" rx="1"
+                    transform="translate(558 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2208" data-name="Rectangle 2208" width="12" height="2" rx="1"
+                    transform="translate(423 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2276" data-name="Rectangle 2276" width="12" height="2" rx="1"
+                    transform="translate(423 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2240" data-name="Rectangle 2240" width="12" height="2" rx="1"
+                    transform="translate(423 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2287" data-name="Rectangle 2287" width="12" height="2" rx="1"
+                    transform="translate(423 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2225" data-name="Rectangle 2225" width="12" height="2" rx="1"
+                    transform="translate(423 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2277" data-name="Rectangle 2277" width="12" height="2" rx="1"
+                    transform="translate(423 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2247" data-name="Rectangle 2247" width="12" height="2" rx="1"
+                    transform="translate(423 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2305" data-name="Rectangle 2305" width="12" height="2" rx="1"
+                    transform="translate(423 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2216" data-name="Rectangle 2216" width="12" height="2" rx="1"
+                    transform="translate(531 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2326" data-name="Rectangle 2326" width="12" height="2" rx="1"
+                    transform="translate(531 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2260" data-name="Rectangle 2260" width="12" height="2" rx="1"
+                    transform="translate(531 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2327" data-name="Rectangle 2327" width="12" height="2" rx="1"
+                    transform="translate(531 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2235" data-name="Rectangle 2235" width="12" height="2" rx="1"
+                    transform="translate(531 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2328" data-name="Rectangle 2328" width="12" height="2" rx="1"
+                    transform="translate(531 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2261" data-name="Rectangle 2261" width="12" height="2" rx="1"
+                    transform="translate(531 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2329" data-name="Rectangle 2329" width="12" height="2" rx="1"
+                    transform="translate(531 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2213" data-name="Rectangle 2213" width="12" height="2" rx="1"
+                    transform="translate(477 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2306" data-name="Rectangle 2306" width="12" height="2" rx="1"
+                    transform="translate(477 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2254" data-name="Rectangle 2254" width="12" height="2" rx="1"
+                    transform="translate(477 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2307" data-name="Rectangle 2307" width="12" height="2" rx="1"
+                    transform="translate(477 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2230" data-name="Rectangle 2230" width="12" height="2" rx="1"
+                    transform="translate(477 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2308" data-name="Rectangle 2308" width="12" height="2" rx="1"
+                    transform="translate(477 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2255" data-name="Rectangle 2255" width="12" height="2" rx="1"
+                    transform="translate(477 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2309" data-name="Rectangle 2309" width="12" height="2" rx="1"
+                    transform="translate(477 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2220" data-name="Rectangle 2220" width="12" height="2" rx="1"
+                    transform="translate(585 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2330" data-name="Rectangle 2330" width="12" height="2" rx="1"
+                    transform="translate(585 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2268" data-name="Rectangle 2268" width="12" height="2" rx="1"
+                    transform="translate(585 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2331" data-name="Rectangle 2331" width="12" height="2" rx="1"
+                    transform="translate(585 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2237" data-name="Rectangle 2237" width="12" height="2" rx="1"
+                    transform="translate(585 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2332" data-name="Rectangle 2332" width="12" height="2" rx="1"
+                    transform="translate(585 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2269" data-name="Rectangle 2269" width="12" height="2" rx="1"
+                    transform="translate(585 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2333" data-name="Rectangle 2333" width="12" height="2" rx="1"
+                    transform="translate(585 1588) rotate(-180)" fill="#282f49" />
+            </g>
+        </svg>
+    </div>
+</section>
+
+
+<section id="about" class="py-0 py-sm-5">
+    <div class="container bg-transparent">
+        <h3 class="text-center bg-transparent">About Me</h3>
+        <div class="bg-transparent row justify-content-center px-3 py-5">
+            
+            <div class="col-sm-12 col-md-8 col-lg-4 mb-5 mb-sm-0 mb-md-5 mb-lg-0 d-none d-sm-none d-md-block">
+                <div class="image d-flex px-5">
+                    
+                    <img src="https://jean-baptiste-lasselle.github.io/whoami-web///images/technology_image.jpeg" class="img-thumbnail mx-auto rounded" alt="">
+                </div>
+            </div>
+            
+            <div class="col-sm-12 col-md-12 col-lg-8 content">
+                <p>I started as a Java Jee developers 15 years ago.
+I soon got interest into CICD, and since CICD also is infrastructure, I completely fell for infra, with
+Linux, Virtual Box, Openstack, Docker and Kubernetes.</p>
+<p>This how I became a devops without being aware, before the word even existed.</p>
+<p>Since 2015, I am focused on how to develop and operate softwares in a cloud world.</p>
+<p>I today am A Gitops Fanatic, an Evangelist in love with Cybernetics (Kubernetes Controllers, Operators, AutoScalability, self-healing abilities).</p>
+<p>One of my main interest today is developing <strong>Kubernetes Operators</strong>.</p>
+
+
+                
+                Here are a few technologies I&#39;ve been working with recently:
+                <ul>
+                    
+                    <li>Kubernetes</li>
+                    
+                    <li>Helm</li>
+                    
+                    <li>Terraform</li>
+                    
+                    <li>Pulumi</li>
+                    
+                    <li>AWS, Azure, GCP, OVH</li>
+                    
+                    <li>TypeScript</li>
+                    
+                    <li>Node</li>
+                    
+                    <li>Golang</li>
+                    
+                    <li>ViteJS</li>
+                    
+                    <li>HashiCorp Vault</li>
+                    
+                    <li>Rust</li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="experience" class="py-5">
+    <div class="container">
+
+        <h3 class="text-center">Some of my Experiences</h3>
+        <div class="row justify-content-center">
+          <div class="d-grid gap-2 col-4 mx-auto">
+            
+              <a href="https://jean-baptiste-lasselle.github.io/whoami-web///resume/en/pdf/CV-Jean-Baptiste-Lasselle.pdf" download="proposed_file_name" class="btn btn-lg btn-primary">
+                Download My Full Resume
+              </a>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-8 col-lg-8 py-5">
+                <div class="experience-container px-3 pt-2">
+                    <ul class="nav nav-pills mb-3 bg-transparent" id="pills-tab" role="tablist">
+                        
+                        
+                        <li class="nav-item px-1 bg-transparent" role="presentation">
+                            <div
+                                class="nav-link active bg-transparent"
+                                aria-selected="true"
+                                type="button"
+                                role="tab"
+                                data-bs-toggle="pill"
+                                id='Gravitee-July-2020---March-2022-tab'
+                                data-bs-target='#pills-Gravitee-July-2020---March-2022'
+                                aria-controls='Gravitee-July-2020---March-2022'
+                            >
+                                Gravitee
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item px-1 bg-transparent" role="presentation">
+                            <div
+                                class="nav-link bg-transparent"
+                                aria-selected="true"
+                                type="button"
+                                role="tab"
+                                data-bs-toggle="pill"
+                                id='Cresh-May-2020---August-2019-tab'
+                                data-bs-target='#pills-Cresh-May-2020---August-2019'
+                                aria-controls='Cresh-May-2020---August-2019'
+                            >
+                                Cresh
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item px-1 bg-transparent" role="presentation">
+                            <div
+                                class="nav-link bg-transparent"
+                                aria-selected="true"
+                                type="button"
+                                role="tab"
+                                data-bs-toggle="pill"
+                                id='SFR-July-2019---October-2019-tab'
+                                data-bs-target='#pills-SFR-July-2019---October-2019'
+                                aria-controls='SFR-July-2019---October-2019'
+                            >
+                                SFR
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item px-1 bg-transparent" role="presentation">
+                            <div
+                                class="nav-link bg-transparent"
+                                aria-selected="true"
+                                type="button"
+                                role="tab"
+                                data-bs-toggle="pill"
+                                id='Bosstek-April-2018-–-November-2018-tab'
+                                data-bs-target='#pills-Bosstek-April-2018-–-November-2018'
+                                aria-controls='Bosstek-April-2018-–-November-2018'
+                            >
+                                Bosstek
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item px-1 bg-transparent" role="presentation">
+                            <div
+                                class="nav-link bg-transparent"
+                                aria-selected="true"
+                                type="button"
+                                role="tab"
+                                data-bs-toggle="pill"
+                                id='Vierling-Feb-2016---Jan-2018-tab'
+                                data-bs-target='#pills-Vierling-Feb-2016---Jan-2018'
+                                aria-controls='Vierling-Feb-2016---Jan-2018'
+                            >
+                                Vierling
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item px-1 bg-transparent" role="presentation">
+                            <div
+                                class="nav-link bg-transparent"
+                                aria-selected="true"
+                                type="button"
+                                role="tab"
+                                data-bs-toggle="pill"
+                                id='SPVC-June-2013---July-2015-tab'
+                                data-bs-target='#pills-SPVC-June-2013---July-2015'
+                                aria-controls='SPVC-June-2013---July-2015'
+                            >
+                                SPVC
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item px-1 bg-transparent" role="presentation">
+                            <div
+                                class="nav-link bg-transparent"
+                                aria-selected="true"
+                                type="button"
+                                role="tab"
+                                data-bs-toggle="pill"
+                                id='Michael-Page-Jan-2012---December-2012-tab'
+                                data-bs-target='#pills-Michael-Page-Jan-2012---December-2012'
+                                aria-controls='Michael-Page-Jan-2012---December-2012'
+                            >
+                                Michael Page
+                            </div>
+                        </li>
+                        
+                        
+                    </ul>
+                    <div class="tab-content pb-5 pt-2 bg-transparent primary-font" id="pills-tabContent">
+                        
+                        
+                        <div
+                            class="tab-pane fade show active bg-transparent"
+                            role="tabpanel"
+                            id='pills-Gravitee-July-2020---March-2022'
+                            aria-labelledby='pills-Gravitee-July-2020---March-2022-tab'
+                        >
+                            <div>
+                                <span class="h4">Devops Tech Lead</span>
+                                <small>-</small>
+                                <a href="https://gravitee.io" target="_blank">Gravitee</a>
+                                <div class="pb-1">
+                                    <small>July 2020 - March 2022</small>
+                                    
+                                    <span class="p-2">
+                                        <span
+                                            style="cursor: pointer;"
+                                            data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            data-bs-original-title=Working&#32;as&#32;a&#32;Devops&#32;Tech&#32;Lead&#32;at&#32;Gravitee
+                                        >
+                                            <i class="fas fa-info-circle fa-xs"></i>
+                                        </span>
+                                    </span>
+                                    
+                                </div>
+
+                                
+                                <div class="py-2 featuredLink">
+                                    <a class="p-2 px-4 btn btn-outline-primary btn-sm" href=https://github.com/gravitee-io target="_blank">
+                                        Gravitee is Open Source!
+                                    </a>
+                                </div>
+                                
+                            </div>
+
+                            <ul>
+<li><strong>Devops stack</strong> : <code>Pulumi</code>, <code>Terraform</code>, <code>Helm</code>, <code>Docker</code>, <code>Kubernetes</code>, <code>K3D</code>, <code>Azure</code> <code>AKS</code>, <code>AWS</code> <code>EKS</code>, <code>FluxCD</code>.</li>
+<li><strong>OS</strong> : <code>Debian</code>, <code>alpine</code>, and many dockerized <code>Linux</code> distros</li>
+<li><strong>Dev stack</strong> : <code>NodeJS</code> <code>TypeScript</code>, <code>Python</code>, <code>bash</code> / <code>sh</code> <code>shell</code>, <code>Golang</code>.</li>
+</ul>
+<p>Devops at Gravitee, Kubernetes SME, I competely re-designed i re-implemented the whole Gravitee CI
+CD, migrating from Jenkins to Circle CI on the way.
+I today am a top expert about Circle CI and Gitops based approaches.
+I am extremely proud that I had the opportunity to work with the <a href="https://gravitee.io">https://gravitee.io</a> Team, a World Class Team of
+Software Engineers, from which i deeply learned about many topics.
+I also there learned a lot about what is, and what brings, cybernetics in the real cloud industry world. In particular, it is there that i started working on Kubenetes Operators.</p>
+<ul>
+<li><code>Kubernetes</code> SME</li>
+<li>Full design, implementation, and migration of the whole of the Gravitee CICD System. In particular, I had to design and implement a very unique CICD component, using <code>NodeJS</code>, <code>TypeScript</code>, <code>RxJS</code>, a component to orchestrate Pipeline executions in a multi git repository context, bringing scalability and removing Single Points of Failures.</li>
+<li>Implementation of all standard operations using pure infra as code of gravitee hosted offers (deployment, backup, restore, upgrades, downgrades, cloud provider migrations, etc.).</li>
+<li>Design of hosted saas offers fo the Gravitee API Gateway,</li>
+<li>Design of best architecture practices for Gravitee API Gateway users.</li>
+<li><code>CircleCI</code> Evangelist for the Dev Engineers</li>
+<li>Training junior devops engineers</li>
+<li>Level 3 Support for Gravitee Customers, example : design and provisioning of a <code>VPN</code> Gateway between <code>Azure</code> and Google <code>GCP</code></li>
+</ul>
+
+                        </div>
+                        
+                        
+                        
+                        <div
+                            class="tab-pane fade bg-transparent"
+                            role="tabpanel"
+                            id='pills-Cresh-May-2020---August-2019'
+                            aria-labelledby='pills-Cresh-May-2020---August-2019-tab'
+                        >
+                            <div>
+                                <span class="h4">Devops Engineer</span>
+                                <small>-</small>
+                                <a href="https://cresh.eu" target="_blank">Cresh</a>
+
+                                <div class="pb-1">
+                                    <small>May 2020 - August 2019</small>
+                                    
+                                    <span class="p-2">
+                                        <span
+                                            style="cursor: pointer;"
+                                            data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            data-bs-original-title=Worked&#32;as&#32;a&#32;Devops&#32;Engineer&#32;at&#32;Cresh
+                                        >
+                                            <i class="fas fa-info-circle fa-xs"></i>
+                                        </span>
+                                    </span>
+                                    
+                                </div>
+
+                                
+                                <div class="py-2 featuredLink">
+                                    <a class="p-2 px-4 btn btn-outline-primary btn-sm" href=https://cresh.eu target="_blank">
+                                        cresh
+                                    </a>
+                                </div>
+                                
+                            </div>
+
+                            <div class="pt-2">
+                                <ul>
+<li><strong>Devops stack</strong> : <code>Pulumi</code>, <code>Helm</code>, <code>Docker</code>, <code>Kubernetes</code>, <code>AWS EKS</code>, <code>Gravitee API Gateway</code>.</li>
+<li><strong>OS</strong> : <code>Debian</code>, <code>Alpine</code>.</li>
+<li><strong>Dev stack</strong> : <code>NodeJS</code> <code>TypeScript</code>, <code>bash</code> / <code>sh</code> shell.</li>
+</ul>
+<p>At <a href="https://cresh.eu">https://cresh.eu</a>, a small french Startup, I worked on designing and implementing the entire Cloud
+Infrastruture, 100 % <code>Kubernetes</code> based : Cresh offer is a SAS Offer, an innovative b2b payment solution.
+AWS EKS, Helm deployment of dev’s work, <code>Gravitee</code> API Gateway. <a href="https://gravitee.io">https://gravitee.io</a> founders heard
+of me because of the work I did there at cresh.
+Small Startup when I helped them, I was at the time the only devops engineer, and massively used
+<code>Pulumi</code>, <code>Packer</code> and <code>Terraform</code>.
+<em>Having major architecture and technical points of disagreement with the CTO, we together agreed to
+end our collaboration.</em></p>
+<ul>
+<li>Devops SME / Cloud Architect, full infrastructure design</li>
+<li><code>Kubernetes</code> SME</li>
+<li>Main <code>Kubernetes</code> Cluster Terraformation Automation.</li>
+</ul>
+
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div
+                            class="tab-pane fade bg-transparent"
+                            role="tabpanel"
+                            id='pills-SFR-July-2019---October-2019'
+                            aria-labelledby='pills-SFR-July-2019---October-2019-tab'
+                        >
+                            <div>
+                                <span class="h4">Devops Engineer</span>
+                                <small>-</small>
+                                <a href="https://sfr.fr" target="_blank">SFR</a>
+
+                                <div class="pb-1">
+                                    <small>July 2019 - October 2019</small>
+                                    
+                                    <span class="p-2">
+                                        <span
+                                            style="cursor: pointer;"
+                                            data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            data-bs-original-title=Worked&#32;as&#32;a&#32;Devops&#32;Engineer&#32;at&#32;SFR
+                                        >
+                                            <i class="fas fa-info-circle fa-xs"></i>
+                                        </span>
+                                    </span>
+                                    
+                                </div>
+
+                                
+                                <div class="py-2 featuredLink">
+                                    <a class="p-2 px-4 btn btn-outline-primary btn-sm" href=https://sfr.fr target="_blank">
+                                        sfr
+                                    </a>
+                                </div>
+                                
+                            </div>
+
+                            <div class="pt-2">
+                                <ul>
+<li><strong>Devops stack</strong> : <code>Ansible</code>, <code>Docker</code>, <code>Gitlab EE</code>, <code>Jenkins</code> Pipelines, <code>LVM</code>, <code>Cisco NSO</code>, <code>Cisco KUBAM</code> for PXEless boot, SSH Bastions.</li>
+<li><strong>OS</strong> : <code>Windows</code>, <code>Linux CentOS 7</code></li>
+<li><strong>Dev stack</strong> : <code>Python 2</code> <code>Python 3</code> <code>PyEnv</code> .</li>
+</ul>
+<p>Devops contractor at SFR (French ISP and phone operator), <code>Cisco NSO</code> project Team (SDN).
+In charge of datacenter deployment automation and operations in the context of the new <code>5G</code> network deployment.</p>
+<ul>
+<li>I worked on designing and deploying a full devops stack, for developers to git push their <code>Python</code> source code, ending with their code deployment to production Cisco NSO devices. I even had, on the SFR request, to build from source docker registry it self : SFR needed its CICD platform to be &ldquo;fully built from source&rdquo; (docker, registry, etc.), and that, for security constraints.</li>
+<li>I was a CI/CD evangelist on this <code>Cisco NSO</code> project (networks engineers do not have the same culture as Dev Engineers, to say the least). This included introducing and training network engineers on git, and why Gitlab and Gityhub are our everyday Facebook (As I use to say, <em><code>Facebook</code> is our today’s real office</em>).</li>
+<li>I designed git workflows, trained on how to operate Gitlab EE as an infrastructure on premise : software engineers at SFR, were in charge of operating their own Gitlab EE.</li>
+<li>I took a <code>Cisco NSO</code> training session at Cisco, on how to automate bare metal provisioning of Cisco NSO Clusters, in « Issy les Moulineaux » a French city close to Paris.</li>
+<li>With those duties, I worked with more than 100 engineers, coming from 3 different teams :
+<ul>
+<li>pure Infrastructure team (those who own the OpenStack),</li>
+<li>software development teams,</li>
+<li>network engineers teams</li>
+</ul>
+</li>
+</ul>
+
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div
+                            class="tab-pane fade bg-transparent"
+                            role="tabpanel"
+                            id='pills-Bosstek-April-2018-–-November-2018'
+                            aria-labelledby='pills-Bosstek-April-2018-–-November-2018-tab'
+                        >
+                            <div>
+                                <span class="h4">Devops Engineer</span>
+                                <small>-</small>
+                                <a href="https://bosstek.fr" target="_blank">Bosstek</a>
+
+                                <div class="pb-1">
+                                    <small>April 2018 – November 2018</small>
+                                    
+                                    <span class="p-2">
+                                        <span
+                                            style="cursor: pointer;"
+                                            data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            data-bs-original-title=Worked&#32;as&#32;a&#32;Devops&#32;Engineer&#32;at&#32;Bosstek
+                                        >
+                                            <i class="fas fa-info-circle fa-xs"></i>
+                                        </span>
+                                    </span>
+                                    
+                                </div>
+
+                                
+                                <div class="py-2 featuredLink">
+                                    <a class="p-2 px-4 btn btn-outline-primary btn-sm" href=https://bosstek.fr target="_blank">
+                                        Bosstek
+                                    </a>
+                                </div>
+                                
+                            </div>
+
+                            <div class="pt-2">
+                                <ul>
+<li><strong>Devops stack</strong> : <code>Terraform</code>, <code>Ansible</code>, <code>Jenkins</code> Pipline, <code>Docker</code> (docker-compose) , <code>NGINX</code>, <code>Gravitee.io</code> (API Gateway), <code>Keycloak</code> (OpenID Connect explicit flow), <code>Kubernetes</code>, <code>ELK</code>.</li>
+<li><strong>OS</strong> : <code>Debian Stretch</code>  &amp; <code>Ubuntu Server</code></li>
+<li><strong>Dev stack</strong> : <code>Karma</code> / <code>Jasmine</code>, <code>Jenkins</code>, <code>Maven</code>, <code>Nexus Sonatype</code>, <code>GIT</code>, <code>bitbucket</code>, <code>NODEJS</code>, <code>NPM</code>, <code>Angular 5</code>, <code>ReactJS</code>, <code>MongoDB</code>, <code>JHipster</code>, <code>JBoss EAP</code>.</li>
+</ul>
+<p>Employee at Bosstek, a french consulting SMB, specialized into infrastructure management, that was
+my first experience in a « Pure Infra » company, and the first time i took that kind of angle into the
+devops market.</p>
+<p>I took part into 3 proejcts with Bosstek, for 3 different French Customers. This experience was very
+interesting, for I worked there with people who never ever worked in software development. I would say
+they were from the « old style » infrastructure world, and that is why i had a lot to learn with them.</p>
+<ul>
+<li>I worked in the core team of projects for huge companies : <a href="https://www.soprasteria.fr/"><strong>SOPRA Steria</strong></a>, <a href="ccc"><strong>ENEDIS</strong></a>, and <code>Carrrefour One Cloud</code>, as Devops SME / Cloud Architect.</li>
+<li>I have been Dev Engineers Team Leader At SOPRA STYERAI, where i worked under the authority of David Maurange.</li>
+<li>I also conducted two internal studies about in that company, where i was the only Kubernetes SME :
+<ul>
+<li>Production grade Kubernetes Cluster Ingress Controller best practices.</li>
+<li>A proposed solution of system monitoring with Rsyslog/Elastic Stack, (with a focus on CA servers restarts) : purpose was to have the company certified as a CA Authority delivering SSL/TLS certificates.</li>
+</ul>
+</li>
+<li>Working in the Carrefour One Cloud (a project in collaboration with Google), I there discovered for the first time the concept of Headless CMS, with <a href="https://strapi.io">https://strapi.io</a> , and it is the first time I worked on a production grade use of the Gravitee API Gateway.</li>
+</ul>
+
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div
+                            class="tab-pane fade bg-transparent"
+                            role="tabpanel"
+                            id='pills-Vierling-Feb-2016---Jan-2018'
+                            aria-labelledby='pills-Vierling-Feb-2016---Jan-2018-tab'
+                        >
+                            <div>
+                                <span class="h4">Java Dev Engineer - CI/CD SME</span>
+                                <small>-</small>
+                                <a href="http://www.dbeeset.com/fibercare/" target="_blank">Vierling</a>
+
+                                <div class="pb-1">
+                                    <small>Feb 2016 - Jan 2018</small>
+                                    
+                                    <span class="p-2">
+                                        <span
+                                            style="cursor: pointer;"
+                                            data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            data-bs-original-title=Worked&#32;as&#32;a&#32;Java&#32;Dev&#32;Engineer&#32;-&#32;CI/CD&#32;SME&#32;at&#32;Vierling
+                                        >
+                                            <i class="fas fa-info-circle fa-xs"></i>
+                                        </span>
+                                    </span>
+                                    
+                                </div>
+
+                                
+                                <div class="py-2 featuredLink">
+                                    <a class="p-2 px-4 btn btn-outline-primary btn-sm" href=http://www.dbeeset.com/fibercare/ target="_blank">
+                                        Vierling Communications (Today DBeeset)
+                                    </a>
+                                </div>
+                                
+                            </div>
+
+                            <div class="pt-2">
+                                <ul>
+<li><strong>Physics</strong> : Optics principles for OTDUs</li>
+<li><strong>Devops stack</strong> : <code>Ansible</code>, <code>PXE boot</code>, <code>PXE boot kickstart installations</code>, <code>Docker</code>, <code>Virtual Box</code>, <code>KVM</code>, <code>Free IPA Server</code>, <code>SSH</code> / <code>SCP</code>/ <code>WinSCP</code>, with a lot of bin/bashing.</li>
+<li><strong>OS</strong> : CentOS 6 &amp; 7, Ubuntu</li>
+<li><strong>CI stack</strong> : Gitlab, Artifactory, MAVEN3 Git, Eclipse JBoss Tools, Jenkins, Checkstyle, JMeter, JUnit, DbUnit, Jasmine + Karma, Wireshark &amp; wireshark dissectors</li>
+<li><strong>Dev stack</strong> : Java, JCA IronJacamar, JPA, Hibernate, WILDFLY, EJB3 Stateless &amp; MDBs&rsquo;, JAX-RS &amp; Resteasy, Apache Shiro, Leaflet, Angular, Linux Pluggable Authentication Mechanism, mariadb, postgresql/postgis, .Net Windows Service Application component, Visual Studio.</li>
+</ul>
+<p>Java Dev Enginer at Vierling-Communication, an R&amp;D company of the « Laudren Group » .
+R&amp;D main goal was to design and develop an cutting edghe network monitoring system.</p>
+<p>What was thrilling and extremely interesting in this experience, is that the system did not monitor
+software, but hardware, and in paritcular, the system goal mainly was to monitor Fiber Optics and
+Copper cables failures !</p>
+<p>The developed Monitoring system consisted in both hardware and software : pure Linux OS, java and C
+language.</p>
+<ul>
+<li>I worked on the software part which was the « brain » of the monitoring system : the server that collects all data from distributed systems, analyze them, and manages alerts, using JCA Components in a Jee JBoss EAP app.</li>
+<li>I introduced there bare metal provisioning : <code>PXE-</code> booted to deploy the whole stack, and i automated all that to be able to run reliable testing. That was my answer to « it is not possible to fully automate our solution deployment ».</li>
+<li>I introduced and convinced of the necessity of Acceptance Tests.</li>
+<li>I developed an authentication module implemented using <code>Jee</code> Listeners and <code>Spring</code> modularization</li>
+<li>I brought in <code>Docker</code>-ized deployments, the internal use of Pipelines using Gitlab on premises, the Java deployment happening in <code>JBoss EAP</code> (<code>Angular</code> 8/9 + <code>bootstrap</code> Web UI).</li>
+<li>Geolocation of hardware failures, so GIS matters, I introduced Leaflet on the Web UI This experience was a turning point for me : That is were I worked months with whom I consider my master as far as *NIX and what OS actually are, a « Linux Wizard » , <strong>Eric Lévenez</strong>, a man I will always remember.</li>
+</ul>
+
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div
+                            class="tab-pane fade bg-transparent"
+                            role="tabpanel"
+                            id='pills-SPVC-June-2013---July-2015'
+                            aria-labelledby='pills-SPVC-June-2013---July-2015-tab'
+                        >
+                            <div>
+                                <span class="h4">IT Architect - IT department founder</span>
+                                <small>-</small>
+                                <a href="#" target="_blank">SPVC</a>
+
+                                <div class="pb-1">
+                                    <small>June 2013 - July 2015</small>
+                                    
+                                    <span class="p-2">
+                                        <span
+                                            style="cursor: pointer;"
+                                            data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            data-bs-original-title=Worked&#32;as&#32;a&#32;IT&#32;Architect&#32;-&#32;IT&#32;department&#32;founder&#32;at&#32;SPVC
+                                        >
+                                            <i class="fas fa-info-circle fa-xs"></i>
+                                        </span>
+                                    </span>
+                                    
+                                </div>
+
+                                
+                            </div>
+
+                            <div class="pt-2">
+                                <ul>
+<li><strong>Operational</strong> : Gantt charts, Specific Terms and Conditions documents in building industry (CCTP in French) / Response to tenders (« Réponses à appel d’offres » in French) / supply chain management on a constuction site.</li>
+<li><strong>Devops stack</strong> : Chef.io, Virtual Box SOAP API, KVM Virtual Manager OS: CentOS 6.x, Ubuntu server</li>
+<li><strong>CI stack</strong> : Artifactory, MAVEN3 (M2E), Git, Eclipse (eclipse bpmn modeler), Jenkins, Checkstyle, JMeter, JUnit, Mockito, DbUnit.</li>
+<li><strong>Dev stack</strong> : Spring, JPA, Activiti BPMN engine, petals ESB / JBI java standard, tomcat 7, JAX-WS/ SOAP/ WSDL, JAX-RS, Spring WS, JSF2, Prime Faces, jQuery v2.x.x, JavaMail, Apache James server, Mailets.</li>
+<li><strong>Misc.</strong> : <strong><code>FM 200</code></strong> Fire protection systems&hellip; ?</li>
+</ul>
+<p>SPVC was an SMB of the contruction industry, specialized into fluids.</p>
+<p>I designed the first real Information System, conducted and took part in developments of software
+components required to deliver that first I.S.</p>
+<p>I thereafter structured the newly created IT department to be fit for production management.
+All in all, this was among my most craziest professional experiences, that made me learn a lot about
+who i am in the IT industry.</p>
+<p>Also my first experience as a pure Software guy, putting his hands unawarely into infrastrucutre.
+And finally, this is the point where I started there changing the way i definded my self : at that point, I
+used to say that i am a « FullStack » Architect.</p>
+<ul>
+<li>The Work began with the desing and implementation of a simple utility software, whose goal was to normalize Business Processes, especially for the commercial and build sites managers everyday tasks.</li>
+<li>I then made it production « almost » ready, by adding to it the seed of a DRP. The implemented services were relation to construction project management : Gantt Charts, Tasks Management, reporting.</li>
+<li>A second generation, redesigned IS turned it into a B.A.M. system (Business Activity Monitoring) using :
+<ul>
+<li>The Acitviti <code>BPMN</code> engine.</li>
+<li>A <code>JBI</code> ESB coupled to the BPMN engine, SOA architecture (all <code>BPMN</code> execution were invoked through the ESB, using JAX-WS / JAX-RS).</li>
+<li>15 users in January 2014, up to 30 end of 2014, then 40 end of 2015.</li>
+<li>As I first talked of the critical importance of a DRP, i was certainly not realizing how deeply I would dive into infrastructure management&hellip;</li>
+</ul>
+</li>
+<li>I built month weeks after weeks a small team consisteing of 3 to 5 developers and ops, I was the software architect with 2 developers, and manager for the 2 / 3 ops engineers (system enginrer, security engineer, network engineer).</li>
+<li>I was personnaly working on the CI system a classical recipe of <code>Git</code>, <code>Maven</code>, <code>Jenkins</code> (<code>Junit</code>, <code>DbUnit</code>, <code>Mockito</code>, etc&hellip;), Artifactory. All classics of that prehistorc times.</li>
+<li>One unthinkable thing happened there, where i lerned a lot about real infratructure , I conducted and designed a full server room: SPVC used on premises servers, the IS being used by employees from their tablets mainly (MTT french trademark Android tablet). A crazy experience where i learned what a datacenter really is, e.g. what material are used on the floor (epoxy) of datacenters, Server Hardware Benchmark, network backbone, DRP with FM200 fire systems, air colling, electricity etc&hellip;</li>
+</ul>
+
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div
+                            class="tab-pane fade bg-transparent"
+                            role="tabpanel"
+                            id='pills-Michael-Page-Jan-2012---December-2012'
+                            aria-labelledby='pills-Michael-Page-Jan-2012---December-2012-tab'
+                        >
+                            <div>
+                                <span class="h4">Java Dev Engineer</span>
+                                <small>-</small>
+                                <a href="https://www.michaelpage.com/" target="_blank">Michael Page</a>
+
+                                <div class="pb-1">
+                                    <small>Jan 2012 - December 2012</small>
+                                    
+                                    <span class="p-2">
+                                        <span
+                                            style="cursor: pointer;"
+                                            data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            data-bs-original-title=Worked&#32;as&#32;a&#32;Java&#32;Dev&#32;Engineer&#32;at&#32;Michael&#32;Page
+                                        >
+                                            <i class="fas fa-info-circle fa-xs"></i>
+                                        </span>
+                                    </span>
+                                    
+                                </div>
+
+                                
+                                <div class="py-2 featuredLink">
+                                    <a class="p-2 px-4 btn btn-outline-primary btn-sm" href=https://www.michaelpage.com/ target="_blank">
+                                        Michael Page International
+                                    </a>
+                                </div>
+                                
+                            </div>
+
+                            <div class="pt-2">
+                                <ul>
+<li><strong>Devops stack</strong> : empty</li>
+<li><strong>OS</strong> : <code>Windows</code></li>
+<li><strong>CI stack</strong> : <code>Maven</code>, <code>Tortoise SVN</code>, <code>JIRA</code>, <code>Jenkins</code>, <code>Nexus Sonatype.</code></li>
+<li><strong>Dev stack</strong> : <code>Tomcat 6</code>, <code>WebLogic 9</code>, <code>struts 1</code>, <code>Taglibs</code>, <code>Spring</code>, <code>hibernate</code>, <code>JUnit</code>, <code>JMX</code>, <code>JAXP</code>, <code>Log4J</code>, <code>Fractal Julia</code>, <code>Javamail</code>.</li>
+</ul>
+<p>At the heart of Michael Page’s IT Department (EMEA), I took part in the full revamping of Michael Page’s Inforamtion system, along with 10 à 15 Java Dev Engineers, 2/3 IT Architects, QA and 10 Business Analysts.</p>
+<p>My personal scope was focused on the « backend » part of all software responsible for Candidates Processes Management, including the Candidates Assessment. This was my first professional
+experience into a major large scale IT Department of an International Corporation.</p>
+<ul>
+<li>In collaboration with IT Architects, and Business Analysts, I designed and implemented the &ldquo;candidate assessement&rdquo; components. That made me an SME on the Candidate Assessment functional scope.</li>
+<li>Learned a lot on HR Business Process in the real world</li>
+<li>Classic Java developmen, involving CI, using Maven, JUnit, on premise Nexus Sonatype repo. Some Java dependencies had to be « mavenized », some others already were.</li>
+<li>I took part in a huge Security Operation, because of a discovered major intrusion attack in Michael Page Information System, a long memorable pizza week-end&hellip;</li>
+<li>I started there being involved into topics of CI/CD and it the Infrastructure it relies on.</li>
+<li>I worked on a proposal for using the Fractal Julia Framework to refactor functional units along the IS revamping process.</li>
+</ul>
+
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="education" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Education</h3>
+        <div class="row justify-content-center py-5">
+            
+            
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    
+
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <small>2011</small>
+                                </div>
+                                <h5 class="card-title">Software Architect Engineer Degree</h5>
+                                
+                                
+                                <a href="https://www.ecoleql.fr/" target="_blank">
+                                    <h6>
+                                    AFCEPF
+                                    </h6>
+                                </a>
+                                
+
+                                
+                                <div class="py-1 education-content">
+                                    <p>Extracurricular Activities</p>
+<ul>
+<li>I took this degree to validate knowledge i gathered inb my professional experiences, and add more on top.</li>
+<li>I studied there softaware architecture / experimented new development techniques, learned about new test automation tools. Knowledge validated by multiple one wek projects along the cursus.</li>
+</ul>
+
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    
+
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <small>2007</small>
+                                </div>
+                                <h5 class="card-title">Software developer degree</h5>
+                                
+                                
+                                <a href="https://afcepf.fr" target="_blank">
+                                    <h6>
+                                    AFPA Paris
+                                    </h6>
+                                </a>
+                                
+
+                                
+                                <div class="py-1 education-content">
+                                    <p>I began my IT career with this degree</p>
+<ul>
+<li>.Net / Java development skills learned mainly.</li>
+<li>Visual Studio, Eclipse, ant, all classic knowledge about obejct oriented programming (static and dynamic polymorphisms, .net and Java JSE runtimes, J2ee), most well known framworks like Struts, J2ee Servlets, JSP etc.. JavaScript.</li>
+</ul>
+
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    
+
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <small>2000 - 2001</small>
+                                </div>
+                                <h5 class="card-title">DEUG MIAS (Mathematics, Undergraduation)</h5>
+                                
+                                
+                                <a href="https://www.sorbonne-universite.fr/en/sorbonne-universite-campus-pierre-et-marie-curie" target="_blank">
+                                    <h6>
+                                    Paris 6 University.
+                                    </h6>
+                                </a>
+                                
+
+                                
+                                <div class="py-1 education-content">
+                                    I there studied pure mathematics, First and Second year of undergradutation also learned the Scheme programming languaage
+Note that the former <a href="https://upmc.fr">https://upmc.fr</a> Paris 6 University website today does not exists anymore, for more infos my University, see <a href="https://en.wikipedia.org/wiki/Pierre_and_Marie_Curie_University">its wikipedia page</a>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    
+
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <small>1999</small>
+                                </div>
+                                <h5 class="card-title">DEUG SCVT, (Biochemistry, first year of Undergraduation)</h5>
+                                
+                                
+                                <a href="https://www.sorbonne-universite.fr/en/sorbonne-universite-campus-pierre-et-marie-curie" target="_blank">
+                                    <h6>
+                                    Paris 6 University.
+                                    </h6>
+                                </a>
+                                
+
+                                
+                                <div class="py-1 education-content">
+                                    After finishing High School and gradutated the french <em><strong>Baccalauréat S</strong></em>, I started studying Life Sciences and Biochemistry.
+Note that the former <a href="https://upmc.fr">https://upmc.fr</a> Paris 6 University website today does not exists anymore, for more infos my University, see <a href="https://en.wikipedia.org/wiki/Pierre_and_Marie_Curie_University">its wikipedia page</a>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+<section id="projects" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Projects</h3>
+        <div class="row justify-content-center px-3 px-md-5">
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3 h-100" title="Pokus">
+                    <div class="card-head">
+                        <img class="card-img-top" src="https://jean-baptiste-lasselle.github.io/whoami-web///images/pokus_logo.svg" alt="Pokus">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <div class="pb-2 bg-transparent">
+                            
+                        </div>
+                        <h5 class="card-title bg-transparent mt-1">Pokus</h5>
+                        <div class="card-text bg-transparent secondary-font">
+                            In my everyday Devops life, I deliver a lot of documentation, and prepare slide shows. I deliver them as websites, for example i am a big fan of https://gohugo.io. I started developing Pokus, The only distrbituted Headless CMS, as a tool to spin up new hugo websites very quickly. A demo will soon be available! :)
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer py-3">
+                        
+                        <span class="m-1 mx-2">
+                            <a href="mailto:?subject=Hugo%20Profile%20Template&amp;body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f" target="_blank">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://github.com/pokusio/pokus" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://github.com/pokusio/npx-hugo-gmented/tree/feature/init-npx-project" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://github.com/pokusio/hugo-gmented-theme" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://www.linkedin.com/in/jean-baptiste-lasselle-b704591b4/" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="float-end">
+
+                          
+                            <a class="btn btn-sm disabled" href="https://hugo-profile.netlify.app" target="_blank">
+                          
+                                Demo
+                            </a>
+                        </span>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</section>
+
+
+
+<section id="contact" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Get In Touch</h3>
+        <div class="px-0 px-md-5 px-lg-5">
+            <div class="row justify-content-center px-md-5">
+                <div class="col-md-8 py-3">
+                    <div class="text-center">
+                        My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+                    </div>
+                    
+                    <div class="text-center pt-3">
+                        <a href="mailto:jean.baptiste.lasselle@gmail.com" class="btn">
+                            Mail me
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    <div class="h3 text-center text-secondary py-3">Recent posts</div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/whoami-web/blogs/making-sens-tsconfig/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="(WIP) Making sense of your tsconfig.json - episode 1">(WIP) Making sense of …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>I recently needed to develop an npx executable, and wanted to code in TypeScript.
+I therefore had to run again tsc --init, and that&rsquo;s where I decided to write this series of articles, with the goal to deeply understand how to choose my tsconfig.json configuration options.
+In this series, I …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">June 9, 2022</span>
+                    <a href="/whoami-web/blogs/making-sens-tsconfig/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div><div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/Jean-Baptiste-Lasselle" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/jean-baptiste-lasselle-b704591b4/" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://jean-baptiste-lasselle.github.io/whoami-web/" title="Devops Quant">
+                    <img alt="Footer logo" src="https://jean-baptiste-lasselle.github.io/whoami-web///images/devops_cycle_eight.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2022  All Rights Reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+<script>
+    let loadingIcons;
+
+    function loading() {
+        myVar = setTimeout(showPage, 100);
+    }
+
+    function showPage() {
+        try{
+            document.getElementById("loading-icons").style.display = "block";
+        } catch(err) {}
+    }
+</script></body>
+
+</html>
