@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Devops Quant</title>
-    <link>https://jean-baptiste-lasselle.github.io/whoami/tags/</link>
+    <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/</link>
     <description>Recent content in Tags on Devops Quant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jun 2022 08:53:58 +0530</lastBuildDate><atom:link href="https://jean-baptiste-lasselle.github.io/whoami/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Jun 2022 08:53:58 +0530</lastBuildDate><atom:link href="https://jean-baptiste-lasselle.github.io/whoami-web/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hugo</title>
-      <link>https://jean-baptiste-lasselle.github.io/whoami/tags/hugo/</link>
+      <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/hugo/</link>
       <pubDate>Thu, 09 Jun 2022 08:53:58 +0530</pubDate>
       
-      <guid>https://jean-baptiste-lasselle.github.io/whoami/tags/hugo/</guid>
+      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>npx</title>
-      <link>https://jean-baptiste-lasselle.github.io/whoami/tags/npx/</link>
+      <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/npx/</link>
       <pubDate>Thu, 09 Jun 2022 08:53:58 +0530</pubDate>
       
-      <guid>https://jean-baptiste-lasselle.github.io/whoami/tags/npx/</guid>
+      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/tags/npx/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tsconfig.json</title>
-      <link>https://jean-baptiste-lasselle.github.io/whoami/tags/tsconfig.json/</link>
+      <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/tsconfig.json/</link>
       <pubDate>Thu, 09 Jun 2022 08:53:58 +0530</pubDate>
       
-      <guid>https://jean-baptiste-lasselle.github.io/whoami/tags/tsconfig.json/</guid>
+      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/tags/tsconfig.json/</guid>
       <description></description>
     </item>
     
     <item>
       <title>TypeScript</title>
-      <link>https://jean-baptiste-lasselle.github.io/whoami/tags/typescript/</link>
+      <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/typescript/</link>
       <pubDate>Thu, 09 Jun 2022 08:53:58 +0530</pubDate>
       
-      <guid>https://jean-baptiste-lasselle.github.io/whoami/tags/typescript/</guid>
+      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/tags/typescript/</guid>
       <description></description>
     </item>
     
