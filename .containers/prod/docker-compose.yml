@@ -5,10 +5,19 @@ services:
   pokus_dev:
     # we need extended, and nodejs for sass!
     image: pokusio/jb-lasselle-whoami-web:${QUAY_OCI_IMAGE_TAG}-dev
-    # container_name: pokus_dev
+    container_name: pokus_dev
+    user: $POKUS_USER_NAME
+    restart: always
+    environment:
+      # - HUGO_BASE_URL=https://jean-baptiste-lasselle.github.io/whoami/
+      # - HUGO_BASE_URL=http://127.0.0.1:3112
+      - HUGO_BASE_URL=http://127.0.0.1:1313
     volumes:
-      - type: bind
-        source: ./../../
-        target: /opt/app/staticvolumes:
+      - $PWD/../../:/pokus.io/hugo/src/:rw
+      # - type: bind
+        # source: ./../../
+        # target: /opt/app/staticvolumes:
+    ports:
+      - "127.0.0.1:1313:1313"
     env_file:
       - ./.dev.env
