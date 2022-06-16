@@ -55,12 +55,12 @@ ls -alh ./../../docs
 
 
 ```bash
-export WHOAMI_WEB_DESIRED_VERSION="0.0.1"
 export WHOAMI_WEB_DESIRED_VERSION="feature/framework"
 # git rev-parse --short=40 HEAD
 export WHOAMI_WEB_DESIRED_VERSION="fe7c7406aa674bf1440350fbfc8a8b41fa021885"
 
 export WHOAMI_WEB_DESIRED_VERSION="LIVE_RELOAD"
+export WHOAMI_WEB_DESIRED_VERSION="0.0.1"
 
 
 export WHERE_I_AM=$(pwd)
