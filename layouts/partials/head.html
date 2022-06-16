@@ -1,7 +1,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="icon" href={{ .Site.Params.staticPath }}/{{ .Site.Params.favicon | default "/fav.png" }} type="image/gif">
+<link rel="icon" href={{ default $.Site.BaseURL $.Site.Params.staticPath  }}/{{ .Site.Params.favicon | default "/fav.png" }} type="image/gif">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +11,7 @@
     rel="stylesheet">
 
 <!-- font configuration -->
-<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/font.css" media="all">
+<link rel="stylesheet" href="{{ default $.Site.BaseURL $.Site.Params.staticPath  }}/css/font.css" media="all">
 
 <!-- Internal templates -->
 {{ template "_internal/google_analytics_async.html" . }}
@@ -19,16 +19,16 @@
 {{ template "_internal/twitter_cards.html" . }}
 
 <!-- stylesheets -->
-<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/bootstrap-5/css/bootstrap.min.css" media="all">
-<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/header.css" media="all">
-<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/footer.css" media="all">
+<link rel="stylesheet" href="{{ default $.Site.BaseURL $.Site.Params.staticPath  }}/bootstrap-5/css/bootstrap.min.css" media="all">
+<link rel="stylesheet" href="{{ default $.Site.BaseURL $.Site.Params.staticPath  }}/css/header.css" media="all">
+<link rel="stylesheet" href="{{ default $.Site.BaseURL $.Site.Params.staticPath  }}/css/footer.css" media="all">
 
 <!-- theme -->
-<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/theme.css" media="all">
+<link rel="stylesheet" href="{{ default $.Site.BaseURL $.Site.Params.staticPath  }}/css/theme.css" media="all">
 
 <!-- Custom Styles -->
 {{ if .Site.Params.customCSS }}
-<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/style.css">
+<link rel="stylesheet" href="{{ default $.Site.BaseURL $.Site.Params.staticPath  }}/style.css">
 {{ end }}
 
 <style>
