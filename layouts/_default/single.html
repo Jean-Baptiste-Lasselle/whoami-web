@@ -19,14 +19,14 @@
           <div class="title mb-5">
             <h1 class="text-center mb-4">{{ .Title }}</h1>
             <div class="text-center">
-              {{ .Params.author }} 
+              {{ .Params.author }}
               <small>|</small>
               {{ .Date.Format "Jan 2, 2006" }}
             </div>
           </div>
           {{ if .Params.image }}
           <div class="featured-image">
-            <img class="img-fluid" src="{{ .Params.image }}" alt="{{ .Title }}">
+            <img class="img-fluid" src="{{.Site.Params.staticPath}}/{{ .Params.image }}" alt="{{ .Title }}">
           </div>
           {{ end }}
           <article class="page-content  p-2">
