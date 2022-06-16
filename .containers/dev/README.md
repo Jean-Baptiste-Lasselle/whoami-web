@@ -11,12 +11,13 @@ The hugo server works with live reload on port 1313 :
 ```Html
 `<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>`
 ```
+* note that the port number used for the WebSocket Connection is set by hugo to `1313` : this is why the docker compose must use that port bind outside container
 * see https://github.com/gohugoio/hugo/issues/8023#issuecomment-1157209642
 
-To be able to change the hotreload port number injected by the dev server, i will perhaps use a different dev seerver than the hugo server... That would allow to change port number, and keep live reload capabilty trough Websocket connection, without having to rebuild the docker image.
+To be able to change the live-reload port number injected by the hugo dev server, i will perhaps use a different dev server than the hugo server... That would allow to change port number, and keep live reload capabilty trough Websocket connection, without having to rebuild the docker image.
 
 
-## ANNEX Otehr Alternatives Hugo Images
+## ANNEX Other Alternatives Hugo Images
 
 
 * https://github.com/devopsdays/docker-hugo-server

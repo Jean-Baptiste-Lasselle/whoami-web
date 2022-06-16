@@ -14,7 +14,7 @@ For the `dev` environment docker image, we have the following specs :
 export WHOAMI_WEB_DESIRED_VERSION="0.0.1"
 export WHOAMI_WEB_DESIRED_VERSION="feature/framework"
 # git rev-parse --short=40 HEAD
-export WHOAMI_WEB_DESIRED_VERSION="4c9709d80c177efc729d5a10123f5fd91113a57b"
+export WHOAMI_WEB_DESIRED_VERSION="91b50c28c65921a12342889a8c0ba3e215924983"
 
 export WHERE_I_AM=$(pwd)
 export WHERE_I_WORK=$(mktemp -d -t "POKUS_HUGO_XXXXXX")
@@ -34,24 +34,6 @@ cd ./.containers/dev/
 # Then you can run an teardown the stack as many times as you wish
 ./.run.dev.sh
 # ./.teardown.dev.sh
-
-
-
-
-
-
-
-
-
-
-
-
-
-export WHERE_I_AM=$(pwd)
-export WHERE_I_WORK=$(mktemp -d -t "POKUS_HUGO_XXXXXX")
-
-echo "WHERE_I_WORK=[${WHERE_I_WORK}]"
-ls -alh ${WHERE_I_WORK}
 
 
 ```
