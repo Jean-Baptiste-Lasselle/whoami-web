@@ -14,7 +14,7 @@ For the `dev` environment docker image, we have the following specs :
 export WHOAMI_WEB_DESIRED_VERSION="0.0.1"
 export WHOAMI_WEB_DESIRED_VERSION="feature/framework"
 # git rev-parse --short=40 HEAD
-export WHOAMI_WEB_DESIRED_VERSION="91b50c28c65921a12342889a8c0ba3e215924983"
+export WHOAMI_WEB_DESIRED_VERSION="fe7c7406aa674bf1440350fbfc8a8b41fa021885"
 
 export WHERE_I_AM=$(pwd)
 export WHERE_I_WORK=$(mktemp -d -t "POKUS_HUGO_XXXXXX")
