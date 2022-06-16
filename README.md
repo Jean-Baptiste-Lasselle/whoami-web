@@ -17,7 +17,7 @@ npm run dev
 ```bash
 export WHERE_I_WAS=$(pwd)
 export WHERE_I_WORK=$(mktemp -d -t "POKUS_WHERE_I_WORK_XXXXXXXX")
-git clone git@github.com:radio-jaune/website.git ${WHERE_I_WORK}
+git clone git@github.com:jean-baptiste-lasselle/whoami-web.git ${WHERE_I_WORK}
 cd ${WHERE_I_WORK}
 git checkout master
 git flow init --defaults
