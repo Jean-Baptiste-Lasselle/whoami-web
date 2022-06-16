@@ -2,7 +2,7 @@
     {{ range .Site.Params.hero.socialLinks.fontAwesomeIcons }}
     <span class="px-1">
         <a href="{{ .url }}" target="_blank" class="btn social-icon">
-            <i class="{{ .icon }}"></i>
+            <i class="{{.Site.Params.staticPath}}/{{ .icon }}"></i>
         </a>
     </span>
     {{ end }}
