@@ -1,0 +1,16 @@
+# hugo generated folder
+public/
+node_modules/
+dist/
+
+# ignore generated env files
+.dev.env
+.staging.env
+.prod.env
+.env
+# --- log files
+*.log
+./.*/**/*.log
+# ./.containers/**/*.log
+# ./.containers/dev/*.*.*.log
+# ./.containers/dev/logs.docker.daemon.log
