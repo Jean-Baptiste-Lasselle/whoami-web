@@ -30,10 +30,10 @@
             <a class="navbar-brand primary-font text-wrap" href="{{ .Site.BaseURL | relURL }}">
                 {{ if or (.Site.Params.favicon) (.Site.Params.navbar.brandLogo) }}
                 <img src="{{ $.Site.BaseURL }}/{{ .Site.Params.navbar.brandLogo | default .Site.Params.favicon }}"
-                    class="devops quant logo d-inline-block align-top">
-                {{ .Site.Params.navbar.brandName | default .Site.Params.title }}
+                    class="devops quant logo d-inline-block align-top" />
+                {{ $.Site.Params.navbar.brandName | default .Site.Params.title }}
                 {{ else }}
-                {{ .Site.Params.navbar.brandName | default .Site.Params.title }}
+                {{ $.Site.Params.navbar.brandName | default .Site.Params.title }}
                 {{ end }}
             </a>
 
