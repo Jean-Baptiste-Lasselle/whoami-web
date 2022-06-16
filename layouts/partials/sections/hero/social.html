@@ -10,7 +10,7 @@
     {{ range .Site.Params.hero.socialLinks.customIcons }}
     <span class="px-1">
         <a href="{{ .url }}" target="_blank" class="btn social-icon">
-            <img src="{{ .icon }}">
+            <img src="{{.Site.Params.staticPath}}/{{ .icon }}">
         </a>
     </span>
     {{ end }}
