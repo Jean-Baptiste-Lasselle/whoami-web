@@ -28,6 +28,50 @@ This is the Eisode 1 of this series, which will uncover the un-uncoverable, the 
 <!-- more -->
 
 
+{{< sketchfigure
+    unique_name="ts_project_envs"
+    src="/images/posts/typescript/episode1/definitive-typescript-configuration.drawio.png"
+    link="/images/posts/typescript/episode1/achille-ecmascript.drawio.png"
+    target="_blank"
+    caption="TypeScript Project and target JavaScript Runtimes"
+    alt_msg="architecture diagram - TypeScript Project and target JavaScript Runtimes" >}}
+
+
+{{< sketchfigure
+  unique_name="js_runtime"
+  src="/images/posts/typescript/episode1/achille-ecmascript.drawio.png"
+  link="/images/posts/typescript/episode1/achille-ecmascript.drawio.png"
+  target="_blank"
+  caption="Architecture of A JavaScript Runtime"
+  alt_msg="architecture diagram - ecmascript runtime" >}}
+
+<!--
+
+{{< sketchdraw path="/images/posts/typescript/episode1/definitive-typescript-configuration.drawio.png" alt_msg="architecture diagram - typescript environments" >}}
+
+
+{{< sketchdraw path="/images/posts/typescript/episode1/definitive-typescript-configuration.drawio.png" alt_msg="architecture diagram - typescript environments" >}}
+
+
+-->
+
+<!--
+
++ src :       URL of the image to be displayed.
++ link :      If the image needs to be hyperlinked, URL of the destination.
++ target :    Optional target attribute for the URL if link parameter is set.
++ rel :       Optional rel attribute for the URL if link parameter is set.
++ alt :       Alternate text for the image if the image cannot be displayed.
++ title :     Image title.
++ caption :   Image caption. Markdown within the value of caption will be rendered.
++ class :     class attribute of the HTML figure tag.
++ height :    height attribute of the image.
++ width       width attribute of the image.
++ attr :      Image attribution text. Markdown within the value of attr will be rendered.
++ attrlink :  If the attribution text needs to be hyperlinked, URL of the destination.
+
+-->
+
 I first began with an extremely simple project consisting of the project structure as followed :
 
 ```bash

@@ -1,0 +1,114 @@
+<!--
+
+- layouts/shortcodes/tech-sketchdraw.html
+
+
+---------------------------
+
+  + src : the path to the image file
+  + alt_msg : the "Alt" text for the img  HTML tag
+  + alt_msg : the "target" attroibuite of the anchor HTML Tag for the hyperlink
+
+
+
+
+
+
+
+
+
+  + src :       URL of the image to be displayed.
+  + link :      If the image needs to be hyperlinked, URL of the destination.
+  + target :    Optional target attribute for the URL if link parameter is set.
+  + rel :       Optional rel attribute for the URL if link parameter is set.
+  + alt :       Alternate text for the image if the image cannot be displayed.
+  + title :     Image title.
+  + caption :   Image caption. Markdown within the value of caption will be rendered.
+  + class :     class attribute of the HTML figure tag.
+  + height :    height attribute of the image.
+  + width       width attribute of the image.
+  + attr :      Image attribution text. Markdown within the value of attr will be rendered.
+  + attrlink :  If the attribution text needs to be hyperlinked, URL of the destination.
+
+see https://getbootstrap.com/docs/4.1/content/figures/
+    https://getbootstrap.com/docs/5.1/content/figures/
+-->
+
+<div class="">
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- <div class="featured-image"> -->
+          <img src="{{ .Get "src" }}"
+          class="img-fluid img-thumbnail rounded-10"
+          {{- if or (.Get "alt_msg") (.Get "caption") }}
+          alt="{{ with .Get "alt_msg" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
+          {{- end -}}
+          {{- with .Get "width" }} width="{{ . }}"{{ end -}}
+          {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+          /><!-- Closing img tag -->
+          <div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<div class="featured-image">
+
+
+<figure{{ with .Get "class" }}  class="figure {{ . }}"{{ end }}>
+    {{- if .Get "link" -}}
+        <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+    {{- end -}}
+    <div class="featured-image">
+      <img src="{{ .Get "src" }}"
+      class="figure-img img-fluid img-thumbnail rounded-10"
+      {{- if or (.Get "alt_msg") (.Get "caption") }}
+      alt="{{ with .Get "alt_msg" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
+      {{- end -}}
+      {{- with .Get "width" }} width="{{ . }}"{{ end -}}
+      {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+      /><!-- Closing img tag -->
+    </div>
+
+
+
+    {{- if .Get "link" }}</a>{{ end -}}
+    {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
+        <figcaption class="figure-caption">
+            {{ with (.Get "title") -}}
+                <h4>{{ . }}</h4>
+            {{- end -}}
+            {{- if or (.Get "caption") (.Get "attr") -}}<p>
+                {{- .Get "caption" | markdownify -}}
+                {{- with .Get "attrlink" }}
+                    <a href="{{ . }}">
+                {{- end -}}
+                {{- .Get "attr" | markdownify -}}
+                {{- if .Get "attrlink" }}</a>{{ end }}</p>
+            {{- end }}
+        </figcaption>
+    {{- end }}
+</figure>
+</div>

@@ -297,3 +297,8 @@ img.devops.quant.logo {
  width: 30px!important;
  height: 30px!important;
 }
+
+
+.modal-dialog.devops.quant.blog.post {
+  max-width: unset!important;
+}
