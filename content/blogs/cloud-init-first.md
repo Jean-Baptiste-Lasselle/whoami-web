@@ -189,7 +189,28 @@ sudo cp cloud.cfg cloud.cfg.bak
 # ---
 # Config :
 # remove all that is about tools  
-# --
+# ---
+#   Configuration BOM :
+#    - The 'default_user' must be configured with :
+
+
+# default_user:
+#   name: pokus
+#   lock_passwd: False
+#   passwd:  $6$w0EKvYCt6WCC089b$rTO42dWCX6VIJhcAh5azQlgUll9TgKzs0BCA9upjRHpR70cZ07Cc52lzvHORZsApqGajH3YqKVQluyhmMwNy30
+#   # cat ~/.ssh/id_rsa.pub
+#   ssh_authorized_keys:
+#     - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAC etc...== pokus@pokusio.k3d
+#   gecos: Pokus
+#   groups: [adm, audio, cdrom, dialout, dip, floppy, netdev, plugdev, sudo, video]
+#   sudo: ["ALL=(ALL) NOPASSWD:ALL"]
+#   shell: /bin/bash
+
+
+
+#    - 'passwd' value must be set generated with 'mkpasswd' from 'whois' debian package
+#    - ''
+# ---
 # Configure Default User
 #
 # on debian default system user is named debian
@@ -220,8 +241,86 @@ echo "# --"
 echo "# Configure Default User"
 echo "# >> - >> - >> GENERATED_HASHED_PASSWD=[${GENERATED_HASHED_PASSWD}]"
 
+
 ```
 
+
+To generate your configuration file :
+
+* generate all secrets ( `sudo mkpasswd -m SHA-512 pokus` `ssh-keygen -t rsa -b 2048 ...`)
+
+* secure secrets in secret manager in `Bitnami's Kubeseal`
+```bash
+
+mkdir -p ~/.ssh.io.pokus.kube/.cluster_node1/
+
+ssh-keygen -t rsa -b 2048 -P '' -C 'pokus@pokusio.kube.node-1' -N '' -f ~/.ssh.io.pokus.kube/.cluster_node1/id_rsa
+
+
+chmod 700 -R ~/.ssh.io.pokus.kube/.cluster_node1/
+chmod 644 -R ~/.ssh.io.pokus.kube/.cluster_node1/id_rsa.pub
+chmod 600 -R ~/.ssh.io.pokus.kube/.cluster_node1/id_rsa
+
+export DEFAULT_USER_NAME="pokus"
+export DEFAULT_USER_CLEAR_PWD="pokus"
+export DEFAULT_USER_PWD_HASH="pokus"
+
+export DEFAULT_USER_PUBLIC_SSH_KEY=$(cat ~/.ssh.io.pokus.kube/.cluster_node1/id_rsa.pub)
+echo "   >>>>> DEFAULT_USER_PUBLIC_SSH_KEY = [${DEFAULT_USER_PUBLIC_SSH_KEY}]"
+
+# --- NExt steps at 15minutes in the video
+
+# curl -LO http://jean-baptiste-lasselle.github.io/whoami-web/blog/code/cloud-init/.etc.cloud.cloud.cfg.reference
+curl -LO http://127.0.0.1:1313/blog/code/cloud-init/.etc.cloud.cloud.cfg.reference
+cp ./.etc.cloud.cloud.cfg.reference ./.etc.cloud.cloud.applied.cfg
+
+# -- changing timezone
+sed -i "s# - timezone .*# - timezone \"Europe/Paris\"#" ./.etc.cloud.cloud.applied.cfg
+# -- set ssh_authorized_keys
+sed -i "s# - ssh-.*# - ${DEFAULT_USER_PUBLIC_SSH_KEY}#" ./.etc.cloud.cloud.applied.cfg
+# -- remove uncessary config like those related to puppet
+# edit interactive with vi ?
+# -- set hostname
+export POKUS_K8S_NODE1_HOSTNAME=node1.pokkus.io
+sed -i "s#^hostname:.*#hostname: ${POKUS_K8S_NODE1_HOSTNAME}#" ./.etc.cloud.cloud.applied.cfg
+
+
+
+
+
+
+
+
+
+
+curl -LO http://127.0.0.1:1313/blog/code/cloud-init/.cloud.cfg.d.99-fake_cloud.cfg.reference
+cp ./.cloud.cfg.d.99-fake_cloud.cfg.reference ./.cloud.cfg.d.99-fake_cloud.applied.cfg
+
+# sed -i "s###g" ./.cloud.cfg.d.99-fake_cloud.applied.cfg
+#
+# >>> no interpolation to perform
+
+if [ -f /etc/cloud/cloud.cfg.d/99-fake_cloud.cfg ]; then
+  sudo rm /etc/cloud/cloud.cfg.d/99-fake_cloud.cfg
+fi;
+sudo touch /etc/cloud/cloud.cfg.d/99-fake_cloud.cfg
+cat ./.cloud.cfg.d.99-fake_cloud.applied.cfg | sudo tee -a /etc/cloud/cloud.cfg.d/99-fake_cloud.cfg
+
+# ---
+# Apparently, we also have to delete a
+# System Symbolic Link in the networking part...
+if [ -f /etc/systemd/network/99-default.link ];then
+  sudo rm /etc/systemd/network/99-default.link
+  # if it exists it is symbolic link to /dev/null
+  # if it exists it prevents cloud-init from running
+fi;
+
+
+# I don't know why, but the author of video says
+# it's good to execute that 'clean' command, so let's do it...
+cloud-init clean
+
+```
 
 ## References
 
