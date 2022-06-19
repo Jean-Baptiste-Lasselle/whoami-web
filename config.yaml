@@ -52,7 +52,7 @@ params:
   staticPath: ""  # The path to serve the static files from
   # favicon: "/images/favico_logo_devops_jbl.png"
   favicon: "/images/devops_cycle_eight.png"
-
+  ShowCodeCopyButtons: true
   theme:
     disableThemeToggle: false
     # defaultTheme: "light" # dark
