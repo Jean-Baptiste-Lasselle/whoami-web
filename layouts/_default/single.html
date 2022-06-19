@@ -21,13 +21,14 @@
             <div class="text-center">
               {{ .Params.author }}
               <small>|</small>
-              {{ .Date.Format "Jan 2, 2006" }}
+              {{ .Params.date.Format "Monday, Jan 2, 2006" }}
             </div>
           </div>
           {{ if .Params.image }}
           <div class="featured-image">
             <img class="img-fluid" src="{{default $.Site.BaseURL $.Site.Params.staticPath }}/{{ .Params.image }}" alt="{{ .Title }}">
           </div>
+
           {{ end }}
           <article class="page-content  p-2">
           {{ .Content | emojify }}
@@ -35,9 +36,9 @@
         </div>
       </div>
       <div class="col-sm-12 col-md-12 col-lg-3">
-        <div class="sticky-sidebar">
+        <div class="sticky-sidebar overflow-auto">
           {{ if .Params.toc | default true}}
-          <aside class="toc">
+          <aside class="toc pokustoc">
               <h5>
                 Table Of Contents
               </h5>
@@ -60,7 +61,7 @@
 
           {{ if .Params.socialShare | default true }}
           <aside class="social">
-            <h5>Social</h5>
+            <h5>Share this post!</h5>
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">

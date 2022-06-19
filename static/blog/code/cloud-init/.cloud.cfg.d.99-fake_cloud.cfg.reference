@@ -1,0 +1,8 @@
+# Configure cloud-init for NoCloud
+#
+# ./cloud.cfg.d.99-fake_cloud.cfg
+#
+datasource_list: [ NoCloud, None ]
+datasource:
+  NoCloud:
+    fs_labem: system-boot

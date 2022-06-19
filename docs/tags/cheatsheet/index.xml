@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cheatsheet on Devops Quant</title>
+    <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/cheatsheet/</link>
+    <description>Recent content in cheatsheet on Devops Quant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Jun 2022 14:43:47 +0000</lastBuildDate><atom:link href="https://jean-baptiste-lasselle.github.io/whoami-web/tags/cheatsheet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo cheatsheet</title>
+      <link>https://jean-baptiste-lasselle.github.io/whoami-web/blogs/hugo-cheatsheet/</link>
+      <pubDate>Sun, 19 Jun 2022 14:43:47 +0000</pubDate>
+      
+      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/blogs/hugo-cheatsheet/</guid>
+      <description>What you will find here Every time I learn something useful about hugo, and I want to remember it, I add another paragraph here.
+Oh, you never heard about Hugo ? go visit https://gohugo.io !! :dash:
+Howtos ToC Change depth of ToC https://github.com/alex-shpak/hugo-book/issues/52#issuecomment-599609898
+#... A lot of configuration before # --- here the top Level configuration # element &amp;#39;markdown&amp;#39; is the one we # use to configure ToC level markup: # just to set ToC depth tableOfContents: endLevel: 4 startLevel: 2 # ordered: false #.</description>
+    </item>
+    
+  </channel>
+</rss>

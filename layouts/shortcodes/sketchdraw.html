@@ -1,0 +1,22 @@
+<!--
+
+- layouts/shortcodes/tech-sketchdraw.html
+
+
+---------------------------
+
+  + path : the path to the image file
+  + alt_msg : the "Alt" text for the img  HTML tag
+
+-->
+
+
+
+{{ $imageFilePath := (.Get "path") }}
+{{ $imageFilePath }}
+{{ .Get "path" }}
+{{ if $imageFilePath }}
+<div class="featured-image">
+  <img class="img-fluid" src="{{default $.Site.BaseURL $.Site.Params.staticPath }}/{{ $imageFilePath }}" alt="{{default $imageFilePath ( .Get "alt_msg" ) }}">
+</div>
+{{ end }}

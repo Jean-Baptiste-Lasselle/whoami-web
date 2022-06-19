@@ -6,17 +6,29 @@
     <description>Recent content in hugo on Devops Quant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jun 2022 08:53:58 +0530</lastBuildDate><atom:link href="https://jean-baptiste-lasselle.github.io/whoami-web/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jun 2022 14:43:47 +0000</lastBuildDate><atom:link href="https://jean-baptiste-lasselle.github.io/whoami-web/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo cheatsheet</title>
+      <link>https://jean-baptiste-lasselle.github.io/whoami-web/blogs/hugo-cheatsheet/</link>
+      <pubDate>Sun, 19 Jun 2022 14:43:47 +0000</pubDate>
+      
+      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/blogs/hugo-cheatsheet/</guid>
+      <description>What you will find here Every time I learn something useful about hugo, and I want to remember it, I add another paragraph here.
+Oh, you never heard about Hugo ? go visit https://gohugo.io !! :dash:
+Howtos ToC Change depth of ToC https://github.com/alex-shpak/hugo-book/issues/52#issuecomment-599609898
+#... A lot of configuration before # --- here the top Level configuration # element &amp;#39;markdown&amp;#39; is the one we # use to configure ToC level markup: # just to set ToC depth tableOfContents: endLevel: 4 startLevel: 2 # ordered: false #.</description>
+    </item>
+    
     <item>
       <title>(WIP) Making sense of your tsconfig.json - episode 1</title>
       <link>https://jean-baptiste-lasselle.github.io/whoami-web/blogs/making-sens-tsconfig/</link>
       <pubDate>Thu, 09 Jun 2022 08:53:58 +0530</pubDate>
       
       <guid>https://jean-baptiste-lasselle.github.io/whoami-web/blogs/making-sens-tsconfig/</guid>
-      <description>I recently needed to develop an npx executable, and wanted to code in TypeScript.
-I therefore had to run again tsc --init, and that&amp;rsquo;s where I decided to write this series of articles, with the goal to deeply understand how to choose my tsconfig.json configuration options.
-In this series, I will not review every single option to explain what their purpose is :
-I want to be able to understand globally the real nature of each of those options, I want to be able to make different configuration options choices, and understand why i will, when I will.</description>
+      <description>Get the Code! What you will find here I recently needed to develop an npx executable, and wanted to code in TypeScript.
+I therefore had to run again tsc --init.
+And that&amp;rsquo;s where I decided to write this series of articles, with a goal, to deeply understand how to choose my tsconfig.json configuration options.
+In this series, I will not review every single tsc command line option to explain what their purpose is :</description>
     </item>
     
   </channel>

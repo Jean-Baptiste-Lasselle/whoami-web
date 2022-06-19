@@ -2,30 +2,48 @@
 title: "(WIP) Making sense of your tsconfig.json - episode 1"
 date: 2022-06-09T08:53:58+05:30
 draft: false
-github_link: "https://github.com/gurusabarish/hugo-profile"
+github_link: "https://github.com/pokusio/npx-hugo-gmented"
+get_the_code: "https://github.com/pokusio/npx-hugo-gmented/tree/feature/init-npx-project/.gulp"
 author: "Jean-B. Lasselle"
 tags:
   - TypeScript
   - npx
   - hugo
   - tsconfig.json
-image: /images/post.jpg
+image: /images/posts/typescript/Typescript_logo_2020.svg
 description: ""
 toc:
 ---
 
 
+## Get the Code!
+
+{{< get_the_code get_the_code="https://github.com/pokusio/npx-hugo-gmented/tree/feature/init-npx-project/.gulp" get_the_code_youtube="https://www.youtube.com/watch?v=exeuvgPxd-E" >}}
+
+## What you will find here
+
 I recently needed to develop an `npx` executable, and wanted to code in `TypeScript`.
 
-I therefore had to run again `tsc --init`, and that's where I decided to write this series of articles, with the goal to deeply understand how to choose my `tsconfig.json` configuration options.
+I therefore had to run again `tsc --init`.
 
-In this series, I will not review every single option to explain what their purpose is :
+And that's where I decided to write this series of articles, with a goal, to deeply understand how to choose my `tsconfig.json` configuration options.
+
+In this series, I will not review every single `tsc` command line option to explain what their purpose is :
 * I want to be able to understand globally the real nature of each of those options,
 * I want to be able to make different configuration options choices, and understand why i will, when I will.
 
-This is the Eisode 1 of this series, which will uncover the un-uncoverable, the one thing we never dive into: the `tsconfig;json`
+This is the Episode 1 of this series, which will uncover again, the one thing we never dive into: the `tsconfig;json`
+
+
+> At the end of this post, we don't want a `tsconfig.json`, or even several one of them, instead, we want a methodology, which :
+> * we will use everytime we decide to start a new `TypeScript` project, to determine what `tsconfig.json` we choose.
+> * will allow us to make sure by means of **tests**, that our `TypeScript` configuration is fit, for our project
+> * we will consinuously improve.
+>
 
 <!-- more -->
+
+## The story
 
 
 I first began with an extremely simple project consisting of the project structure as followed :
@@ -39,7 +57,7 @@ $ tree -alh
 └── [ 207]  README.md
 
 1 directory, 3 files
-
+$ cat ./bin/index.js
 ```
 
 From there, I wanted the `./bin/index.js` to be compiled from `TypeScript`.
@@ -54,93 +72,15 @@ npx tsc --init --rootDir src --outDir bin
 
 ```
 
-And tha's where this work began.
-
-This work is about actually understanding how to start a new `TypeScript` project, a question which a lot of people have experienced, ending with les or more success.
-
-In the present work, I will in the conclusion explain you :
-
-* Why [this article](https://medium.com/@tommedema/typescript-confusion-tsconfig-json-module-moduleresolution-target-lib-explained-65db2c44b491) is completely wrong about probably every single one of its assertions.
-  * That the work behind this article is very likely to be reduced to:
-    * running `tsc --init --help`,
-    * reading the `--target`, `--module`, `--moduleResolution`, `--lib` documentation, misunderstanding it completely, and imagining foolish things like the assetion about polyfill
-  * That this article is completely missing the point especially about the `--lib` option, for one good reason :
-    * because "front end people", are really not used to what copmpilation is,
-    * for example they are not used to read and run a Makefile with several target systems,
-    * an,other example those developers would not ever be able to just quote one or two Golang compiler options
-    * even more than that, those people certainly have never worked with a framework like Spring,
-    * and they certainly do not understand a pattern like Abstract Factory in Java
-    * and they certainly do not understand what are:
-      * methods / function dynamic polymorphism (passing as arguments, objects from different types, only assuming those types implement one same interface)
-      * Java JRE Standard Override Mechanism :
-        * It is based on the `-Djava.endorsed.dirs <path to directory containing jars to load>`
-        * You can check in a java program the value of that `java.endorsed.dirs` Java JRE Sytstem variable, by excuting `System.getProperty("java.endorsed.dirs")`
-        * This system is well known for example :
-          * to set what implementation are used for networking example `CORBA` protocol used for webservices
-          * to set a specific XML SAX parser https://docs.oracle.com/javase/8/docs/technotes/guides/standards/
-      * see https://docs.oracle.com/javase/8/docs/technotes/guides/standards/ , the "`Endorsed Standards`" section.
-      * How you can implement an inversion of control / modularization framework using sring like techniques :
-        * in a configuration file, we find class names for objects, and maybe the path to the binary defining those classes
-        * the ioc program creates instances of that type (a Class is a Type), providing those classes do implement a given interfaces: in Spring Framework, that's called beans
-        * the program managed by ioc, runs with the provided instances, to complete its tasks.
-        * i will demo that :
-          * i will implement an ioc program and will deploy a demo app into that container
-          * i will compare using a rather recent java framework : https://quarkus.io/ and springboot
-          * all in distroless containers
-* How [this other article](https://docs.joshuatz.com/cheatsheets/node-and-npm/node-esm/#typescript---fully-resolved-import-filepaths-with-extensions) :
-  * shows much more interesting content about the problem of starting a TypeScript / NodeJS ESM Module project
-  * is astonishingly related to the reasons why I am developing `Hugo-Gmented`, starting with this repo's npx module, see indeed :
-    * [this other article](https://docs.joshuatz.com/cheatsheets/node-and-npm/node-esm/#typescript---fully-resolved-import-filepaths-with-extensions) was made by `joshuatz` on his personal website https://joshuatz.com/
-    * `Joshua TZ` made his personal website https://joshuatz.com/ using the [Gatsby](https://gatsby.io) 's Headless CMS, while I made my personal website using `Hugo` :
-      * There are 2 families of headless CMS , in this world : the Git based headless CMS, and the API based Headless CMS,
-      * Hugo is the world 's number one Git-based headless CMS by far
-      * Gatsby is the world's number one API-based headless CMS by far
-      * all other headless CMS in the world are in iether of those families, there are even hybrids, but none of them match `Gatsby` and `Hugo` :
-        * directus
-        * strapi
-        * etc...
-    * `Joshua TZ` 's Gtihub profile https://github.com/joshuatz has a few good looking and interesting things :
-      * How come he also worked with cloudinary :) (his little tool is interesting as far as pokus is concerned) : https://github.com/joshuatz/desktop-cloud-transform
-      * `Hugo Gmented` is related to one of my main projects : `Pokus`
-      * In one of the website project i worked on using `hugo`, I started indeed using image CDN management for deployment, especially using Gulp tasks for image processing :
-        * I used gulp taks to process tasks on iamge files : resizing, compressing, image transformations (adding special effects like blurring)
-        * I used deployment pipeline to deploy gulp processed images to iamge CDN :
-          * one gulp tasks would deploy image files to a CDN , in dev environment ( a local iamge CDN installed with docker comppose, it could even be directus used as a pure CDN)
-          * one gulp tasks would deploy image files to a CDN , in staging environment : cloudinary, if cloudinary accepts multiple envionments / organizations. I cloudinary would not support multiple organizations or environments, i will use Optimole on staging.
-          * one gulp tasks would deploy image files to a CDN , in production environment : cloudinary and / or Optimole, the one that has
-          * best would be that iamge CDNs support environment concept, in order to be able to have staging and production CDNs, and without relying on that, here is how i will implement that :
-            * staging and production environment images will be deployed to Cloudinary and Optimole: for each image, it is deployed either to Optimole, or to Cloudinary
-            * the same image, deployed to staging and production environments, changes only by the path to access the image. the change is made in the image file name using `${IMAGE_FILENAME}` for production,  `staging_${IMAGE_FILENAME}` for staging
-            * problem there, is that production is always up :
-              * we want to use as much as possible in the limits of any kind of plan: so we test that ability to manage not exceeding any given plan, using only free plans
-              * our goal is to deploy a set of images, across multiple CDNs, to take advantage as much as possible from all free plans of a given service, relying on multiple service providers
-              * Ok, so what will do constantly here is executing a gulp tasks which :
-                * for each iamge file
-                * upload the image file to one of the CDNs, based on a yaml configuration file `dogman.yaml`
-                *
-        * I naturally started looking for all image CDNs offering free plans, and among them I found `Cloudinary` : so did `Joshua TZ`, i think most fullstack developers / frontend devs who have worked in large websites projects, start by trying Cloudinary
 
 
 
-All in all, in a scond episode of this article we will :
-
-* Explain in detail ARchitecture at the center of all of this : Our TypeScript app lifecycle architecture, from source code to deployment
-* Explain what it is that front end dev don't understand :
-  * building a Goglang executable for different target artchitectures
-  * building a C language executable for different target artchitectures
-  * building 2 C language executables and make use of an API : programming a simple plugin system in C Language, with an API concept
-  * Building two Java applications to demonstrate programming a simple plugin system in C Language, with an API concept :
-    * we wil also demonstrate invrersion of Control and Dynamic Polymorphism patterns
+## Making sense of the `tsconfig.json`
 
 
-That will show what we actually mean by interface
-
-
-
-
-## Making sense of your `tsconfig.json` `TypeScript` configuration
-
-
+In this part, we will:
+* first prepare an environment to run tests: we are going to think, we want to be able to test our ideas.
+* then start using our brain: in [that part](#time-to-use-our-brain), we will gather facts, analyze, run tests, until we get
 
 
 ### Dockie Tests First
@@ -249,11 +189,29 @@ Version 4.7.2
 
 
 
-### It's now time to use our brain: the `tsconfig.json`
+### Time to use our brain
+
+Here is the little brain walk I planned :
+
+* [Facts about `tsc`](#facts-about-tsc): First, i'll state clear facts about that software called the `TypeScript` compiler, `tsc`
+* [Achille](#achille) : Here I explain in details, what a compiler is, so we are very clear about what we are talking about. This will for example be required to understand the `--lib` `tsc` compiler option, and what is the core of a programming language.
+* [JavaScript Core](#javascript-core) : Every programming language has _a core_, as explained with the `Achille` hero language. In this part we will learn things about the `JavaScript` core language, `EcmaScript`. This will help understanding the ``
+* [Architecture](#architecture) Here we'll draw the big picture, and we will identify questions we need to answer.
+* [Dive in Compiler Options details](#dive-in-compiler-options-details) : here we will make numerous tests to answer our questions. See also:
+  * https://github.com/pokusio/npx-hugo-gmented/tree/feature/init-npx-project/.gulp
+  * `TSLint`, `ESlint`, `prettier` configuration on top of `tsconfig.json` :
+    * https://github.com/pokusio/npx-hugo-gmented/blob/feature/init-npx-project/.gulp/.npm.scripts/project/dependencies.sh#L116
+    * https://github.com/pokusio/npx-hugo-gmented/blob/feature/init-npx-project/.gulp/.eslintrc.yaml
+    * https://github.com/pokusio/npx-hugo-gmented/blob/feature/init-npx-project/.gulp/.prettierrc.yaml
+* [Bring it together](#bring-it-all-together) : We will there pull out of our work, what we learned.
+
+
+
+#### Facts about `tsc`
 
 The `tsc` executable is the `TypeScript` compiler.
 
-Any GNU Option of the `tsc` `TypeScript` compiler match a configuration option in the `tsconfig.json` file :
+Any **GNU** Option of the `tsc` `TypeScript` compiler match a configuration option in the `tsconfig.json` file :
 * For any `tsc` compiler Option, we can choose to specify the option value, either by using a GNU Option, or a configuration property in the `tsconfig.json`.
 * To execute the `tsc` compiler command with as little GNU Options as possible, the `tsc --init` will persist all compiler GNU Options in the `tsconfig.json` file.
 
@@ -263,14 +221,17 @@ The `tsc --init` command has numerous GNU Options, all of which allow to change 
 
 For example if we execute the `TypeScript` compiler :
 * without the `tsc --init` GNU Option command.
-* and with the `tsc --noEmit` GNU Options, we can compile the `TypeScript` code without generating the compiled `JavaScript` code:
+* and with the `tsc --noEmit` GNU Options,
+* we then compile the `TypeScript` code without generating the compiled `JavaScript` code:
   * So this useful for just checking that your source code compiles, without generating any file (makes the compilation checks faster)
   * Another interesting variant of the `tsc --noEmit` GNU Option, is the `tsc --noEmitOnError` GNU Option: If any compilatin Error, no files are generated
-
+* And that's an example `TypeScript` compiler GNU Option which is **not a compiler configuration option
 
 #### Achille
 
-> _**Compiled or Interpreted**_
+> _**Compiled or Interpreted?**_
+
+
 
 There are only 2 ways to execute a JavaScript Software on a given machine :
 * **Compiled `JavaScript`** : Either we compile the JavaScript to machine native language, just like C language
@@ -280,7 +241,10 @@ Today, a vast majority of the `JavaScript` softwares are executed as **Interpret
 
 I just want to mention that there exists context where **Compiled `JavaScript`** is absolutely awesome and extremely interesting. I have for example heard of people working in hardware reverse engineering, where the y use JavaScript to dump CPU data from JTAG (Awesome ! :D )
 
-> _**JavaScript Core**_
+
+#### JavaScript Core
+
+> _**JavaScript Core Humanum est**_
 
 Right, now, realize this :
 * Imagine you are writing a software, which drives a robot.
@@ -295,42 +259,42 @@ Ok, so you loooove Robotics, that's why you learned the `Achille` Languague. It 
 And now you want to develop a software to work with another robot :
 * This new Robot does not have arms, neither does it have arms, but instead it has rockets to fly, and wheels to roll on a raod. Its name is `Bumblebee`.
 * Well, oh, the the `Achille` Languague, as you learned it, has commands to move arms and legs, but not to turn on/off rockets and tune its thrust power!
-* Ouch ! You have to make a pull request in the Github repo of the Achille languague, to that is is able to turn on rockets, and tune its rocket thrust, etc...!
+* Ouch ! You have to make a pull request in the Github repo of the `Achille` languague, to that is is able to turn on rockets, and tune its rocket thrust, etc...!
 * What would such a PR look like ?
-* Of course, the PR would not submit Achille language :
+* Of course, the PR would not submit `Achille` language :
   * It would submit Assembly languague, that can be executed into the `Bumblebee` CPU,
   * to be able to turn on/off rockets, and control the wheels and the wheels gaz engine, etc...
-* The new version of the Achille Language :
+* The new version of the `Achille` Language :
   * has now new commmands, to control wheels , wheels engine, and rockets
   * and it still has the commands to move arms, and legs
-* But hey, Why would I use an Achille compiler that can compile legs or arms commands, when i work on Bumblebee that has no legs and no arms ? It really is unuseful thing, and we are excellent engineers, we always get rid of anything unuseful.
-* Okay, so in the new version of Achille Language, i strip out the arm and legs commands.
+* But hey, Why would I use an `Achille` compiler that can compile legs or arms commands, when i work on Bumblebee that has no legs and no arms ? It really is unuseful thing, and we are excellent engineers, we always get rid of anything unuseful.
+* Okay, so in the new version of `Achille` Language, i strip out the arm and legs commands.
 
 Okay, now, my point is:
-* if you change enough the Robot, you may end up with changing completely, 100% of all the Achille Language,
-* So the 2 versions of the Achille language, have zero commands in comman, so they actually are 2 comletely different languages, (so Why call it the Achille Langguage at all, after all those changes ?)
+* if you change enough the Robot, you may end up with changing completely, 100% of all the `Achille` Language,
+* So the 2 versions of the `Achille` language, have zero commands in common, so they actually are 2 completely different languages, (so Why call it the `Achille` Language at all, after all those changes ?)
 
-In the end, you may wonder: Hey, but what actually is the Achille Language ?
+In the end, you may wonder: Hey, but what actually is the `Achille` Language ?
 
 
 In all programming languages, there are two types of "commands" (actually called _words_ and _sentences_, in the language theory) :
-* the commands that are related to a specific hardware (like moving arms, legs, tturning rockets on/off etc...)
-* the commands that have nothing to do with any hardwar at all :
+* the commands that are related to a specific hardware (like moving arms, legs, turning rockets on/off etc...)
+* the commands that have nothing to do with any hardware at all :
   * adding numbers does not depend at all on what hardware you run on, the operation has the exact same meaning and result, whatever the machine number representation is.
   * same about multiplying numbers
-  * same about modus operations
+  * same about moduli operations
   * same about boolean operations
   * same about quick sort algorithm (the quick sort algorithm is the same no matter the  hardware)
-  * same about the _words_ the Achiell Language uses to add a dependency used in my software
+  * same about the _words_ the `Achille` Language uses to add a dependency used in my software
   * etc...
 
-In other words, The part of the Achille Language which does not depend on the hardware, the _target Runtime_, where the software is going to be executed, is what actually what makes the Achielle Language. We could speak of the Achille _core_ language.
+In other words, The part of the `Achille` Language which does not depend on the hardware, the _target Runtime_, where the software is going to be executed, is what actually what makes the Achielle Language. We could speak of the `Achille` _core_ language.
 
 This may seem a long explanation, but very worthy: What is the Java Script Language?
 
 
 
-Since you are interested into JavaScrtipt, you do know that `JavaScript` Softwares are executed in a lot of different _target Runtimes_ :
+Since you are interested into `JavaScript`, you do know that `JavaScript` Softwares are executed in a lot of different _target Runtimes_ :
 * browsers. And among browsers there are different JavaScript Runtimes indeed: they do execute the same code with different results)
 * `nodejs`.
 * All of those Runtimes still execute code from the same language, `JavaScript`, and are all indeed JavaScript Runtimes, because :
@@ -345,9 +309,15 @@ Or said otherwise, if you write a pure `ECMAScript` software, it will be able to
 * `JavaScript` Runtimes all are supersets of an `ECAMScript` runtime, standardize by the ECMAScript standard. (consider ECMAScript as a theoritical JavaScript, that you may implement for any target hardware in, the future)
 * `JavaScript` Runtimes differ from each other, only "out of the `ECMAScript` scope"
 
-<!-- ![Achille ECMAScript](/images/posts/typescript/episode1/achille-ecmascript.drawio.svg) -->
 
-<img class="img-fluid" src="/images/posts/typescript/episode1/achille-ecmascript.drawio.svg" alt="Making sense of your tsconfig.json - episode 1">
+{{< sketchfigure
+    unique_name="ts_project_envs"
+    src="/images/posts/typescript/episode1/achille-ecmascript.drawio.png"
+    link="/images/posts/typescript/episode1/achille-ecmascript.drawio.png"
+    target="_blank"
+    caption="TypeScript Project and target JavaScript Runtimes"
+    alt_msg="architecture diagram - TypeScript Project and target JavaScript Runtimes" >}}
+
 
 Therefore, one extremely important choice to do (but  not the only one), when designing the `TypeScript` configuration of your project, is to determine what version of `ECMAScript` will be used in the target `JavaScript` Runtimes  of your app users.
 
@@ -357,8 +327,9 @@ Now, let's mention a few examples, about the part that makes the differences bet
 * A modern Browser `JavaScript` Runtime will include a web worker library (for PWA web apps), But you will generally speaking not ever find or use a webworker library in a NodeJS server.
 * etc... etc...
 
+#### Architecture
 
-> _**Architecture**_
+> _**The Big Picture**_
 
 Among the `TypeScript` configuration options that very often are really not clear there are :
 * Some take in values like `es5`, `es6`, `es2017` (Wtfuss ...?) :
@@ -366,7 +337,15 @@ Among the `TypeScript` configuration options that very often are really not clea
 
 To fully configure our `TypeScript` Compiler, let's first have a look on the big Picture, considering only the case of an  **Interpreted `JavaScript`** :
 
-<img class="img-fluid" src="/images/posts/typescript/episode1/definitive-typescript-configuration.drawio_.drawio.svg" alt="Making sense of your tsconfig.json - episode 1">
+
+{{< sketchfigure
+  unique_name="js_runtime"
+  src="/images/posts/typescript/episode1/definitive-typescript-configuration.drawio.png"
+  link="/images/posts/typescript/episode1/definitive-typescript-configuration.drawio.png"
+  target="_blank"
+  caption="Architecture of A JavaScript Runtime"
+  alt_msg="architecture diagram - ecmascript runtime" >}}
+
 
 <!-- ![TypeScript Conifiguration Keep In Mind](/images/posts/typescript/episode1/definitive-typescript-configuration.drawio_.drawio.svg) -->
 
@@ -400,16 +379,26 @@ All in all :
   * style,
   * will i use `require` of `import`, etc...
 
-
 #### Dive in Compiler Options details
+
+> _**Tests for brain sanity**_
+
+<!-- ICI JE DOIS METTRE AU CLAIR :
+
+  +++- je montre que j'ai testé avec le build de mon module gulp: je raconte l'histoire de mon gulp, et derrière de la construction que j'ai faite.
+  +++- je montre que j'ai testé avec le build de mon module gulp, les opiions tsc init
+
+ -->
+
+<!--
 
 Okay, so, now that we have our big picture in mind, here are the questions we want to answer to, in order to determine the exact configuration we want to use in our `TypeScript` project :
 
 * Do I want to force using explicit typing everywhere ?
   * _Indeed, in `TypeScript`, if no type is explicitly defined for a given variable or method argument, the `Any` Type is implicitly assigned.
   * All other Types must be explicitly declared. `Any` is a bit like the `Object` Type in `Java`. We may like or not like this implicit typing. I do not like imlicit tping, I always like everything clear (that's why I use `TypeScript`, not `JavaScript`)._
-  * That's why we will use the `--noImplicitAny true` GNU Option, so the TypeScript compiler forces all types to be explicitly declared ofr any variable / method argument
-* Do I want to use non-EcmaScript libraries in my softwware ?:
+  * That's why we will use the `--noImplicitAny true` GNU Option, so the `TypeScript` compiler forces all types to be explicitly declared for any variable / method argument
+* Do I want to use non-`EcmaScript` libraries in my softwware ?:
   * Those non-`ECMAScript` dependencies could for example be the `DOM API` or a `WebWorker API` (for browsers for example)
   * If I do use non-`ECMAScript` dependencies in the source code of my `JavaScript` Software, then I ned the interfaces of those APIs, to compile my source code.
   * That's the purpose of the `--lib` GNU Option
@@ -420,11 +409,11 @@ Okay, so, now that we have our big picture in mind, here are the questions we wa
     * that's the version of ECMAScript we want the compiler to use to generate JavaScript code.
     * So it won't necessarily spcify what kind of modularization will be used, but it never the less sets "The JavaSCript core version"
     * As this article is written, we are middle 2022, so i will use `--target "es2020"` : that, because TypeScript from 2021 is just one year old, can't speak too young, `2020` is old enough (to begin speaking, aka having a stable language a lot of people talk).
-  * **`--moduleResolution `** :  That's about the type of modularization in the TypeScript code tyou write :
+  * **`--moduleResolution `** :  That's about the type of modularization in the TypeScript code you write :
     * Specify how `TypeScript` looks up a file from a given module specifier.
     * one of: `classic`, `node`, `node16`, `nodenext`
     * This option never the less is infered a value, from the value of the `--module` GNU Option :
-      * less or more, the compiler considers you implicitly mean to use the same modularization technology fot bot the source of the compilation process (your `TypeScript` source code), and in the target of the compilation process (the generated `JavaScript`)
+      * less or more, the compiler considers you implicitly mean to use the same modularization technology for both the source of the compilation process (your `TypeScript` source code), and in the target of the compilation process (the generated `JavaScript`)
       * default: module === `AMD` or `UMD` or `System` or `ES6`, then `Classic`, Otherwise `Node`
     * That GNU Option was worth mentioning, even though we will not use it just let it take its implicitly infered from `--module` default value.
     * Actually after running a few tests on my configuration, i :
@@ -472,7 +461,10 @@ Okay, so, now that we have our big picture in mind, here are the questions we wa
       * That, for Otherwise the `GulpClass` type will not compile.
 
 
-All in all, this gives us the following tsc command to generate our donfiguration :
+-->
+
+
+All in all, this gives us the following `tsc` command to generate our configuration :
 
 ```bash
 
@@ -488,6 +480,25 @@ npx tsc --init --rootDir ./src --outDir ./bin.gmented \
 #   --esModuleInterop true --resolveJsonModule true
 
 ```
+
+#### Bring it all together
+
+> _**What we keep from here**_
+
+* For the `TypeScript` Source code, where our software will be executed :
+* For the JavaScript Runtime where our software will be executed :
+  * The `--target` `TypeScript` compiler option allows specifying what version of `ECMAScript` the generated `JavaScript` code complies with. Therefore, any targeted JavaScript Runtime must support that version of `ECMAScript`.
+  * The `--module` `TypeScript` compiler option allows specifying the modularization technology used. Here are main choices :
+    * the modularization technologies supported by `NodeJS` Runtime :
+      * `commonjs`
+      * of course `EcmaScript` modularization will be supported by recent `NodeJS` Runtimes, but :
+        * there still today exists many very useful `npm` packages which cannot be imported using the `import` `EcmaScript` modularization keyword,
+        * that, because they were designed and implemented long before `EcmaScript` had built-in modularization technology (dates back to `2015`, cf. [this page](https://javascript.info/modules-intro) , and this [other page](ccc) )
+    * the modularization technologies supported by a browser Runtime :
+      * `amd`
+      * `umd`
+
+  * the `EcmaScript` language version used
 
 
 
@@ -529,7 +540,7 @@ npx tsc --init --rootDir ./ --baseUrl ./ --outDir ./dist \
 ```
 
 
-## ANNEX B : _**What Version of `EcmaScript` exist ?**_
+## ANNEX B : _**What Versions of `EcmaScript` exist ?**_
 
 For the record, here are all the versions of TypeScript available from `2015` to `2022` :
 
@@ -545,6 +556,7 @@ For the record, here are all the versions of TypeScript available from `2015` to
 |         | `ES13`   | `ES2022`  |         |         |
 
 
+<!--
 Now, which will i choose ?
 
 For any software, my choice would go for the latest stable.
@@ -557,7 +569,7 @@ Now, here are reference articles where the question "What version of `ECMAScript
 Ok, so in Short, and this is a very important thing to understand about a `TypeScript` Project :
 
 * `JavaScript` will always be executed by an `ECMAScript` Engine. Ok
-* So, if I work with a `TypeScript` poject, I will have 2 things to take in consideration :
+* So, if I work with a `TypeScript` project, I will have 2 things to take in consideration :
   * What is the target execution environment ? (In particular, I may want my software to execute into several different "target environments", example several browsers, right?)
   * The `TypeScript` Compiler that I use, will have debugging capabilities, and the higher version of the `TypeScript` Compiler I use, the best features I will have in debugging mode, ok ?
 
@@ -568,16 +580,13 @@ Ok, so in Short, and this is a very important thing to understand about a `TypeS
     * and of Course we want ECMAScript to be enhanced with new major innovations in the Future,
     * So it is pretty sure that `ECMAScript` must have beaking changes to be enhanced with major tehcnlogical innovations
     *
-  * so we may assume `ECMAScript` guarantees ascending compatibilty for the last 10 years for example )
+  * so we may assume `ECMAScript` guarantees ascending compatibility for the last 10 years for example )
 
 * So, all in all,  i will here consider 2 main use cases :
   * use case 1 : My Software will be executed in users browser
   * use case 2 : My software will be executed in NodeJS
 
-
-
-
-
+-->
 
 ## ANNEX C : General Build process
 
@@ -611,7 +620,7 @@ An example of [a production build according a framework vendor like `Adonis`](ht
   * So we will use all verbose options etc..., strict options for JavaScript etc..
 * Copy all the static files to the build folder. The static files are registered to the software using them using configuration files at runtime.
 * Copy the `package.json` and `package-lock.json`/`yarn.lock` to the build folder.
-* Generate manifest file in the build folder : depending ont he tehcnolgy used, this file generally contains meta data about the package that's being built. Like Release Notes, Supported runtime list, Git commit ID, link to Release Notes, etc...
+* Generate manifest file in the build folder : depending ont he technolgy used, this file generally contains meta data about the package that's being built. Like Release Notes, Supported runtime list, Git commit ID, link to Release Notes, etc...
 
 
 All in all, the above list :
@@ -622,13 +631,19 @@ With that build process in mind, we see that the build process of the `npx-hugo-
 
 We will use `gulp`, using `TypeScript` with a `gulpfile.ts` configuration file :
 
+> The rest of the Gulp story soon...
+
+
+
+<!--
+
 
 ```bash
 
 touch ./gulpfile.js
 touch ./gulp.pokus.ts
 
-cat <<EOF>./gulp.pokus.ts
+cat <<EOF> ./gulp.pokus.ts
 import {Gulpclass, Task} from "gulpclass/Decorators";
 
 let gulp = require("gulp");
@@ -643,10 +658,9 @@ export class Gulpfile {
    }
 
 }
-
 EOF
 
-cat <<EOF>./gulpfile.js
+cat <<EOF> ./gulpfile.js
 eval(require("typescript").transpile(require("fs").readFileSync("./gulp.pokus.ts").toString()));
 EOF
 
@@ -785,8 +799,6 @@ npx tsc --init --rootDir ./src --outDir ./bin.gmented \
   --strict true --alwaysStrict true --allowJs true --noImplicitAny true --experimentalDecorators true \
   --esModuleInterop true --resolveJsonModule true
 
-
-
 ```
 
 * Then, to be able to use `TypeScript` language in the `gulp.pokus.ts` `gulpfile` itself,  I have to :
@@ -794,10 +806,10 @@ npx tsc --init --rootDir ./src --outDir ./bin.gmented \
   * Use the `--moduleResolution node` GNU Option for typescript modules to be corectly imported for `gulp.pokus.ts` compilation. I am using ES2020 as for both --module and --target options, so this means by default this value should be "classic", right
 
 
-* Now for compiling the bulpfile.ts to gulpfile.js and then execute the gulpfile, i need a different typescript compiler configuration file, namely `tsconfig.gulp.json` :
+* Now for compiling the `gulpfile.ts` to `gulpfile.js` and then execute the gulpfile, i need a different `TypeScript` compiler configuration file, namely `tsconfig.gulp.json` :
   * "rootDir": "./.gulp/src",
   * "outDir": "./.gulp/bin",
-  * SO I will compile all files from the `./.gulp/src` and put the generated JavaScript Files into the `./.gulp/bin` folder, and then execute the resulting `./.gulp/bin/gulpfile.js` file. Iwill certaainly compile all typescript into one single `./.gulp/bin/gulpfile.js`
+  * So I will compile all files from the `./.gulp/src` and put the generated JavaScript Files into the `./.gulp/bin` folder, and then execute the resulting `./.gulp/bin/gulpfile.js` file. I will certainly compile all `TypeScript` into one single `./.gulp/bin/gulpfile.js`
 
 
 ```bash
@@ -828,7 +840,7 @@ tsc -p tsconfig.gulp.json
 ```
 
 
-Note those GNU Option 's `--help` documentation :
+Note those GNU Option's `--help` documentation :
 
 >
 > --project, -p
@@ -844,16 +856,17 @@ Note those GNU Option 's `--help` documentation :
 For that i must finish testing all infos in https://medium.com/@pleerock/create-a-gulpfile-and-write-gulp-tasks-using-typescript-f08edebcac57
 
 
-And draw my own conclusions with the `npx-hugo-gmented` npm package
+And draw my own conclusions with the npx-hugo-gmented npm package
 
 
 
-
+-->
 
 
 
 
 ## ANNEX D : About the alpine image I used for the Containerized tests
+
 
 ```bash
 ~$ docker images
@@ -958,15 +971,127 @@ default: false
 ```
 
 
-## More `TypeScript` : class interfaces and design patterns
 
-A few references :
+## References
 
-* https://www.typescriptlang.org/docs/handbook/classes.html
-* https://www.typescriptlang.org/docs/handbook/interfaces.html
+* https://www.digitalocean.com/community/tutorials/setting-up-a-node-project-with-typescript
+* https://www.typescriptlang.org/
+* https://www.typescriptlang.org/docs/handbook/typescript-tooling-in-5-minutes.html
+* https://www.typescriptlang.org/download : recommandations to have a TypeScript setup as per project, instead of globally (best practice to version control the stack)
+* https://formationjavascript.com/versions-de-javascript-histoire-et-futur/ (just to make it clear what version of EcmaScript I wanna use)
+* About `CommonJS` :
+  * https://en.wikipedia.org/wiki/CommonJS
+  * https://medium.com/@cgcrutch18/commonjs-what-why-and-how-64ed9f31aa46
+* https://medium.com/jspoint/typescript-compiler-flags-3b1efebedf15
+* https://blog.logrocket.com/exploring-advanced-compiler-options-typescript/
+* About approaches to typescript compilation (or so called "transpilation") :
+  * https://docs.adonisjs.com/guides/typescript-build-process :  very interesting how they think like me, no compiler except `tsc` it self, only `ts-node` can transpile just as `tsc`
+* `gulp` :
+  * https://github.com/gulpjs/gulp/blob/master/docs/getting-started/2-javascript-and-gulpfiles.md#transpilation
+  * https://gulpjs.com/docs/en/getting-started/javascript-and-gulpfiles/#transpilation
+  * https://medium.com/@pleerock/create-a-gulpfile-and-write-gulp-tasks-using-typescript-f08edebcac57
+* Very good to understand which files are included excluded in by `tsc` :
+  * https://dev.to/vdegenne/i-finally-understand-typescript-outdir-include-exclude-configuration-properties-5545
+* About `TypeScript` Modularization technologies :
+  * about `es2020` `ECMAScript` modules https://www.typescriptlang.org/docs/handbook/2/modules.html
+  *
+* About a few compile time / runtime issues I met :
+  * https://bobbyhadz.com/blog/javascript-syntaxerror-cannot-use-import-statement-outside-module
+* About `TypeScript` classes, interfaces :
+  * https://www.typescriptlang.org/docs/handbook/classes.html
+  * https://www.typescriptlang.org/docs/handbook/interfaces.html
 
 
-## Building my own CDN
+
+
+<!--
+
+## Plans for the future of this series
+
+
+In the present work, I will in the conclusion explain you :
+
+* Why [this article](https://medium.com/@tommedema/typescript-confusion-tsconfig-json-module-moduleresolution-target-lib-explained-65db2c44b491) is completely wrong about probably every single one of its assertions.
+  * That the work behind this article is very likely to be reduced to:
+    * running `tsc --init --help`,
+    * reading the `--target`, `--module`, `--moduleResolution`, `--lib` documentation, misunderstanding it completely, and imagining foolish things like the assertion about polyfill
+  * That this article is completely missing the point especially about the `--lib` option, for one good reason :
+    * because "front end people", are really not used to what compilation is,
+    * for example they are not used to read and run a `Makefile` with several target systems,
+    * an,other example those developers would not ever be able to just quote one or two `Golang` compiler options
+    * even more than that, those people certainly have never worked with a framework like Spring,
+    * and they certainly do not understand a pattern like Abstract Factory in Java
+    * and they certainly do not understand what are:
+      * methods / function dynamic polymorphism (passing as arguments, objects from different types, only assuming those types implement one same interface)
+      * Java JRE Standard Override Mechanism :
+        * It is based on the `-Djava.endorsed.dirs <path to directory containing jars to load>`
+        * You can check in a java program the value of that `java.endorsed.dirs` Java JRE Sytstem variable, by executing `System.getProperty("java.endorsed.dirs")`
+        * This system is well known for example :
+          * to set what implementation are used for networking example `CORBA` protocol used for webservices
+          * to set a specific XML SAX parser https://docs.oracle.com/javase/8/docs/technotes/guides/standards/
+      * see https://docs.oracle.com/javase/8/docs/technotes/guides/standards/ , the "`Endorsed Standards`" section.
+      * How you can implement an inversion of control / modularization framework using sring like techniques :
+        * in a configuration file, we find class names for objects, and maybe the path to the binary defining those classes
+        * the ioc program creates instances of that type (a Class is a Type), providing those classes do implement a given interfaces: in Spring Framework, that's called beans
+        * the program managed by ioc, runs with the provided instances, to complete its tasks.
+        * i will demo that :
+          * i will implement an ioc program and will deploy a demo app into that container
+          * i will compare using a rather recent java framework : https://quarkus.io/ and springboot
+          * all in distroless containers
+* How [this other article](https://docs.joshuatz.com/cheatsheets/node-and-npm/node-esm/#typescript---fully-resolved-import-filepaths-with-extensions) :
+  * shows much more interesting content about the problem of starting a TypeScript / NodeJS ESM Module project
+  * is astonishingly related to the reasons why I am developing `Hugo-Gmented`, starting with this repo's npx module, see indeed :
+    * [this other article](https://docs.joshuatz.com/cheatsheets/node-and-npm/node-esm/#typescript---fully-resolved-import-filepaths-with-extensions) was made by `joshuatz` on his personal website https://joshuatz.com/
+    * `Joshua TZ` made his personal website https://joshuatz.com/ using the [Gatsby](https://gatsby.io) 's Headless CMS, while I made my personal website using `Hugo` :
+      * There are 2 families of headless CMS , in this world : the Git based headless CMS, and the API based Headless CMS,
+      * Hugo is the world 's number one Git-based headless CMS by far
+      * Gatsby is the world's number one API-based headless CMS by far
+      * all other headless CMS in the world are in iether of those families, there are even hybrids, but none of them match `Gatsby` and `Hugo` :
+        * directus
+        * strapi
+        * etc...
+    * `Joshua TZ` 's Gtihub profile https://github.com/joshuatz has a few good looking and interesting things :
+      * How come he also worked with cloudinary :) (his little tool is interesting as far as pokus is concerned) : https://github.com/joshuatz/desktop-cloud-transform
+      * `Hugo Gmented` is related to one of my main projects : `Pokus`
+      * In one of the website project i worked on using `hugo`, I started indeed using image CDN management for deployment, especially using Gulp tasks for image processing :
+        * I used gulp taks to process tasks on iamge files : resizing, compressing, image transformations (adding special effects like blurring)
+        * I used deployment pipeline to deploy gulp processed images to iamge CDN :
+          * one gulp tasks would deploy image files to a CDN , in dev environment ( a local iamge CDN installed with docker comppose, it could even be directus used as a pure CDN)
+          * one gulp tasks would deploy image files to a CDN , in staging environment : cloudinary, if cloudinary accepts multiple envionments / organizations. I cloudinary would not support multiple organizations or environments, i will use Optimole on staging.
+          * one gulp tasks would deploy image files to a CDN , in production environment : cloudinary and / or Optimole, the one that has
+          * best would be that iamge CDNs support environment concept, in order to be able to have staging and production CDNs, and without relying on that, here is how i will implement that :
+            * staging and production environment images will be deployed to Cloudinary and Optimole: for each image, it is deployed either to Optimole, or to Cloudinary
+            * the same image, deployed to staging and production environments, changes only by the path to access the image. the change is made in the image file name using `${IMAGE_FILENAME}` for production,  `staging_${IMAGE_FILENAME}` for staging
+            * problem there, is that production is always up :
+              * we want to use as much as possible in the limits of any kind of plan: so we test that ability to manage not exceeding any given plan, using only free plans
+              * our goal is to deploy a set of images, across multiple CDNs, to take advantage as much as possible from all free plans of a given service, relying on multiple service providers
+              * Ok, so what will do constantly here is executing a gulp tasks which :
+                * for each iamge file
+                * upload the image file to one of the CDNs, based on a yaml configuration file `dogman.yaml`
+                *
+        * I naturally started looking for all image CDNs offering free plans, and among them I found `Cloudinary` : so did `Joshua TZ`, i think most fullstack developers / frontend devs who have worked in large websites projects, start by trying Cloudinary
+
+
+
+All in all, in a second episode of this article we will :
+
+* Explain in detail architecture at the center of all of this : Our `TypeScript` app lifecycle architecture, from source code to deployment
+* Explain what it is that front end dev don't understand :
+  * building a Goglang executable for different target artchitectures
+  * building a C language executable for different target artchitectures
+  * building 2 C language executables and make use of an API : programming a simple plugin system in C Language, with an API concept
+  * Building two Java applications to demonstrate programming a simple plugin system in C Language, with an API concept :
+    * we wil also demonstrate invrersion of Control and Dynamic Polymorphism patterns
+
+
+That will show what we actually mean by interface
+
+
+
+
+
+
+### Building my own CDN
 
 What if i built my self  a cdn ? Is there any meaning about a CDN deployed on one single machine ?
 
@@ -1006,31 +1131,18 @@ A first goal for me is to setup somehing that can act as CDN loally on the devel
       * or Directus cms cdn capabilitis
 
 
-## References
 
-* https://www.digitalocean.com/community/tutorials/setting-up-a-node-project-with-typescript
-* https://www.typescriptlang.org/
-* https://www.typescriptlang.org/docs/handbook/typescript-tooling-in-5-minutes.html
-* https://www.typescriptlang.org/download : recommandations to have a typesript setup as per project, instead of globally (best practice to version control the stack)
-* https://formationjavascript.com/versions-de-javascript-histoire-et-futur/ (just to make it clear what version of EcmaScript I wanna use)
-* About `CommonJS` :
-  * https://en.wikipedia.org/wiki/CommonJS
-  * https://medium.com/@cgcrutch18/commonjs-what-why-and-how-64ed9f31aa46
-* https://medium.com/jspoint/typescript-compiler-flags-3b1efebedf15
-* https://blog.logrocket.com/exploring-advanced-compiler-options-typescript/
-* About approaches to typescript compilation (or so called "transpilation") :
-  * https://docs.adonisjs.com/guides/typescript-build-process :  very interesting how they think like me, no compiler except `tsc` it self, only `ts-node` can transpile just as `tsc`
-* `gulp` :
-  * https://github.com/gulpjs/gulp/blob/master/docs/getting-started/2-javascript-and-gulpfiles.md#transpilation
-  * https://gulpjs.com/docs/en/getting-started/javascript-and-gulpfiles/#transpilation
-  * https://medium.com/@pleerock/create-a-gulpfile-and-write-gulp-tasks-using-typescript-f08edebcac57
-* Very good to understand which files are included excluded in by `tsc` :
-  * https://dev.to/vdegenne/i-finally-understand-typescript-outdir-include-exclude-configuration-properties-5545
-* About `TypeSript` Modularization technologies :
-  * about `es2020` `ECMAScript` modules https://www.typescriptlang.org/docs/handbook/2/modules.html
-  *
-* About a few compile time / runtime issues I met :
-  * https://bobbyhadz.com/blog/javascript-syntaxerror-cannot-use-import-statement-outside-module
-* About `TypeScript` classes, interfaces :
-  * https://www.typescriptlang.org/docs/handbook/classes.html
-  * https://www.typescriptlang.org/docs/handbook/interfaces.html
+
+
+
+## ANNEX F : `TypeScript` modules, class, interfaces, and design patterns
+
+A few references :
+
+* https://www.typescriptlang.org/docs/handbook/classes.html
+* https://www.typescriptlang.org/docs/handbook/interfaces.html
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+* https://tc39.es/
+
+
+-->

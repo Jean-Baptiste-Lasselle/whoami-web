@@ -13,10 +13,10 @@
       <pubDate>Thu, 09 Jun 2022 08:53:58 +0530</pubDate>
       
       <guid>https://jean-baptiste-lasselle.github.io/whoami-web/blogs/making-sens-tsconfig/</guid>
-      <description>I recently needed to develop an npx executable, and wanted to code in TypeScript.
-I therefore had to run again tsc --init, and that&amp;rsquo;s where I decided to write this series of articles, with the goal to deeply understand how to choose my tsconfig.json configuration options.
-In this series, I will not review every single option to explain what their purpose is :
-I want to be able to understand globally the real nature of each of those options, I want to be able to make different configuration options choices, and understand why i will, when I will.</description>
+      <description>Get the Code! What you will find here I recently needed to develop an npx executable, and wanted to code in TypeScript.
+I therefore had to run again tsc --init.
+And that&amp;rsquo;s where I decided to write this series of articles, with a goal, to deeply understand how to choose my tsconfig.json configuration options.
+In this series, I will not review every single tsc command line option to explain what their purpose is :</description>
     </item>
     
   </channel>

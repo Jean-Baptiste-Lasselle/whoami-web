@@ -1,0 +1,229 @@
+<!--
+
+- layouts/shortcodes/tech-sketchdraw.html
+
+
+---------------------------
+
+  + src : the path to the image file
+  + alt_msg : the "Alt" text for the img  HTML tag
+  + alt_msg : the "target" attroibuite of the anchor HTML Tag for the hyperlink
+
+
+
+
+
+
+
+
+
+  + src :       URL of the image to be displayed.
+  + link :      If the image needs to be hyperlinked, URL of the destination.
+  + target :    Optional target attribute for the URL if link parameter is set.
+  + rel :       Optional rel attribute for the URL if link parameter is set.
+  + alt :       Alternate text for the image if the image cannot be displayed.
+  + title :     Image title.
+  + caption :   Image caption. Markdown within the value of caption will be rendered.
+  + class :     class attribute of the HTML figure tag.
+  + height :    height attribute of the image.
+  + width       width attribute of the image.
+  + attr :      Image attribution text. Markdown within the value of attr will be rendered.
+  + attrlink :  If the attribution text needs to be hyperlinked, URL of the destination.
+
+see https://getbootstrap.com/docs/4.1/content/figures/
+    https://getbootstrap.com/docs/5.1/content/figures/
+-->
+<!-- Button trigger modal
+    <div class="position-relative col-12 margin-auto">
+      <div class="position-absolute top-0 start-0"></div>
+      <div class="position-absolute top-0 start-50 translate-middle-x"></div>
+      <div class="position-absolute top-0 end-0"></div>
+      <div class="position-absolute top-50 start-0 translate-middle-y"></div>
+      <div class="position-absolute top-50 start-50 translate-middle">
+        <button type="button" class="btn btn-primary centered" data-bs-toggle="modal" data-bs-target="#exampleModal{{ .Get "unique_name" }}">
+          Launch demo modal
+        </button>
+      </div>
+      <div class="position-absolute top-50 end-0 translate-middle-y"></div>
+      <div class="position-absolute bottom-0 start-0"></div>
+      <div class="position-absolute bottom-0 start-50 translate-middle-x"></div>
+      <div class="position-absolute bottom-0 end-0"></div>
+    </div>
+  </div>
+ -->
+
+<!-- +++++++++++++++++++++++++++++ -->
+<!-- START OF COMPONENT DEFINITION -->
+<div class="container-fluid">
+  <!--
+                     ONE ROW TO CENTER MODAL TRIGGER BUTTON
+  -->
+  <!--
+    <div class="row">
+      <div class="col-5">
+
+      </div>
+      <div class="col-2">
+        <button type="button" class="btn btn-primary centered" data-bs-toggle="modal" data-bs-target="#exampleModal{{ .Get "unique_name" }}">
+          Launch demo modal
+        </button>
+      </div>
+      <div class="col-5">
+
+      </div>
+
+    </div>
+  -->
+  <!--
+    ------------------------------------------------------------
+    ------------------------------------------------------------
+                     !!! - MODAL - !!!
+    ------------------------------------------------------------
+    ------------------------------------------------------------
+  -->
+
+  <div class="modal fade" id="exampleModal{{ .Get "unique_name" }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable devops quant blog post">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModal{{ .Get "unique_name" }}Label">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <!--
+                           MODAL BODY
+        -->
+
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12 .ms-auto">
+                <!-- <div class="featured-image"> -->
+                <img src="{{ .Get "src" }}"
+                class="img-fluid rounded-4"
+                {{- if or (.Get "alt_msg") (.Get "caption") }}
+                alt="{{ with .Get "alt_msg" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
+                {{- end -}}
+                {{- with .Get "width" }} width="100%"{{ end -}}
+                {{- with .Get "height" }} height="100%"{{ end -}}
+                /><!-- Closing img tag -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!--
+                           MODAL FOOTER
+        -->
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          {{- if .Get "link" -}}
+              <!--  -->
+              <a href="{{ .Get "link" }}" download="proposed_file_name" class="devops quant blog post modalfigure btn btn-primary" {{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>Download</a>
+              <a href="{{ .Get "link" }}" class="devops quant blog post modalfigure btn btn-primary" target="_blank"{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>Raw</a>
+
+          {{- end -}}
+
+          <!--
+          <button type="button" class="btn btn-primary">Download</button>
+          <button type="button" class="btn btn-primary">Raw</button>
+          -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!--
+                   FIGURE
+-->
+
+<div class="featured-image">
+
+<figure{{ with .Get "class" }}  class="figure {{ . }}"{{ end }}>
+
+
+    {{- if .Get "link" -}}
+        <!-- <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}> -->
+
+        <a data-bs-toggle="modal" data-bs-target="#exampleModal{{ .Get "unique_name" }}" href="#"{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+    {{- end -}}
+    <div class="featured-image">
+      <img src="{{ .Get "src" }}"
+      class="figure-img img-fluid rounded-10"
+      {{- if or (.Get "alt_msg") (.Get "caption") }}
+      alt="{{ with .Get "alt_msg" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
+      {{- end -}}
+      {{- with .Get "width" }} width="{{ . }}"{{ end -}}
+      {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+      /><!-- Closing img tag -->
+    </div>
+
+
+
+    {{- if .Get "link" }}</a>{{ end -}}
+    {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
+        <figcaption class="figure-caption">
+            {{ with (.Get "title") -}}
+                <h4>{{ . }}</h4>
+            {{- end -}}
+            {{- if or (.Get "caption") (.Get "attr") -}}<p>
+                {{- .Get "caption" | markdownify -}}
+                {{- with .Get "attrlink" }}
+                    <a href="{{ . }}">
+                {{- end -}}
+                {{- .Get "attr" | markdownify -}}
+                {{- if .Get "attrlink" }}</a>{{ end }}</p>
+            {{- end }}
+        </figcaption>
+    {{- end }}
+</figure>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+  MODAL with GRID
+-->

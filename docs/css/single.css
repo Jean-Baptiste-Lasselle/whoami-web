@@ -116,9 +116,11 @@
   color: var(--text-secondary-color) !important;
 }
 
+/*
 #single .page-content code {
   color: var(--primary-color) !important;
 }
+*/
 
 /* kbd and mark */
 
@@ -155,10 +157,12 @@
     margin-bottom: 1em;
 }
 
+/*
 #single .sticky-sidebar {
   position: sticky;
   top: 50px;
 }
+*/
 
 /* Tags */
 #single aside.tags h5 {
@@ -297,3 +301,63 @@ img.devops.quant.logo {
  width: 30px!important;
  height: 30px!important;
 }
+
+
+.modal-dialog.devops.quant.blog.post {
+  max-width: unset!important;
+}
+
+
+#single .page-content a.devops.quant.blog.post.modalfigure.btn.btn-outline-primary {
+  /* color: var(--secondary-color-dark)!important; */
+  color: rgba(255,255,255,.9) !important;
+	font-weight: 900;
+  font-family: "Roboto", sans-serif;
+}
+
+#single .page-content code {
+  background-color: #b1f221a3 !important;
+  color: #1c1566 !important;
+  border-style: solid 2px rgba(#000, .2);
+  border-radius: 4px;
+  padding: 3px;
+}
+
+#single .sticky-sidebar {
+  /*
+   must have bootstrap 5 class 'overflow-auto'
+   to make scrollbar behavior possible
+  */
+  position: sticky!important;
+  top: 3rem!important;
+  height: 80% !important;
+}
+
+#get_the_code_of_this_post {
+  /*
+   must have bootstrap 5 class 'overflow-auto'
+   to make scrollbar behavior possible
+  */
+  /*
+  position: sticky!important;
+  top: 3rem!important;
+  height: 20vh !important;
+  */
+}
+
+
+
+
+
+
+/*
+#single .sticky-sidebar aside.toc.pokustoc {
+
+  // must have bootstrap 5 class 'overflow-auto'
+  // to make scrollbar behavior possible
+
+  position: sticky!important;
+  top: 10vh!important;
+  height: 80vh !important;
+}
+*/
