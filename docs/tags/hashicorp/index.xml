@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hashicorp on Devops Quant</title>
+    <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/hashicorp/</link>
+    <description>Recent content in hashicorp on Devops Quant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 17 Jun 2022 20:53:11 +0000</lastBuildDate><atom:link href="https://jean-baptiste-lasselle.github.io/whoami-web/tags/hashicorp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud Init - episode 1</title>
+      <link>https://jean-baptiste-lasselle.github.io/whoami-web/blogs/cloud-init-first/</link>
+      <pubDate>Fri, 17 Jun 2022 20:53:11 +0000</pubDate>
+      
+      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/blogs/cloud-init-first/</guid>
+      <description>Get the Code! What you will find here In this new article, we will use:
+Cloud Init HashiCorp Packer Terraform Bitnami&#39;s Kubeseal secret manager To automate virtual machines creation from templates.
+References a video tuorial I fully experimented : https://www.youtube.com/watch?v=exeuvgPxd-E </description>
+    </item>
+    
+  </channel>
+</rss>

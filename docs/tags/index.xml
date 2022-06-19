@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Devops Quant</title>
+    <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/</link>
+    <description>Recent content in Tags on Devops Quant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Jun 2022 14:43:47 +0000</lastBuildDate><atom:link href="https://jean-baptiste-lasselle.github.io/whoami-web/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cheatsheet</title>
+      <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/cheatsheet/</link>
+      <pubDate>Sun, 19 Jun 2022 14:43:47 +0000</pubDate>
+      
+      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/tags/cheatsheet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/hugo/</link>
+      <pubDate>Sun, 19 Jun 2022 14:43:47 +0000</pubDate>
+      
+      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>npx</title>
+      <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/npx/</link>
+      <pubDate>Sun, 19 Jun 2022 14:43:47 +0000</pubDate>
+      
+      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/tags/npx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TypeScript</title>
+      <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/typescript/</link>
+      <pubDate>Sun, 19 Jun 2022 14:43:47 +0000</pubDate>
+      
+      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/tags/typescript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloud-init</title>
+      <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/cloud-init/</link>
+      <pubDate>Fri, 17 Jun 2022 20:53:11 +0000</pubDate>
+      
+      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/tags/cloud-init/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hashicorp</title>
+      <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/hashicorp/</link>
+      <pubDate>Fri, 17 Jun 2022 20:53:11 +0000</pubDate>
+      
+      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/tags/hashicorp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>packer</title>
+      <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/packer/</link>
+      <pubDate>Fri, 17 Jun 2022 20:53:11 +0000</pubDate>
+      
+      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/tags/packer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pxeless</title>
+      <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/pxeless/</link>
+      <pubDate>Fri, 17 Jun 2022 20:53:11 +0000</pubDate>
+      
+      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/tags/pxeless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>qemu-kvm</title>
+      <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/qemu-kvm/</link>
+      <pubDate>Fri, 17 Jun 2022 20:53:11 +0000</pubDate>
+      
+      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/tags/qemu-kvm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>terraform</title>
+      <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/terraform/</link>
+      <pubDate>Fri, 17 Jun 2022 20:53:11 +0000</pubDate>
+      
+      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/tags/terraform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtualbox</title>
+      <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/virtualbox/</link>
+      <pubDate>Fri, 17 Jun 2022 20:53:11 +0000</pubDate>
+      
+      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/tags/virtualbox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tsconfig.json</title>
+      <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/tsconfig.json/</link>
+      <pubDate>Thu, 09 Jun 2022 08:53:58 +0530</pubDate>
+      
+      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/tags/tsconfig.json/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
