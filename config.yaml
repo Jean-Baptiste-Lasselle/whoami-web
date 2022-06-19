@@ -13,7 +13,11 @@ markup:
   goldmark:
     renderer:
       unsafe: true
-
+  # just to set ToC depth
+  tableOfContents:
+    endLevel: 4
+    startLevel: 2
+    # ordered: false
 Menus:
   main:
     - identifier: blog

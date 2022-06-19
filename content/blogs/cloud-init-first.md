@@ -4,28 +4,44 @@ title: "Cloud Init - episode 1"
 # date: 2022-06-09T08:53:58+05:30
 date: 2022-06-17T20:53:11+00:00
 draft: false
-github_link: "https://github.com/pokusio/cloud-init-first.git"
+github_link: "https://github.com/pokusio/cloud-init-first"
+get_the_code: "https://github.com/pokusio/cloud-init-first"
+get_the_code_youtube: "https://www.youtube.com/watch?v=exeuvgPxd-E"
 author: "Jean-B. Lasselle"
 tags:
-  - TypeScript
-  - npx
-  - hugo
-  - tsconfig.json
+  - cloud-init
+  - packer
+  - terraform
+  - virtualbox
+  - qemu-kvm
+  - hashicorp
+  - pxeless
 image: /images/posts/cloud-init/cloud_init_logo.png
 description: ""
 toc:
 ---
 
-```bash
-cd ~/whoami-web/static/images/posts/cloud-init
-# /images/posts/cloud-init/cloud_init_logo.png
-curl -L https://cloudinit.readthedocs.io/en/latest/_static/logo.png -o ./cloud_init_logo.png
-```
+## Get the Code!
+
+{{< get_the_code get_the_code="https://github.com/pokusio/cloud-init-first" get_the_code_youtube="https://www.youtube.com/watch?v=n6RoVyZEsv4" >}}
+
+## What you will find here
+
+In this new article, we will use:
+* Cloud Init
+* HashiCorp Packer
+* Terraform
+* `Bitnami's Kubeseal` secret manager
+
+To automate virtual machines creation from templates.
+
+<!--
 This article is a first step playing **_the_ `cloud-init`**
 
 In this article we will :
 * Install and configure **`cloud-init`**
 * Create our first images using **`cloud-init`** on `GNU/Linux Debian - Bullseye`
+-->
 
 <!-- more -->
 
@@ -60,6 +76,8 @@ In this article we will :
 
 -->
 
+
+<!--
 
 ## Install `cloud-init`
 
@@ -188,7 +206,7 @@ sudo cp cloud.cfg cloud.cfg.bak
 
 # ---
 # Config :
-# remove all that is about tools  
+# remove all that is about tools that you don't use
 # ---
 #   Configuration BOM :
 #    - The 'default_user' must be configured with :
@@ -226,8 +244,6 @@ ls -alh /etc/cloud/cloud.cfg
 sudo apt-get install -y whois
 
 export DEFAULT_SYS_USER_LX_PWD=pokus
-
-# echo -e "${DEFAULT_SYS_USER_LX_PWD}" | sudo mkpasswd --password-fd=0 -m SHA-512
 
 
 # ---
@@ -321,6 +337,8 @@ fi;
 cloud-init clean
 
 ```
+
+-->
 
 ## References
 
