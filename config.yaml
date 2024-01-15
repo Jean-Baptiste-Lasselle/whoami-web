@@ -94,7 +94,21 @@ params:
   #     disableAchievements: true
   #     disableContact: true
 
-  # Hero
+
+
+  # Resume Download 
+  ### {{ .Site.Params.downloads.pdf_resume.proposed_file_name.en }}
+  ### {{ .Site.Params.downloads.pdf_resume.url.en }}
+  downloads:
+    pdf_resume:
+      proposed_file_name: 
+        en: "CV-Jean-Baptiste-Lasselle.pdf"
+        fr: "CV-Jean-Baptiste-Lasselle.pdf"
+      url: 
+        en: "/whoami-web/resume/en/pdf/CV-Jean-Baptiste-Lasselle.pdf"
+        fr: "/whoami-web/resume/en/pdf/CV-Jean-Baptiste-Lasselle.pdf"
+
+  # Hero {{ .Site.Params.hero.button.name }}
   hero:
     enable: true
     intro: "Hi, my name is"
@@ -106,7 +120,7 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: "/resume/en/pdf/CV-Jean-Baptiste-Lasselle.pdf"
+      url: "/whoami-web/resume/en/pdf/CV-Jean-Baptiste-Lasselle.pdf"
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
@@ -126,31 +140,41 @@ params:
     # image: "/images/me.png"
     image: "/images/technology_image.jpeg"
     content: |
-      I started as a Java Jee developers 15 years ago.
-      I soon got interest into CICD, and since CICD also is infrastructure, I completely fell for infra, with
-      Linux, Virtual Box, Openstack, Docker and Kubernetes.
-
-      This how I became a devops without being aware, before the word even existed.
+      I started as a developer many years ago.
 
       Since 2015, I am focused on how to develop and operate softwares in a cloud world.
 
-      I today am A Gitops Fanatic, an Evangelist in love with Cybernetics (Kubernetes Controllers, Operators, AutoScalability, self-healing abilities).
+      In a word, I love automating everything.
 
-      One of my main interest today is developing **Kubernetes Operators**.
+      I today am A **Gitops** Fanatic, an **Evangelist** in love with Cybernetics (Kubernetes Controllers, Operators, AutoScalability, self-healing abilities).
+
+      My interests today are:
+      * Designing and implementing **Infrastructure As Code** the gitops way
+      * Developing **terrafrom providers**, and **terraform-compatible cloud providers**
+      * Developing **Kubernetes Operators**.
+
+      <i>**How have I become a devops?**
+      I started as a developer many years ago (Java ee/JavaScript). I started as a developer many years ago (Java ee/JavaScript).
+      After a few years, I soon (maven) got interested into automation, with CI/CD.
+      And because CI/CD involves managing infrastructure (servers, remember Jenkins?), I completely 
+      fell for infrastructure management, and automating everything. 
+      
+      Linux, Virtual Box, Openstack, Docker and Kubernetes, all of them came along just naturally.
+      
+      This how I became a devops without being aware, before the word even existed.</i>
 
     skills:
       enable: true
-      title: "Here are a few technologies I've been working with recently:"
+      title: "My everyday tech stack:"
       items:
         - "Kubernetes"
         - "Helm"
         - "Terraform"
         - "Pulumi"
         - "AWS, Azure, GCP, OVH"
-        - "TypeScript"
-        - "Node"
+        - "NodeJs/TypeScript/ViteJS"
+        - "Astro/Hugo/React"
         - "Golang"
-        - "ViteJS"
         - "HashiCorp Vault"
         - "Rust"
 
@@ -158,6 +182,90 @@ params:
   experience:
     enable: true
     items:
+      # ----
+      # -- Job Template
+      # ----
+      # - job: "Devops Tech Lead"
+      #   company: "Company Name"
+      #   companyUrl: "https://example.com"
+      #   date: "July 2020 - March 2022"
+      #   featuredLink:
+      #     enable: true
+      #     name: "Gravitee is Open Source!"
+      #     url: "https://github.com/gravitee-io"
+      #   content: |
+      # 
+      #     * **Devops stack** : `Pulumi`, `Terraform`, `Helm`, `Docker`, `Kubernetes`, `K3D`, `Azure` `AKS`, `AWS` `EKS`, `FluxCD`.
+      #     * **OS** : `Debian`, `alpine`, and many dockerized `Linux` distros
+      #     * **Dev stack** : `NodeJS` `TypeScript`, `Python`, `bash` / `sh` `shell`, `Golang`.
+      # 
+      #     Job Desciption here
+      # 
+      #     * Job Responsibility/Achievement Entry 1
+      #     * Job Responsibility/Achievement Entry 2
+      #     * Job Responsibility/Achievement Entry 3
+      #     * ...
+      # ----
+
+      - job: "Devops terraform SME"
+        company: "Limagrain"
+        companyUrl: "https://www.limagrain.com/"
+        date: "September 2023 - February 2024"
+        featuredLink:
+          enable: false
+          name: "Limagrain BSD"
+          url: "https://www.limagrain.com/"
+        content: |
+      
+          * **Devops stack** :  `Terraform`, `Helm`, `kubectl`, `Docker`, `Azure AKS / App Gateway Ingress Controller (AGIC)`, `Azure Functions`, `Azure CosmoDB`, `Azure EventHub`, `Azure Devops (Pipelines)`, `Azure Managed identities / Service Principals`, `Azure networking - vnet, subnets, private endpoints`, `Artifactory`, shell scripting (`sh`, `bash`).
+          * **OS** : `Windows Server`,  many dockerized `Linux` distros for CI/CD.
+          * **Dev stack** : I mainly used terraform and did only Infra As Code. I only had once to dive into code, to be able to shell script the full build from source of the `Dotnet` Azure Functions.
+
+          Project Context: At Limagrain, a business critical, internally developed app, had only one envrionment, and no production env. I was in charge of building the missing production environment.
+
+          In charge of building the production environment, I was first assigned the task of auditing the whole poject, both in terms of infrastructure, and CI/CD.
+          I produced a first executive summary, providing opinionated recommandations.
+          My two main recommandations were : 
+          * to automate "everything": both the infrastrtucture management with terraform, and the dev CI/CD
+          * to spin up isolated envrionments to promote releases from dev, to staging, UAT, up to the production.
+          
+          My responsibilities and achievements:
+          * I was then in charge of implementing my recommandations, working with the Dev Team (5 developers), on one end, and the infrastructure teams (compute, identity, network, security teams), on the other hand.
+          * I was invited to architecture labs, to give a talk on terraform and infrastructure as code concepts. My talk was very appreciated, so that other departments requested to have knwowledge sharing workshop with me.
+          * I was required to attend the validation gates meetings, required to allow the app to go to prodution.
+          * Terraform was not used at all in the project, and I convinced the management, and the different infrastructure teams, to choose to start using terraform for infrasructure management, especially in production.
+          * In less than 4 months, I brought up with `terraform`, 3 new isolated environments, DEV, UAT and production. I also found and solved a couple of very complex issues integrating `Azure` cloud components and `Microsoft Dynamics`.
+          * The `terraform` achievements, my evangelist conviction, added to the support of the new architect in the Dev team, and the project managers, resulted in a real victory: In January 2024, several dedicated Azure subscriptions were given to the Dev Team department, where initially a single Azure subscription had to be shared with other departments!
+          
+      - job: "Devops Lead"
+        company: "Michelin"
+        companyUrl: "https://www.michelin.com/"
+        date: "November 2022 - September 2023"
+        featuredLink:
+          enable: false
+          name: "Michelin DDI"
+          url: "https://ddi.michelin.com/"
+        content: |
+      
+          * **Devops stack** :  `Databricks`, `dbx`, `Snowflake`, `dbt`, `Terraform`, `Helm`, `Docker`, `Kubernetes`, `Azure`, `azcopy`, `Gitlab`, `Artifactory`, shell scripting (`sh`, `bash`), `make`.
+          * **OS** : `Windows Server`, `CentOS`, many dockerized `Linux` distros for CI/CD.
+          * **Dev stack** : `Python`, `Python setuptools`, `NodeJS` `TypeScript`, `Astro`, `Hugo`.
+
+          Project Context: At Michelin,  Data Engineering / AI Project
+
+          I was in charge of managing all Azure resources with **terraform**, including
+          I was involved with 2 Data engineer SMEs, to **re-design and implement** the whole 
+          **Data Engineering platform**, with a **migration from** an **{Azure Data Factory / ADF Pipelines} stack**, to a much 
+          more advanced, Python-based, **{Databricks + Snowflake} Stack**.
+
+          The new data engineering platform processed data by executing Python code, and therefore needed a fully fledged Python CI/CD.
+      
+          * Managing of **Azure** resources with `terraform`: Databricks workspaces, Azure Account Storage, networks, Azure Key Vaults, Managed Identities, R-Studio VMs, MongoDB clusters, etc...
+          * **Modularization of terraform code**, management of terraform state: **terraform modules**, terraform private registry, terraform state into Azure Account storage container
+          * Design of **CI/CD Modules**, **CI/CD runners** Docker images (Python code)
+          * Design of **CI/CD Pipelines**: **Git workflows**, **Gitlab** release automation with `gitlab-cli`, **python** packages deployment to databricks (**databricks scheduled jobs**), snowflake (with liquibase).
+          * Design of **Documentation**: `astro`/`hugo` documentation repo with automation based on Gitlab CI/CD pipelines.
+
       - job: "Devops Tech Lead"
         company: "Gravitee"
         companyUrl: "https://gravitee.io"
@@ -349,41 +457,6 @@ params:
           * I built month weeks after weeks a small team consisteing of 3 to 5 developers and ops, I was the software architect with 2 developers, and manager for the 2 / 3 ops engineers (system enginrer, security engineer, network engineer).
           * I was personnaly working on the CI system a classical recipe of `Git`, `Maven`, `Jenkins` (`Junit`, `DbUnit`, `Mockito`, etc...), Artifactory. All classics of that prehistorc times.
           * One unthinkable thing happened there, where i lerned a lot about real infratructure , I conducted and designed a full server room: SPVC used on premises servers, the IS being used by employees from their tablets mainly (MTT french trademark Android tablet). A crazy experience where i learned what a datacenter really is, e.g. what material are used on the floor (epoxy) of datacenters, Server Hardware Benchmark, network backbone, DRP with FM200 fire systems, air colling, electricity etc...
-
-
-#       - job: "Java Dev Engineer"
-#         company: "Atermès"
-#         companyUrl: "https://www.atermes.fr/"
-#         date: "Feb 2013 - May 2013"
-#         featuredLink:
-#           enable: true
-#           name: "Atermès"
-#           url: "https://www.atermes.fr/fr/index"
-#         info:
-#           enable: true
-#         content: |
-#
-#           * **Devops stack** : empty
-#           * **OS** : `Windows`, sur machines Dell `Alienware`
-#           * **CI stack** : quasi-empty : `Maven` + `JUnit`
-#           * **Dev stack** : `Swing` `JSE6`, `JAXB`, `Luciad Lightspeed`, MVC2 design pattern.
-#           * **Misc.**  : a bit of differential geometry of finite dimensional manifolds.
-#
-#           Atermès is a French Company affiliated to Thalès, a player in the military technologies industry.
-#
-#           As Java Dev Engineer, I worked in the R&D department, where i designed and implemented a set of
-#           Java JSE6 Swing components, using the Luciad Lightspeed framework (a GIS Framework, very early
-#           endowed with 3D capabilities).
-#
-#           It was mainly about Terran elevation analysis, hypsometry in GIS. Military purpose only.
-#
-#           * designed and implemented a set of `Java Jse6` `Swing` components, using the `Luciad Lightspeed` framework, and `Luciad Lightspeed` hypsometric "_`IndexColorModels`_".
-#           * I pushed in `JUnit` testing, the guys were manily working over there with the well know `Qt` `C++` UI framework.
-#           * I learned for the first time, and a lot about GIS systems :
-#             * that’s after that pro experience, that I got interested into OpenStreetMap, Leaflet, etc.
-#             * Fundamental knowledge : geoïd, reference ellipsoïd, reference system, projections, reference point, datum, tuiles, "line-of-sights", etc....
-
-
 
       - job: "Java Dev Engineer"
         company: "Michael Page"
