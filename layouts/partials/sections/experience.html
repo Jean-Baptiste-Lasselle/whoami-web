@@ -5,8 +5,7 @@
         <h3 class="text-center">Some of my Experiences</h3>
         <div class="row justify-content-center">
           <div class="d-grid gap-2 col-4 mx-auto">
-            <!-- <a href="{{ .Site.Params.hero.button.url }}" download="proposed_file_name" class="btn btn-lg btn-primary" class="btn btn-outline-primary btn-lg"> -->
-              <a href="{{ default $.Site.BaseURL $.Site.Params.staticPath  }}/{{ .Site.Params.hero.button.url }}" download="proposed_file_name" class="btn btn-lg btn-primary">
+              <a href="{{ .Site.Params.downloads.pdf_resume.url.en }}" download="{{ .Site.Params.downloads.pdf_resume.proposed_file_name.en }}" class="btn btn-lg btn-primary">
                 Download My Full {{ .Site.Params.hero.button.name }}
               </a>
           </div>
