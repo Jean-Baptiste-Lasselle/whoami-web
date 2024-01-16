@@ -167,15 +167,16 @@ params:
       enable: true
       title: "My everyday tech stack:"
       items:
+        - "Terraform"
+        - "Packer"
+        - "Pulumi"
+        - "HashiCorp Vault"
         - "Kubernetes"
         - "Helm"
-        - "Terraform"
-        - "Pulumi"
         - "AWS, Azure, GCP, OVH"
         - "NodeJs/TypeScript/ViteJS"
         - "Astro/Hugo/React"
         - "Golang"
-        - "HashiCorp Vault"
         - "Rust"
 
   # Experience
