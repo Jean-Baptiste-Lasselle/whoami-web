@@ -229,13 +229,13 @@ params:
           * to automate "everything": both the infrastrtucture management with terraform, and the dev CI/CD
           * to spin up isolated envrionments to promote releases from dev, to staging, UAT, up to the production.
           
-          My responsibilities and achievements:
-          * I was then in charge of implementing my recommandations, working with the Dev Team (5 developers), on one end, and the infrastructure teams (compute, identity, network, security teams), on the other hand.
-          * I was invited to architecture labs, to give a talk on terraform and infrastructure as code concepts. My talk was very appreciated, so that other departments requested to have knwowledge sharing workshop with me.
-          * I was required to attend the validation gates meetings, required to allow the app to go to prodution.
-          * Terraform was not used at all in the project, and I convinced the management, and the different infrastructure teams, to choose to start using terraform for infrasructure management, especially in production.
+          Duties and achievements:
+          * I was then **in charge of implementing** my recommandations, working with the **Dev Team (5 developers), on one end, and the core infrastructure teams** (compute, identity, network, security teams), on the other hand.
+          * I was invited to **architecture labs**, to give a **talk on terraform and infrastructure as code concepts**. My talk was very appreciated, so that other departments requested to have knowledge sharing workshop with me.
+          * I was required to attend the validation gates meetings, required to allow the app to go to production. My role was to **answer the question about infrastructure and automation design** choices details.
+          * Terraform was not used at all in the project, and I **convinced** the management, and the core infrastructure teams, **to start using terraform for infrasructure management**, especially in **production**.
           * In less than 4 months, I brought up with `terraform`, 3 new isolated environments, DEV, UAT and production. I also found and solved a couple of very complex issues integrating `Azure` cloud components and `Microsoft Dynamics`.
-          * The `terraform` achievements, my evangelist conviction, added to the support of the new architect in the Dev team, and the project managers, resulted in a real victory: In January 2024, several dedicated Azure subscriptions were given to the Dev Team department, where initially a single Azure subscription had to be shared with other departments!
+          * The `terraform` achievements, my **evangelist** conviction, added to the support of the new architect in the Dev team, and the project managers, resulted in a real victory: In January 2024, several dedicated Azure subscriptions were given to the Dev Team department, where initially a single Azure subscription had to be shared with other departments!
           
       - job: "Devops Lead"
         company: "Michelin"
@@ -253,13 +253,14 @@ params:
 
           Project Context: At Michelin,  Data Engineering / AI Project
 
-          I was in charge of managing all Azure resources with **terraform**, including
+          I was in charge of managing all Azure resources with **terraform** (Azure Storage Accounts, vnet/sbnets, VMs, managed identities, service principals, etc...)
           I was involved with 2 Data engineer SMEs, to **re-design and implement** the whole 
-          **Data Engineering platform**, with a **migration from** an **{Azure Data Factory / ADF Pipelines} stack**, to a much 
+          **Data Engineering platform**. I was working on the CI/CD scope. The new design involved a **migration from** an **{Azure Data Factory / ADF Pipelines} stack**, to a much 
           more advanced, Python-based, **{Databricks + Snowflake} Stack**.
 
           The new data engineering platform processed data by executing Python code, and therefore needed a fully fledged Python CI/CD.
-      
+          
+          Duties and achievements:
           * Managing of **Azure** resources with `terraform`: Databricks workspaces, Azure Account Storage, networks, Azure Key Vaults, Managed Identities, R-Studio VMs, MongoDB clusters, etc...
           * **Modularization of terraform code**, management of terraform state: **terraform modules**, terraform private registry, terraform state into Azure Account storage container
           * Design of **CI/CD Modules**, **CI/CD runners** Docker images (Python code)
