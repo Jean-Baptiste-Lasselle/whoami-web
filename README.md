@@ -28,9 +28,6 @@ git flow init --defaults
 # you  must be on develp : your feature branch must be suashed and merged
 
 export RELEASE_VERSION="0.0.4"
-export DEPLOYMENT_DOMAIN=jean-baptiste-lasselle.github.io
-export DEPLOYMENT_BASE_URL=https://${DEPLOYMENT_DOMAIN}/whoami-web
-export CUSTOM_DOMAIN_CNAME="false"
 
 git flow release start ${RELEASE_VERSION}
 
