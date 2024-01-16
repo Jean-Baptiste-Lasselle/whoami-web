@@ -3,7 +3,7 @@ title: "Cloud Init - episode 1"
 # date -u +'%Y-%m-%dT%H:%M:%S%:z'
 # date: 2022-06-09T08:53:58+05:30
 date: 2022-06-17T20:53:11+00:00
-draft: false
+draft: true
 github_link: "https://github.com/pokusio/cloud-init-first"
 get_the_code: "https://github.com/pokusio/cloud-init-first"
 get_the_code_youtube: "https://www.youtube.com/watch?v=exeuvgPxd-E"
@@ -34,6 +34,107 @@ In this new article, we will use:
 * `Bitnami's Kubeseal` secret manager
 
 To automate virtual machines creation from templates.
+
+
+
+## `Packer` / `VirtualBox`
+
+Our goal here is to provision a VirtualBox VM with :
+* Debian Bullseye
+* `git` , `git-flow`, `Docker`, `Docker Compose`, a few other utility linux packages
+* two net interfaces, one used to connect :
+  * to internet through USB Key Wifi Network Adpater network cidr `192.168.195.0/24`
+  * to another network isolated from the Internet, network cidr `192.168.1.0/24`
+
+<!--
+* this machine can become a router and a firewall to connect the two networks, and :
+  * `192.168.195.0/24` acts as a its like a DMZ for `192.168.1.0/24`
+  * ...
+-->
+
+### Install `Chocolatey` (Windows only)
+
+See :
+
+* https://chocolatey.org/install
+
+
+---
+
+
+* Open A PowerShell as administrator, and run :
+
+```PowerShell
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+```
+* wait  a few seconds that execution has completed, If you don't see any errors, you are ready to use Chocolatey! Type `choco` or `choco -?` now, or see Getting Started for usage instructions.
+* From now now, to upgrade `Chocolatey`, you will execute :
+
+```PowerShell
+choco upgrade chocolatey
+```
+
+
+
+### Install Packer
+
+{{< os_support_tabs role="user" symbol="$" >}}
+
++++
+PowerShell
+xxx
+```PowerShell
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+packer --version
+```
+
+
++++
+Linux Shell Bash
+xxx
+```Bash
+#!/bin/bash
+sudo apt-get update -y
+sudo apt-get install -y packer
+
+packer --version
+
+```
+
+{{< / os_support_tabs >}}
+
+
+
+```PowerShell
+choco install packer
+```
+
+
+```bash
+
+# 1. Add HashiCorp GPG Key
+
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+
+# 2. Add HashiCorp Linux repository
+sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+
+# 3. Update
+sudo apt-get update -y
+
+# 4. Install Packer
+sudo apt-get install -y packer
+
+# --------------------
+# # I got :
+# ~$ packer --version
+# 1.8.1
+#
+
+
+```
+
 
 <!--
 This article is a first step playing **_the_ `cloud-init`**

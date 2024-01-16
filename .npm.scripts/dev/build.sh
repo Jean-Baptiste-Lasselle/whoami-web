@@ -17,6 +17,7 @@ echo "# ------ -  PATH=[${PATH}]"
 echo "# --- # --- # --- # --- # --- # --- # --- # --- # --- # --- # --- #"
 echo "# ----    NO OPERATIONS IN DEV BUILD FOR NOW"
 echo "# --- # --- # --- # --- # --- # --- # --- # --- # --- # --- # --- #"
+exit 0
 # ----
 #   1./ Will run the npm dev build,
 #   2./ then copy to 'dist/', and finally will
