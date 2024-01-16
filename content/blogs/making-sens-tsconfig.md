@@ -1,7 +1,7 @@
 ---
 title: "(WIP) Making sense of your tsconfig.json - episode 1"
 date: 2022-06-09T08:53:58+05:30
-draft: false
+draft: true
 github_link: "https://github.com/pokusio/npx-hugo-gmented"
 get_the_code: "https://github.com/pokusio/npx-hugo-gmented/tree/feature/init-npx-project/.gulp"
 author: "Jean-B. Lasselle"

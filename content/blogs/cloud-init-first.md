@@ -3,7 +3,7 @@ title: "Cloud Init - episode 1"
 # date -u +'%Y-%m-%dT%H:%M:%S%:z'
 # date: 2022-06-09T08:53:58+05:30
 date: 2022-06-17T20:53:11+00:00
-draft: false
+draft: true
 github_link: "https://github.com/pokusio/cloud-init-first"
 get_the_code: "https://github.com/pokusio/cloud-init-first"
 get_the_code_youtube: "https://www.youtube.com/watch?v=exeuvgPxd-E"

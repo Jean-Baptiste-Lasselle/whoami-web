@@ -22,8 +22,8 @@ source ./.env
 
 echo "# --- --- --- --- --- --- --- --- #"
 echo "# ---- STARTING HUGO BUIL WITH : "
-echo "#    Golang version = [$(go --version)]"
-echo "#    Hugo version = [$(hugo --version)]"
+echo "#    Golang version = [$(go version)]"
+echo "#    Hugo version = [$(hugo version)]"
 echo "#    HUGO_BASE_URL=[${HUGO_BASE_URL}]"
 echo "#    HUGO_SERVER_BIND_ADDR=[${HUGO_SERVER_BIND_ADDR}]"
 echo "#    HUGO_SERVER_PORT_NUMBER=[${HUGO_SERVER_PORT_NUMBER}]"
