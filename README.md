@@ -7,9 +7,9 @@ In this repository, you will find my resume as a static website.
 ```bash
 export HUGO_SERVER_PORT=1314
 
-# hugo server -b http://localhost:${HUGO_SERVER_PORT}/whoami-web/ -p ${HUGO_SERVER_PORT}
+hugo server -b http://localhost:${HUGO_SERVER_PORT}/whoami-web/ -p ${HUGO_SERVER_PORT}
 
-hugo server -D -b http://localhost:${HUGO_SERVER_PORT}/whoami-web/ -p ${HUGO_SERVER_PORT}
+# hugo server -D -b http://localhost:${HUGO_SERVER_PORT}/whoami-web/ -p ${HUGO_SERVER_PORT}
 
 # Then go to http://localhost:1314/whoami-web/
 ```
