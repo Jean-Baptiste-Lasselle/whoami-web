@@ -19,28 +19,5 @@ Howtos ToC Change depth of ToC https://github.com/alex-shpak/hugo-book/issues/52
 #... A lot of configuration before # --- here the top Level configuration # element &amp;#39;markdown&amp;#39; is the one we # use to configure ToC level markup: # just to set ToC depth tableOfContents: endLevel: 4 startLevel: 2 # ordered: false #.</description>
     </item>
     
-    <item>
-      <title>Cloud Init - episode 1</title>
-      <link>https://jean-baptiste-lasselle.github.io/whoami-web/blogs/cloud-init-first/</link>
-      <pubDate>Fri, 17 Jun 2022 20:53:11 +0000</pubDate>
-      
-      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/blogs/cloud-init-first/</guid>
-      <description>Get the Code! What you will find here In this new article, we will use:
-Cloud Init HashiCorp Packer Terraform Bitnami&#39;s Kubeseal secret manager To automate virtual machines creation from templates.
-References a video tuorial I fully experimented : https://www.youtube.com/watch?v=exeuvgPxd-E </description>
-    </item>
-    
-    <item>
-      <title>(WIP) Making sense of your tsconfig.json - episode 1</title>
-      <link>https://jean-baptiste-lasselle.github.io/whoami-web/blogs/making-sens-tsconfig/</link>
-      <pubDate>Thu, 09 Jun 2022 08:53:58 +0530</pubDate>
-      
-      <guid>https://jean-baptiste-lasselle.github.io/whoami-web/blogs/making-sens-tsconfig/</guid>
-      <description>Get the Code! What you will find here I recently needed to develop an npx executable, and wanted to code in TypeScript.
-I therefore had to run again tsc --init.
-And that&amp;rsquo;s where I decided to write this series of articles, with a goal, to deeply understand how to choose my tsconfig.json configuration options.
-In this series, I will not review every single tsc command line option to explain what their purpose is :</description>
-    </item>
-    
   </channel>
 </rss>

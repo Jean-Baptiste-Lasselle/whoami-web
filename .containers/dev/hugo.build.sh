@@ -8,9 +8,9 @@ export PATH=$PATH:/usr/local/go/bin
 echo "# --- --- --- --- --- --- --- --- #"
 echo "# ---- STARTING HUGO BUILD WITH : "
 echo "#    Golang version :"
-go --version
+go version
 echo "#    Hugo version : "
-hugo --version
+hugo version
 echo "#    HUGO_BASE_URL=[${HUGO_BASE_URL}]"
 echo "#    HUGO_SERVER_BIND_ADDR=[${HUGO_SERVER_BIND_ADDR}]"
 echo "#    HUGO_SERVER_PORT_NUMBER=[${HUGO_SERVER_PORT_NUMBER}]"
