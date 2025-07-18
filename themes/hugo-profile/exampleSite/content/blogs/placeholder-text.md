@@ -2,7 +2,7 @@
 title: "Placeholder Text"
 date: 2021-04-03T22:41:10+05:30
 draft: false
-github_link: "https://github.com/gurusabarish/hugo-profile"
+github_link: "https://github.com/jean-baptiste-lasselle-b704591b4/hugo-profile"
 author: "Gurusabarish"
 tags:
   - Placeholder text

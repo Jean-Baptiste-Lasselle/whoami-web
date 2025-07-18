@@ -52,8 +52,8 @@ git flow release finish -s ${RELEASE_VERSION} && git push -u origin --all  && gi
 # ---
 # re-generate the hugo project
 npm run spawn:project:clean
-export HUGO_THEME_GIT_SSH="git@github.com:gurusabarish/hugo-profile.git"
-export HUGO_THEME_GIT_SSH="git@github.com:gurusabarish/hugo-profile.git"
+export HUGO_THEME_GIT_SSH="git@github.com:jean-baptiste-lasselle-b704591b4/hugo-profile.git"
+export HUGO_THEME_GIT_SSH="git@github.com:jean-baptiste-lasselle-b704591b4/hugo-profile.git"
 npm run spawn:project:gen
 
 ```

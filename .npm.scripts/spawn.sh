@@ -5,7 +5,7 @@ source .${whoami_webENV}.env
 # export HUGO_THEME_GIT_SSH=${HUGO_THEME_GIT_SSH:-"git@github.com:runningstream/hugograyscale.git"}
 #
 export HUGO_THEME_GIT_SSH=${HUGO_THEME_GIT_SSH:-"git@github.com:halogenica/beautifulhugo.git"}
-# export HUGO_THEME_GIT_SSH=${HUGO_THEME_GIT_SSH:-"git@github.com:gurusabarish/hugo-profile.git"}
+# export HUGO_THEME_GIT_SSH=${HUGO_THEME_GIT_SSH:-"git@github.com:jean-baptiste-lasselle-b704591b4/hugo-profile.git"}
 #
 
 # export HUGO_THEME_VERSION=${HUGO_THEME_VERSION:-"1.1.0"}

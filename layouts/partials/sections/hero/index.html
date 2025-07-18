@@ -15,10 +15,15 @@
                 <p class="hero-content">
                     {{ .Site.Params.hero.content | markdownify }}
                 </p>
+
                 <div class="row">
+                    <div class="col-auto px-0 h-100">
+                        {{- partial "sections/hero/certifications.html" . -}}
+                    </div>
                     <div class="col-auto h-100">
                         {{ if .Site.Params.hero.button.enable }}
-                        <a href="{{ .Site.Params.downloads.pdf_resume.url.en }}" download="{{ .Site.Params.downloads.pdf_resume.proposed_file_name.en }}" class="btn">
+                        <a href="{{ .Site.Params.downloads.pdf_resume.url.en }}"
+                            download="{{ .Site.Params.downloads.pdf_resume.proposed_file_name.en }}" class="btn">
                             {{ .Site.Params.hero.button.name }}
                         </a>
                         {{ end }}
@@ -32,9 +37,7 @@
                 <div class="row justify-content-center">
                     <div class="col-sm-12 col-md-9 pt-5 image px-5 px-md-5 px-lg-0 text-center">
                         <img src="{{default $.Site.BaseURL $.Site.Params.staticPath }}/{{ .Site.Params.hero.image }}"
-                            class="img-thumbnail mx-auto"
-                            alt=""
-                        >
+                            class="img-thumbnail mx-auto" alt="">
                     </div>
                 </div>
             </div>
