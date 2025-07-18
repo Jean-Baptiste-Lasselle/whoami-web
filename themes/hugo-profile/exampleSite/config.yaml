@@ -4,7 +4,7 @@ title: "Hugo Profile"
 theme: hugo-profile
 
 Paginate: 3
-disqusShortname: gurusabarish
+disqusShortname: jean-baptiste-lasselle-b704591b4
 googleAnalytics: G-DWJJVE27WD
 
 markup:
@@ -244,7 +244,7 @@ params:
         content: Developed a product using Artificial Intelligence.
       - title: Hugo Profile
         content: Developed a theme and getting 1K+ downloads per month.
-        url: "https://github.com/gurusabarish/hugo-profile"
+        url: "https://github.com/jean-baptiste-lasselle-b704591b4/hugo-profile"
       - title: Microsoft Imagine Runner
         content: We are developed a product which can help others.
       - title: Google Summer of Code
@@ -269,9 +269,9 @@ params:
           - icon: fa fa-envelope
             url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
           - icon: fab fa-github
-            url: https://github.com/gurusabarish/hugo-profile
+            url: https://github.com/jean-baptiste-lasselle-b704591b4/hugo-profile
           - icon: fab fa-twitter
-            url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+            url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fjean-baptiste-lasselle-b704591b4%2Fhugo-profile
 
       - title: Image Converter
         content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
@@ -284,7 +284,7 @@ params:
         #   - "Bootstrap"
         links:
           - icon: fab fa-github
-            url: https://github.com/gurusabarish/converter
+            url: https://github.com/jean-baptiste-lasselle-b704591b4/converter
 
       - title: Hugo Profile V2
         content: A clean and simple Hugo template for personal portfolio and blog.
@@ -298,13 +298,13 @@ params:
         #   - "Javascript"
         links:
           - icon: fab fa-github
-            url: https://github.com/gurusabarish/HugoProfileV2
+            url: https://github.com/jean-baptiste-lasselle-b704591b4/HugoProfileV2
 
   #Contact
   contact:
     enable: true
     content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
-    email: gurusabarisha@gmail.com
+    email: jean-baptiste-lasselle-b704591b4a@gmail.com
     btnName: Mail me
 
   footer:
