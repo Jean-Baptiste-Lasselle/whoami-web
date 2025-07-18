@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Devops Quant</title>
+    <title>Tags on Devops SRE</title>
     <link>https://jean-baptiste-lasselle.github.io/whoami-web/tags/</link>
-    <description>Recent content in Tags on Devops Quant</description>
+    <description>Recent content in Tags on Devops SRE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 19 Jun 2022 14:43:47 +0000</lastBuildDate><atom:link href="https://jean-baptiste-lasselle.github.io/whoami-web/tags/index.xml" rel="self" type="application/rss+xml" />
