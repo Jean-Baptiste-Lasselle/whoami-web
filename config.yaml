@@ -211,7 +211,7 @@ params:
       #     * ...
       # ----
 
-      - job: "Devops, Infra As Code SME"
+      - job: "SRE Devops, Infra As Code SME"
         company: "Michelin"
         companyUrl: "https://www.michelin.com/"
         date: "February 2024 - Today"
@@ -234,7 +234,7 @@ params:
           * I train team members to new tools
           * I review merge requests
           
-      - job: "Devops, terraform SME"
+      - job: "SRE Devops, terraform SME"
         company: "Limagrain"
         companyUrl: "https://www.limagrain.com/"
         date: "September 2023 - February 2024"
@@ -262,7 +262,7 @@ params:
           * In less than 4 months, I brought up with `terraform`, 3 new isolated environments: DEV, UAT and production. I also found and solved a couple of very complex issues integrating `Azure` cloud components and `Microsoft Dynamics`.
           * The `terraform` achievements, my **evangelist** work, added to the support of the project managers, resulted in a real victory: In January 2024, several dedicated Azure subscriptions were granted to the Dev Team department, where initially a single Azure subscription had to be shared by all departments!
           
-      - job: "Devops Lead"
+      - job: "SRE Devops Lead"
         company: "Michelin"
         companyUrl: "https://www.michelin.com/"
         date: "November 2022 - September 2023"
@@ -290,7 +290,7 @@ params:
           * Design of **CI/CD Pipelines**: **Git workflows**, **Gitlab** release automation with `gitlab-cli`, **python** packages deployment to databricks (**databricks scheduled jobs**), snowflake (with liquibase).
           * Design of **Documentation**: `astro`/`hugo` documentation repo with automation based on Gitlab CI/CD pipelines.
 
-      - job: "Devops Leader"
+      - job: "SRE Devops Leader"
         company: "Gravitee"
         companyUrl: "https://gravitee.io"
         date: "July 2020 - March 2022"
@@ -323,7 +323,7 @@ params:
       - job: "Cloud Engineer"
         company: "Cresh"
         companyUrl: "https://cresh.eu"
-        date: "May 2020 - August 2019"
+        date: "April 2020 - July 2020"
         featuredLink:
           enable: true
           name: "cresh"
