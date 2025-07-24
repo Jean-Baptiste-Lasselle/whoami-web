@@ -1,12 +1,12 @@
 baseURL: "https://Jean-Baptiste-Lasselle.github.io/whoami-web"
 languageCode: "en-us"
-title: "Devops Quant"
+title: "Devops SRE"
 theme: hugo-profile
 themesDir: "./themes/"
 Paginate: 3
 # --- # --- #
 # About disqus shortname : https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-disqusShortname: gurusabarish
+disqusShortname: jean-baptiste-lasselle-b704591b4
 googleAnalytics: G-DWJJVE27WD
 
 markup:
@@ -45,8 +45,8 @@ Menus:
     #   weight: 2
 
 params:
-  title: "Devops Quant - Gitops everywhere"
-  description: Text about my cool site
+  title: "Devops SRE"
+  description: Devops Leader
   # staticPath: "https://jean-baptiste-lasselle.github.io/whoami-web/"  # The path to serve the static files from
   # staticPath: "/whoami-web/"  # The path to serve the static files from
   staticPath: ""  # The path to serve the static files from
@@ -113,8 +113,8 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Jean-Baptiste Lasselle."
-    subtitle: "I'm a Devops Quant"
-    content: "I love automating everything. I daily work with Kubernetes, terraform, pulumi, CI/CD, robots. I love coding, shell, `TypeScript`, `Golang`, `C`, and `rust` are my favorites languages."
+    subtitle: "I'm a Cloud Engineer / SRE"
+    content: "I love automating everything. I daily work with Kubernetes, terraform, pulumi, CI/CD pipelines, robots. I love coding, shell, `TypeScript`, `Golang`, `Python` are my favorites languages. <br/> I sometimes like to say I am a Devops Quant: <br/> I don't fit in paradigms, I twist them to design infrastructure automation."
     # image: /images/hero.svg
     image: /images/jblasselle_profile_pic.png
     button:
@@ -140,44 +140,47 @@ params:
     # image: "/images/me.png"
     image: "/images/technology_image.jpeg"
     content: |
-      I started as a developer many years ago.
+      At University, I studied pure mathematics.
 
-      Since 2015, I am focused on how to develop and operate softwares in a cloud world.
+      I started IT as a developer.
 
-      In a word, I love automating everything, and I love coding.
+      2015, I turned my focus on infrastructure (as code), and the cloud world.
 
-      I today am A **Gitops** Fanatic, an **Evangelist** in love with Cybernetics (Kubernetes Controllers, Operators, AutoScalability, self-healing abilities).
+      I love coding and automating everything.
+
+      I today am a **Cloud Engineer/SRE**, an **Evangelist** in love with **Gitops** and Cybernetics (Kubernetes Controllers, Operators, AutoScalability, self-healing abilities).
 
       My interests today are:
-      * Designing and implementing **Infrastructure As Code** the gitops way
-      * Developing **terrafrom providers**, and **terraform-compatible cloud providers**
+      * Designing and implementing **Infrastructure automation**: make it as autonomous as possible.
+      * Developing **terraform providers**, **OpenBAO utilities**
       * Developing **Kubernetes Operators**.
+      * Landing Zones: What comes after the Cloud Adoption Framework ?
 
-      <i>**How have I become a devops?**
-      I started as a developer many years ago (Java ee/JavaScript). I started as a developer many years ago (Java ee/JavaScript).
-      After a few years, I soon (maven) got interested into automation, with CI/CD.
-      And because CI/CD involves managing infrastructure (servers, remember Jenkins?), I completely 
-      fell for infrastructure management, and automating everything. 
+      <i>**How have I become a devops/cloud engineer?**
+      After a few years as developer, I soon got interested into automation with CI/CD (maven).
+      Because CI/CD involves managing infrastructure (servers, remember Jenkins?), I was pulled into infrastructure management, and completely 
+      got into automating infrastructure ops. 
       
-      Linux, Virtual Box, Openstack, Docker and Kubernetes, all of them came along just naturally.
-      
-      This how I became a devops without being aware, before the word even existed.</i>
+      Linux, Virtual Box, Terraform, Openstack, Docker and Kubernetes, all of them just came along naturally.</i>
 
     skills:
       enable: true
-      title: "My everyday tech stack:"
+      title: "My skills stack:"
       items:
-        - "Terraform"
+        - "Terraform/OpenTOFU"
         - "Packer"
         - "Pulumi"
-        - "HashiCorp Vault"
-        - "Kubernetes"
-        - "Helm"
+        - "Vault/OpenBAO"
+        - "Kubernetes/Helm"
+        - "FluxCD, ArgoCD"
+        - "CI/CD Pipelines (Gitlab, Circle CI, Tekton)"
+        - "Ansible/Ansible Tower (AWX)"
         - "AWS, Azure, GCP, OVH"
-        - "NodeJs/TypeScript/ViteJS"
-        - "Astro/Hugo/React"
+        - "VMware vSphere"
+        - "Astro, Hugo"
         - "Golang"
-        - "Rust"
+        - "Python"
+        # - "React/NodeJs/TypeScript"
 
   # Experience
   experience:
@@ -208,7 +211,30 @@ params:
       #     * ...
       # ----
 
-      - job: "Devops terraform SME"
+      - job: "SRE Devops, Infra As Code SME"
+        company: "Michelin"
+        companyUrl: "https://www.michelin.com/"
+        date: "February 2024 - Today"
+        content: |
+          
+          Project Context: ~30 engineers on 5 continents. The Project aims at unifying all of the on-premises infrastructure as one IAAS platform (~100 small datacenters spread around the whole world).
+          
+          * **Tech stack** : `VMware vSphere`, `VMware Aria Automation`, `Ansible`/`Ansible Tower`, `Kubernetes`, `Docker`, `Packer`, `Hashicorp Vault`, `OpenTOFU`, `python`, `Artifactory`, `Gitlab pipelines`
+          
+          Automation SME in the Team, in a team of about 30 engineers.
+          Achievements I am so proud of:
+          * I have introduced the use of Hashicorp `Packer`, the concepts of immutable infrastructure, golden images, and hardening in a packer image build.
+          * I have entirely built an Ansible Tower service, in a kubernetes cluster, with full automation of provisioning, backup and restore. The AWX service is managed with the AWX Operator. Fully Airgapped environment, includes automated K3S Kubernetes Cluster provisioning, and upgrades. Private Image registry on Artifactory.
+          * I have fully automated provisioning of Windows server VMs using packer golden images, autounattend xml answer files, and ansible to run post install operations.
+          * I have built and demonstrated the full lifecycle of Ansible Tower (AWX) Execution Environments using Ansible Builder, with Ansible Collections in a fully private context - artifactory configured as a private ansible galaxy service, and private python wheels / packages repository service.
+
+          Duties:
+          * I provide Proof of concepts, tools bench-marking, I build environments, with and about automation technologies.
+          * I evangelize concepts across the team
+          * I train team members to new tools
+          * I review merge requests
+          
+      - job: "SRE Devops, terraform SME"
         company: "Limagrain"
         companyUrl: "https://www.limagrain.com/"
         date: "September 2023 - February 2024"
@@ -217,28 +243,26 @@ params:
           name: "Limagrain BSD"
           url: "https://www.limagrain.com/"
         content: |
-      
-          * **Devops stack** :  `Terraform`, `Helm`, `kubectl`, `Docker`, `Azure AKS / App Gateway Ingress Controller (AGIC)`, `Azure Functions`, `Azure CosmoDB`, `Azure EventHub`, `Azure Devops (Pipelines)`, `Azure Managed identities / Service Principals`, `Azure networking - vnet, subnets, private endpoints`, `Artifactory`, shell scripting (`sh`, `bash`).
-          * **OS** : `Windows Server`,  many dockerized `Linux` distros for CI/CD.
-          * **Dev stack** : I mainly used terraform and did only Infra As Code. I only had once to dive into code, to be able to shell script the full build from source of the `Dotnet` Azure Functions.
-
-          Project Context: At Limagrain, a business critical, internally developed app, had only one envrionment, and no production env. I was in charge of building the missing production environment.
-
-          In charge of building the production environment, I was first assigned the task of auditing the whole poject, both in terms of infrastructure, and CI/CD.
-          I produced a first executive summary, providing opinionated recommandations.
-          My two main recommandations were : 
-          * to automate "everything": both the infrastrtucture management with terraform, and the dev CI/CD
-          * to spin up isolated envrionments to promote releases from dev, to staging, UAT, up to the production.
+          
+          Project Context: At Limagrain, a business critical, internally developed app, had only one environment, which was manually built.
+          I was in charge of building all environments, with automation.
+          
+          * **Tech stack** : `Terraform`, `Helm`, `kubectl`, `Docker`, `Azure AKS / App Gateway Ingress Controller (AGIC)`, `Azure Functions`, `Azure CosmoDB`, `Azure EventHub`, `Azure Devops (Pipelines)`, `Azure Managed identities / Service Principals`, `Azure networking - vnet, subnets, private endpoints`, `Artifactory`, shell scripting (`sh`, `bash`).
+          
+          I was first assigned the task of auditing the whole project, both in terms of infrastructure, and CI/CD, with an executive summary as deliverable.
+          My two main recommendations were : 
+          * to automate "everything": both the infrastructure management with terraform, and the dev CI/CD
+          * to spin up isolated environments to promote releases from dev, to staging, UAT, up to the production.
           
           Duties and achievements:
-          * I was then **in charge of implementing** my recommandations, working with the **Dev Team (5 developers), on one end, and the core infrastructure teams** (compute, identity, network, security teams), on the other hand.
-          * I was invited to **architecture labs**, to give a **talk on terraform and infrastructure as code concepts**. My talk was very appreciated, so that other departments requested to have knowledge sharing workshop with me.
-          * I was required to attend the validation gates meetings, required to allow the app to go to production. My role was to **answer the question about infrastructure and automation design** choices details.
-          * Terraform was not used at all in the project, and I **convinced** the management, and the core infrastructure teams, **to start using terraform for infrasructure management**, especially in **production**.
-          * In less than 4 months, I brought up with `terraform`, 3 new isolated environments, DEV, UAT and production. I also found and solved a couple of very complex issues integrating `Azure` cloud components and `Microsoft Dynamics`.
-          * The `terraform` achievements, my **evangelist** conviction, added to the support of the new architect in the Dev team, and the project managers, resulted in a real victory: In January 2024, several dedicated Azure subscriptions were given to the Dev Team department, where initially a single Azure subscription had to be shared with other departments!
+          * I was **in charge of implementing** my recommendations, working with the **Dev Team (5 developers), on one end, and the core infrastructure teams**, on the other hand.
+          * I was invited to **architecture labs**, to give a **talk on terraform and infrastructure as code concepts**. My talk was very appreciated, so that other departments requested to have knowledge sharing workshops with me.
+          * I was required to attend the validation gates meetings: the process to allow the app to go to production. My role was to **answer the question about infrastructure and automation design** choices details.
+          * Terraform was not used at all in the project, and I **convinced** the management, and the core infrastructure teams, **to start using terraform for infrastructure management**, especially in **production**.
+          * In less than 4 months, I brought up with `terraform`, 3 new isolated environments: DEV, UAT and production. I also found and solved a couple of very complex issues integrating `Azure` cloud components and `Microsoft Dynamics`.
+          * The `terraform` achievements, my **evangelist** work, added to the support of the project managers, resulted in a real victory: In January 2024, several dedicated Azure subscriptions were granted to the Dev Team department, where initially a single Azure subscription had to be shared by all departments!
           
-      - job: "Devops Lead"
+      - job: "SRE Devops Lead"
         company: "Michelin"
         companyUrl: "https://www.michelin.com/"
         date: "November 2022 - September 2023"
@@ -248,16 +272,14 @@ params:
           url: "https://ddi.michelin.com/"
         content: |
       
-          * **Devops stack** :  `Databricks`, `dbx`, `Snowflake`, `dbt`, `Terraform`, `Helm`, `Docker`, `Kubernetes`, `Azure`, `azcopy`, `Gitlab`, `Artifactory`, shell scripting (`sh`, `bash`), `make`.
-          * **OS** : `Windows Server`, `CentOS`, many dockerized `Linux` distros for CI/CD.
-          * **Dev stack** : `Python`, `Python setuptools`, `NodeJS` `TypeScript`, `Astro`, `Hugo`.
+          Project Context: At Michelin, Data Engineering / AI Project
 
-          Project Context: At Michelin,  Data Engineering / AI Project
+          * **Tech stack** :  `Terraform`, `Kubernetes`, `Helm`, `Docker`, `Azure`, `Databricks`, `dbx`, `Snowflake`, `dbt`, `azcopy`, `Gitlab`, `Artifactory`, `shell` scripting, `Python`, `TypeScript`, `Astro`, `Hugo`.
 
-          I was in charge of managing all Azure resources with **terraform** (Azure Storage Accounts, vnet/sbnets, VMs, managed identities, service principals, etc...)
-          I was involved with 2 Data engineer SMEs, to **re-design and implement** the whole 
-          **Data Engineering platform**. I was working on the CI/CD scope. The new design involved a **migration from** an **{Azure Data Factory / ADF Pipelines} stack**, to a much 
-          more advanced, Python-based, **{Databricks + Snowflake} Stack**.
+          In charge of managing all Azure resources with **terraform** (Azure Storage Accounts, vnet/sbnets, VMs, managed identities, service principals, etc...)
+          **Re-designing and implementing**, with 2 Data engineer SMEs,  the whole 
+          **Data Engineering platform**. I was working on the CI/CD pipelines scope. The new design involved a **migration from** an **{Azure Data Factory / ADF Pipelines} stack**, to a much 
+          more advanced, Python/PySpark-based, **{Databricks + Snowflake} Stack**.
 
           The new data engineering platform processed data by executing Python code, and therefore needed a fully fledged Python CI/CD.
           
@@ -268,7 +290,7 @@ params:
           * Design of **CI/CD Pipelines**: **Git workflows**, **Gitlab** release automation with `gitlab-cli`, **python** packages deployment to databricks (**databricks scheduled jobs**), snowflake (with liquibase).
           * Design of **Documentation**: `astro`/`hugo` documentation repo with automation based on Gitlab CI/CD pipelines.
 
-      - job: "Devops Tech Lead"
+      - job: "SRE Devops Leader"
         company: "Gravitee"
         companyUrl: "https://gravitee.io"
         date: "July 2020 - March 2022"
@@ -277,31 +299,31 @@ params:
           name: "Gravitee is Open Source!"
           url: "https://github.com/gravitee-io"
         content: |
+      
+          Context: Gravitee is an Open Source API Gateway
 
-          * **Devops stack** : `Pulumi`, `Terraform`, `Helm`, `Docker`, `Kubernetes`, `K3D`, `Azure` `AKS`, `AWS` `EKS`, `FluxCD`.
-          * **OS** : `Debian`, `alpine`, and many dockerized `Linux` distros
-          * **Dev stack** : `NodeJS` `TypeScript`, `Python`, `bash` / `sh` `shell`, `Golang`.
-
-          Devops at Gravitee, Kubernetes SME, I competely re-designed i re-implemented the whole Gravitee CI
+          * **Tech stack** : `Pulumi`, `Terraform`, `Kubernetes`, `Helm`, `Docker`, `K3D`, `Azure` `AKS`, `AWS` `EKS`, `FluxCD`. `NodeJS`, `TypeScript`, `Python`, `shell` scripting, `Golang`.
+          
+          I completely re-designed I re-implemented the whole Gravitee CI
           CD, migrating from Jenkins to Circle CI on the way.
-          I today am a top expert about Circle CI and Gitops based approaches.
+          I today am a top expert about Circle CI and git based CI/CD.
           I am extremely proud that I had the opportunity to work with the https://gravitee.io Team, a World Class Team of
-          Software Engineers, from which i deeply learned about many topics.
-          I also there learned a lot about what is, and what brings, cybernetics in the real cloud industry world. In particular, it is there that i started working on Kubenetes Operators.
+          Software Engineers, with which I deeply learned about many topics.
+          I also there learned a lot about what cybernetics is in the real cloud industry world. In particular, it is there that I started working on Kubernetes Operators.
 
-          * `Kubernetes` SME
-          * Full design, implementation, and migration of the whole of the Gravitee CICD System. In particular, I had to design and implement a very unique CICD component, using `NodeJS`, `TypeScript`, `RxJS`, a component to orchestrate Pipeline executions in a multi git repository context, bringing scalability and removing Single Points of Failures.
-          * Implementation of all standard operations using pure infra as code of gravitee hosted offers (deployment, backup, restore, upgrades, downgrades, cloud provider migrations, etc.).
-          * Design of hosted saas offers fo the Gravitee API Gateway,
+          Duties and achievements:
+          * Design, implement, and migrate of the whole of the Gravitee CI/CD System. I designed and implemented a very unique CI/CD component, using `NodeJS`, `TypeScript`, `RxJS`, to orchestrate Circle CI Pipeline executions, for the Gravitee Release process (dozens of git repositories): bringing scalability, and removing Single Points of Failures.
+          * Automation of all standard operations of Gravitee, for hosted offers (deployment, backup, restore, upgrades, downgrades, etc).
+          * Design of saas offer fo the Gravitee API Gateway,
           * Design of best architecture practices for Gravitee API Gateway users.
           * `CircleCI` Evangelist for the Dev Engineers
           * Training junior devops engineers
           * Level 3 Support for Gravitee Customers, example : design and provisioning of a `VPN` Gateway between `Azure` and Google `GCP`
 
-      - job: "Devops Engineer"
+      - job: "Cloud Engineer"
         company: "Cresh"
         companyUrl: "https://cresh.eu"
-        date: "May 2020 - August 2019"
+        date: "April 2020 - July 2020"
         featuredLink:
           enable: true
           name: "cresh"
@@ -309,20 +331,22 @@ params:
         info:
           enable: true
         content: |
-          * **Devops stack** : `Pulumi`, `Helm`, `Docker`, `Kubernetes`, `AWS EKS`, `Gravitee API Gateway`.
-          * **OS** : `Debian`, `Alpine`.
-          * **Dev stack** : `NodeJS` `TypeScript`, `bash` / `sh` shell.
+
+          Project Context: Cresh offer is a SAAS Offer, an innovative b2b payment solution.
+          
+          * **Tech stack** : `Pulumi`, `Helm`, `Docker`, `Kubernetes`, `AWS EKS`, `Gravitee API Gateway`. `NodeJS`, `TypeScript`, `bash` / `sh` shell.
 
           At https://cresh.eu, a small french Startup, I worked on designing and implementing the entire Cloud
-          Infrastruture, 100 % `Kubernetes` based : Cresh offer is a SAS Offer, an innovative b2b payment solution.
-          AWS EKS, Helm deployment of dev’s work, `Gravitee` API Gateway. https://gravitee.io founders heard
+          Infrastructure, 100 % `Kubernetes` based.
+          AWS EKS, Helm deployment of dev's work, `Gravitee` API Gateway. https://gravitee.io founders heard
           of me because of the work I did there at cresh.
           Small Startup when I helped them, I was at the time the only devops engineer, and massively used
           `Pulumi`, `Packer` and `Terraform`.
           _Having major architecture and technical points of disagreement with the CTO, we together agreed to
           end our collaboration._
 
-          * Devops SME / Cloud Architect, full infrastructure design
+          Duties and achievements:
+          * Cloud Engineer, full infrastructure design
           * `Kubernetes` SME
           * Main `Kubernetes` Cluster Terraformation Automation.
 
@@ -337,15 +361,17 @@ params:
         info:
           enable: true
         content: |
-          * **Devops stack** : `Ansible`, `Docker`, `Gitlab EE`, `Jenkins` Pipelines, `LVM`, `Cisco NSO`, `Cisco KUBAM` for PXEless boot, SSH Bastions.
-          * **OS** : `Windows`, `Linux CentOS 7`
-          * **Dev stack** : `Python 2` `Python 3` `PyEnv` .
+          
+          Project Context: Edge Datacenter deployments for an ISP/Phone Operator.
+
+          * **Tech stack** : `Ansible`, `Docker`, `Gitlab EE`, `Jenkins` Pipelines, `LVM`, `Cisco NSO`, `Cisco KUBAM` for PXEless boot, SSH Bastions, `Python` .
 
           Devops contractor at SFR (French ISP and phone operator), `Cisco NSO` project Team (SDN).
           In charge of datacenter deployment automation and operations in the context of the new `5G` network deployment.
 
-          * I worked on designing and deploying a full devops stack, for developers to git push their `Python` source code, ending with their code deployment to production Cisco NSO devices. I even had, on the SFR request, to build from source docker registry it self : SFR needed its CICD platform to be "fully built from source" (docker, registry, etc.), and that, for security constraints.
-          * I was a CI/CD evangelist on this `Cisco NSO` project (networks engineers do not have the same culture as Dev Engineers, to say the least). This included introducing and training network engineers on git, and why Gitlab and Gityhub are our everyday Facebook (As I use to say, _`Facebook` is our today’s real office_).
+          Duties and achievements:
+          * I worked on designing and deploying a full devops stack, for developers to git push their `Python` source code, ending with their code deployment to production Cisco NSO devices. I even had, on the SFR request, to build from source docker registry it self : SFR needed its CI/CD platform to be "fully built from source" (docker, registry, etc.), and that, for security constraints.
+          * I was a CI/CD evangelist on this `Cisco NSO` project (networks engineers do not have the same culture as Dev Engineers, to say the least). This included introducing and training network engineers on git, and why Gitlab and Github are our everyday Facebook (I used to say, _`Facebook` is our today's real office_ - and by _"Facebook"_ I meant Github/Gitlab-like platforms).
           * I designed git workflows, trained on how to operate Gitlab EE as an infrastructure on premise : software engineers at SFR, were in charge of operating their own Gitlab EE.
           * I took a `Cisco NSO` training session at Cisco, on how to automate bare metal provisioning of Cisco NSO Clusters, in « Issy les Moulineaux » a French city close to Paris.
           * With those duties, I worked with more than 100 engineers, coming from 3 different teams :
@@ -364,20 +390,21 @@ params:
         info:
           enable: true
         content: |
-          * **Devops stack** : `Terraform`, `Ansible`, `Jenkins` Pipline, `Docker` (docker-compose) , `NGINX`, `Gravitee.io` (API Gateway), `Keycloak` (OpenID Connect explicit flow), `Kubernetes`, `ELK`.
-          * **OS** : `Debian Stretch`  & `Ubuntu Server`
-          * **Dev stack** : `Karma` / `Jasmine`, `Jenkins`, `Maven`, `Nexus Sonatype`, `GIT`, `bitbucket`, `NODEJS`, `NPM`, `Angular 5`, `ReactJS`, `MongoDB`, `JHipster`, `JBoss EAP`.
+          
+          Context: Infrastructure Management Consulting services. 
+          
+          * **Tech stack** : `Terraform`, `Ansible`, `Jenkins` Pipline, `Docker` (docker-compose) , `NGINX`, `Gravitee.io` (API Gateway), `Keycloak`, `Kubernetes`, `ELK`.
 
           Employee at Bosstek, a french consulting SMB, specialized into infrastructure management, that was
-          my first experience in a « Pure Infra » company, and the first time i took that kind of angle into the
-          devops market.
+          my first experience in a « Pure Infra » company.
 
           I took part into 3 projects with Bosstek, for 3 different French Customers. This experience was very
           interesting, for I worked there with people who never ever worked in software development. I would say
           they were from the « old style » infrastructure world, and that is why i had a lot to learn with them.
 
-          * I worked in the core team of projects for huge companies : [**SOPRA Steria**](https://www.soprasteria.fr/), [**ENEDIS**](ccc), and `Carrrefour One Cloud`, as Devops SME / Cloud Architect.
-          * I have been Dev Engineers Team Leader At SOPRA STYERAI, where i worked under the authority of David Maurange.
+          Duties and achievements:
+          * I worked in the core team of projects for huge companies : [**SOPRA Steria**](https://www.soprasteria.fr/), [**ENEDIS**](https://www.enedis.fr/), and [`Carrrefour One Cloud`](https://www.carrefour.com/fr/news/googlegcp), as Cloud Engineer.
+          * I have been Dev Engineers Team Leader At SOPRA STERIA, where I worked under the authority of David Maurange.
           * I also conducted two internal studies about in that company, where i was the only Kubernetes SME :
             * Production grade Kubernetes Cluster Ingress Controller best practices.
             * A proposed solution of system monitoring with Rsyslog/Elastic Stack, (with a focus on CA servers restarts) : purpose was to have the company certified as a CA Authority delivering SSL/TLS certificates.
@@ -394,22 +421,24 @@ params:
         info:
           enable: true
         content: |
-          * **Physics** : Optics principles for OTDUs
-          * **Devops stack** : `Ansible`, `PXE boot`, `PXE boot kickstart installations`, `Docker`, `Virtual Box`, `KVM`, `Free IPA Server`, `SSH` / `SCP`/ `WinSCP`, with a lot of bin/bashing.
-          * **OS** : CentOS 6 & 7, Ubuntu
+          
+          Context: R&D fault detection in fiber optics large networks (OTDUs).
+
+          * **Tech stack** : `Ansible`, `PXE boot`, `PXE boot kickstart installations`, `Docker`, `Virtual Box`, `KVM`, `Free IPA Server`, `SSH` / `SCP`/ `WinSCP`, with a lot of bin/bashing.
           * **CI stack** : Gitlab, Artifactory, MAVEN3 Git, Eclipse JBoss Tools, Jenkins, Checkstyle, JMeter, JUnit, DbUnit, Jasmine + Karma, Wireshark & wireshark dissectors
           * **Dev stack** : Java, JCA IronJacamar, JPA, Hibernate, WILDFLY, EJB3 Stateless & MDBs', JAX-RS & Resteasy, Apache Shiro, Leaflet, Angular, Linux Pluggable Authentication Mechanism, mariadb, postgresql/postgis, .Net Windows Service Application component, Visual Studio.
 
           Java Dev Enginer at Vierling-Communication, an R&D company of the « Laudren Group » .
-          R&D main goal was to design and develop an cutting edghe network monitoring system.
+          R&D main goal was to design and develop a cutting edge network monitoring system.
 
           What was thrilling and extremely interesting in this experience, is that the system did not monitor
-          software, but hardware, and in paritcular, the system goal mainly was to monitor Fiber Optics and
+          software, but hardware, and in particular, the system goal mainly was to monitor Fiber Optics and
           Copper cables failures !
 
           The developed Monitoring system consisted in both hardware and software : pure Linux OS, java and C
           language.
 
+          Duties and achievements:
           * I worked on the software part which was the « brain » of the monitoring system : the server that collects all data from distributed systems, analyze them, and manages alerts, using JCA Components in a Jee JBoss EAP app.
           * I introduced there bare metal provisioning : `PXE-` booted to deploy the whole stack, and i automated all that to be able to run reliable testing. That was my answer to « it is not possible to fully automate our solution deployment ».
           * I introduced and convinced of the necessity of Acceptance Tests.
@@ -418,7 +447,7 @@ params:
           * Geolocation of hardware failures, so GIS matters, I introduced Leaflet on the Web UI This experience was a turning point for me : That is were I worked months with whom I consider my master as far as *NIX and what OS actually are, a « Linux Wizard » , **Eric Lévenez**, a man I will always remember.
 
 
-      - job: "IT Architect - IT department founder"
+      - job: "IS Architect - IT department founder"
         company: "SPVC"
         companyUrl: "#"
         date: "June 2013 - July 2015"
@@ -430,8 +459,10 @@ params:
           enable: true
         content: |
 
-          * **Operational** : Gantt charts, Specific Terms and Conditions documents in building industry (CCTP in French) / Response to tenders (« Réponses à appel d’offres » in French) / supply chain management on a constuction site.
-          * **Devops stack** : Chef.io, Virtual Box SOAP API, KVM Virtual Manager OS: CentOS 6.x, Ubuntu server
+          Context: IT Dept. in a contruction industry company
+
+          * **Operational** : Gantt charts, Specific Terms and Conditions documents in building industry (CCTP in French) / Response to tenders (« Réponses à appel d'offres » in French) / supply chain management on a constuction site.
+          * **Devops stack** : Chef.io, Virtual Box SOAP API, KVM Virtual Manager, GNU/Linux (CentOS/Ubuntu server)
           * **CI stack** : Artifactory, MAVEN3 (M2E), Git, Eclipse (eclipse bpmn modeler), Jenkins, Checkstyle, JMeter, JUnit, Mockito, DbUnit.
           * **Dev stack** : Spring, JPA, Activiti BPMN engine, petals ESB / JBI java standard, tomcat 7, JAX-WS/ SOAP/ WSDL, JAX-RS, Spring WS, JSF2, Prime Faces, jQuery v2.x.x, JavaMail, Apache James server, Mailets.
           * **Misc.** : **`FM 200`** Fire protection systems... ?
@@ -445,11 +476,9 @@ params:
           All in all, this was among my most craziest professional experiences, that made me learn a lot about
           who i am in the IT industry.
 
-          Also my first experience as a pure Software guy, putting his hands unawarely into infrastrucutre.
-          And finally, this is the point where I started there changing the way i definded my self : at that point, I
-          used to say that i am a « FullStack » Architect.
+          Also my first experience as a pure Software guy, putting his hands unawarely into infrastructure.
 
-          * The Work began with the desing and implementation of a simple utility software, whose goal was to normalize Business Processes, especially for the commercial and build sites managers everyday tasks.
+          * The Work began with the design and implementation of a simple utility software, whose goal was to normalize Business Processes, especially for the commercial and build sites managers everyday tasks.
           * I then made it production « almost » ready, by adding to it the seed of a DRP. The implemented services were relation to construction project management : Gantt Charts, Tasks Management, reporting.
           * A second generation, redesigned IS turned it into a B.A.M. system (Business Activity Monitoring) using :
             * The Acitviti `BPMN` engine.
@@ -458,7 +487,7 @@ params:
             * As I first talked of the critical importance of a DRP, i was certainly not realizing how deeply I would dive into infrastructure management...
           * I built month weeks after weeks a small team consisteing of 3 to 5 developers and ops, I was the software architect with 2 developers, and manager for the 2 / 3 ops engineers (system enginrer, security engineer, network engineer).
           * I was personnaly working on the CI system a classical recipe of `Git`, `Maven`, `Jenkins` (`Junit`, `DbUnit`, `Mockito`, etc...), Artifactory. All classics of that prehistorc times.
-          * One unthinkable thing happened there, where i lerned a lot about real infratructure , I conducted and designed a full server room: SPVC used on premises servers, the IS being used by employees from their tablets mainly (MTT french trademark Android tablet). A crazy experience where i learned what a datacenter really is, e.g. what material are used on the floor (epoxy) of datacenters, Server Hardware Benchmark, network backbone, DRP with FM200 fire systems, air colling, electricity etc...
+          * One unthinkable thing happened there, where I learned a lot about real infratructure , I conducted and designed a full server room: SPVC used on premises servers, the IS being used by employees from their tablets mainly (MTT french trademark Android tablet). A crazy experience where i learned what a datacenter really is, e.g. what material are used on the floor (epoxy) of datacenters, Server Hardware Benchmark, network backbone, DRP with FM200 fire systems, air cooling, electricity etc...
 
       - job: "Java Dev Engineer"
         company: "Michael Page"
@@ -472,23 +501,22 @@ params:
           enable: true
         content: |
 
-          * **Devops stack** : empty
-          * **OS** : `Windows`
-          * **CI stack** : `Maven`, `Tortoise SVN`, `JIRA`, `Jenkins`, `Nexus Sonatype.`
+          Context: IT Dept. of one of the world's biggest HR industry player.
+
+          * **CI stack** : `Maven`, `Tortoise SVN`, `JIRA`, `Jenkins`, `Nexus Sonatype`
           * **Dev stack** : `Tomcat 6`, `WebLogic 9`, `struts 1`, `Taglibs`, `Spring`, `hibernate`, `JUnit`, `JMX`, `JAXP`, `Log4J`, `Fractal Julia`, `Javamail`.
 
-          At the heart of Michael Page’s IT Department (EMEA), I took part in the full revamping of Michael Page’s Inforamtion system, along with 10 à 15 Java Dev Engineers, 2/3 IT Architects, QA and 10 Business Analysts.
+          At the heart of Michael Page's IT Department (EMEA), I took part in the full revamping of Michael Page's Information system, along with 10 à 15 Java Dev Engineers, 2/3 IT Architects, QA and 10 Business Analysts.
 
           My personal scope was focused on the « backend » part of all software responsible for Candidates Processes Management, including the Candidates Assessment. This was my first professional
           experience into a major large scale IT Department of an International Corporation.
+          
+          Duties and achievements:
 
-          * In collaboration with IT Architects, and Business Analysts, I designed and implemented the "candidate assessement" components. That made me an SME on the Candidate Assessment functional scope.
-          * Learned a lot on HR Business Process in the real world
-          * Classic Java developmen, involving CI, using Maven, JUnit, on premise Nexus Sonatype repo. Some Java dependencies had to be « mavenized », some others already were.
+          * In collaboration with IT Architects, and Business Analysts, I designed and implemented the "candidate assessment" components. That made me an SME on the Candidate Assessment functional scope.
+          * Classic Java development, involving CI, using Maven, JUnit, on premise Nexus Sonatype repo. Some Java dependencies had to be « mavenized », some others already were.
           * I took part in a huge Security Operation, because of a discovered major intrusion attack in Michael Page Information System, a long memorable pizza week-end...
           * I started there being involved into topics of CI/CD and it the Infrastructure it relies on.
-          * I worked on a proposal for using the Fractal Julia Framework to refactor functional units along the IS revamping process.
-
 
   # Education
   education:
@@ -563,7 +591,7 @@ params:
         content: Developed a product using Artificial Intelligence.
       - title: Hugo Profile
         content: Developed a theme and getting 1K+ downloads per month.
-        url: "https://github.com/gurusabarish/hugo-profile"
+        url: "https://github.com/jean-baptiste-lasselle-b704591b4/hugo-profile"
       - title: Microsoft Imagine Runner
         content: We are developed a product which can help others.
       - title: Google Summer of Code
@@ -572,7 +600,7 @@ params:
 
   # projects
   projects:
-    enable: true
+    enable: false
     items:
       - title: Pokus
         content: In my everyday Devops life, I deliver a lot of documentation, and prepare slide shows. I deliver them as websites, for example i am a big fan of https://gohugo.io. I started developing Pokus, The only distrbituted Headless CMS, as a tool to spin up new hugo websites very quickly. A demo will soon be available! :)
@@ -598,13 +626,13 @@ params:
           - icon: fab fa-linkedin
             url: https://www.linkedin.com/in/jean-baptiste-lasselle-b704591b4/
 #           - icon: fab fa-twitter
-#             url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+#             url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fjean-baptiste-lasselle-b704591b4%2Fhugo-profile
 
 
   #Contact
   contact:
     enable: true
-    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+    content: My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
     email: jean.baptiste.lasselle@gmail.com
     btnName: Mail me
 

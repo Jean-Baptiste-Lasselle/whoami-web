@@ -1,9 +1,9 @@
 {
     "name": "Hugo Profile",
     "license": "MIT",
-    "licenselink": "https://github.com/gurusabarish/hugo-profile/blob/master/LICENSE",
+    "licenselink": "https://github.com/jean-baptiste-lasselle-b704591b4/hugo-profile/blob/master/LICENSE",
     "description": "A high performance and mobile first hugo template for personal portfolio and blog.",
-    "homepage": "https://github.com/gurusabarish/hugo-profile",
+    "homepage": "https://github.com/jean-baptiste-lasselle-b704591b4/hugo-profile",
     "demosite": "https://hugo-profile.netlify.app",
     "tags": [
         "Responsive",
@@ -14,6 +14,6 @@
     "min_version": "0.68.0",
     "author": {
         "name": "Gurusabarish",
-        "homepage": "https://www.linkedin.com/in/gurusabarish/"
+        "homepage": "https://www.linkedin.com/in/jean-baptiste-lasselle-b704591b4/"
     }
 }
