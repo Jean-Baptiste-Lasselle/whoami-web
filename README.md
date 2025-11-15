@@ -27,7 +27,7 @@ git flow init --defaults
 
 # you  must be on develp : your feature branch must be suashed and merged
 
-export RELEASE_VERSION="0.0.4"
+export RELEASE_VERSION="0.0.9"
 
 git flow release start ${RELEASE_VERSION}
 
